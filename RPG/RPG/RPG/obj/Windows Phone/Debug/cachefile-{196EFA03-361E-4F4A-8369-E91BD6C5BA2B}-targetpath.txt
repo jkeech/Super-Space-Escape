@@ -1,2 +1,0 @@
-Content\tiles\tiles.xnb
-Content\levels\level0.txt
