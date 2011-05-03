@@ -1,0 +1,13 @@
+[**Intro to level**]
+
+The baren land that you have been traveling on seems to be gathering 
+more life as you keep traveling onward.  You find a lake that refills 
+your energy, but you need to keep moving, and as you look up you see 
+that you are not the only on that is enjoying the water from this lake 
+and the other creatures around you don't seemlike to sharing type...
+
+[**In this level**]
+Refill health meter? or are we refilling it every level?
+More of a filler level, but it does transition from one type of 
+background to another.  
+	Time limit 120 seconds.
