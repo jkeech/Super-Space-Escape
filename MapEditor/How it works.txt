@@ -1,0 +1,32 @@
+We have been building the map editor as an in-house development tool for our game. The map editor allows us
+to build a level from scratch, placing objects where we want them.
+
+Each level is divided into 4 layers, background, collision, objects, and foreground. Each of these layers can
+be editted individually, and you can also view any combination of layers at any given time.
+
+This gives us the flexability to view only the objects and interactions that we want at that moment.
+
+The way our editor works is by loading in tile sheets for the background, objects, and foreground layers
+(collision is invisible in the game, but we color it a bright pink in the editor so you can visualize the
+boundaries). Once the tile sheets are loaded, we split the tiles into individual images.
+
+You can either load an existing level file, or create a new one. When you edit a level, data is stored in two ways.
+First, we have our tile engine that stores the IDs in a matrix (the same way that the game interprets the data).
+This is the data that we actually save to the level file in the end. But we also need a way to visualize the map
+in real time. To do this, we create and manage 4 separate bitmaps that we overlap on the screen.
+
+Having 4 separate bitmaps rather than one bitmap for all layers allows us to easily and effeciently add and remove
+objects from an individual layer without having to redraw the other layers. In fact, we don't even need to redraw
+the entire layer, only the spot on the bitmap where the tile was located. These optimizations allow for fast
+redraw times so you can see the results of your editting immediately.
+
+For usability, you select a tile on the left side of the screen that you wish to add to the level (the tiles to
+choose from change depending on which layer you are currently editting). Once yuo have a tile selected, click
+(and drag if you want to edit multiple tiles) on the tile you wish to edit. There is also an eraser button that
+allows you to remove objects from the map.
+
+Foreground works a little bit differently from the rest due to the fact that the foreground matrix is actually
+twice as large in both dimensions because the foreground scrolls at twice the rate in the game. This means you
+cannot draw individual foreground tiles, but we have created a foreground generation system that lets you choose
+which foreground image you want as well as which pattern (random, diagonal, vertical, horizontal, etc) you wish
+to use.

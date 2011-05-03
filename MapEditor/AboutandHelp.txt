@@ -1,0 +1,33 @@
+------ABOUT------
+Map Editor version 1.0.0
+Created by: Wintendo
+© 2011 Wintendo
+All rights reserved
+
+------HELP------
+*Where do I start?
+	To begin just click File (Alt + F) and click New.
+
+*What are those weird symbols next to the menu items?
+	Those are short cut command to more easily issue commands to the program.
+	the Ctrl + [letter] means that you need to hold down the Ctrl button and 
+	then press the letter that is next to it.
+
+How do I save?
+	To save the progress that you have made on a map click the save button and
+	your work will be saved. You can then continue to work or close out of the
+	program and come back later and load your saved map file.
+
+How do I load a map that I have saved?
+	To load an existing map, just click the Load button, or go to File -> Load and
+        select the level file (.lvl) that you wish to load.
+
+How do I change different layers?
+	click the down arrow next to the Edit button and choose the layer that you 
+	want to start working on. Only one layer can be edited at a time.
+
+How do I stop looking at a layer?
+	To change what layer you are viewing, click the down arrow next to the View
+	button and select or deselect what layer you want to look at or what layer
+	you do not want to look at.
+

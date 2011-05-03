@@ -1,0 +1,9 @@
+H:\CSCE315\project3\AutoID\AutoID\bin\Release\AutoID.exe
+H:\CSCE315\project3\AutoID\AutoID\bin\Release\AutoID.pdb
+H:\CSCE315\project3\AutoID\AutoID\obj\x86\Release\ResolveAssemblyReference.cache
+H:\CSCE315\project3\AutoID\AutoID\obj\x86\Release\AutoID.mainForm.resources
+H:\CSCE315\project3\AutoID\AutoID\obj\x86\Release\AutoID.Properties.Resources.resources
+H:\CSCE315\project3\AutoID\AutoID\obj\x86\Release\GenerateResource.read.1.tlog
+H:\CSCE315\project3\AutoID\AutoID\obj\x86\Release\GenerateResource.write.1.tlog
+H:\CSCE315\project3\AutoID\AutoID\obj\x86\Release\AutoID.exe
+H:\CSCE315\project3\AutoID\AutoID\obj\x86\Release\AutoID.pdb

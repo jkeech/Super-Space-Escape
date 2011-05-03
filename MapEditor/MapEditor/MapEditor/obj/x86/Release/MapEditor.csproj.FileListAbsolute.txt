@@ -1,0 +1,10 @@
+H:\CSCE315\project3\MapEditor\MapEditor\MapEditor\bin\Release\MapEditor.exe
+H:\CSCE315\project3\MapEditor\MapEditor\MapEditor\bin\Release\MapEditor.pdb
+H:\CSCE315\project3\MapEditor\MapEditor\MapEditor\obj\x86\Release\ResolveAssemblyReference.cache
+H:\CSCE315\project3\MapEditor\MapEditor\MapEditor\obj\x86\Release\MapEditor.MainForm.resources
+H:\CSCE315\project3\MapEditor\MapEditor\MapEditor\obj\x86\Release\MapEditor.newForm.resources
+H:\CSCE315\project3\MapEditor\MapEditor\MapEditor\obj\x86\Release\MapEditor.Properties.Resources.resources
+H:\CSCE315\project3\MapEditor\MapEditor\MapEditor\obj\x86\Release\GenerateResource.read.1.tlog
+H:\CSCE315\project3\MapEditor\MapEditor\MapEditor\obj\x86\Release\GenerateResource.write.1.tlog
+H:\CSCE315\project3\MapEditor\MapEditor\MapEditor\obj\x86\Release\MapEditor.exe
+H:\CSCE315\project3\MapEditor\MapEditor\MapEditor\obj\x86\Release\MapEditor.pdb
