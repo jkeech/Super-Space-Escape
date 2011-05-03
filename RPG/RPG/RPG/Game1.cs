@@ -23,7 +23,7 @@ namespace RPG
         TileEngine tileEngine;
         List<Texture2D> tiles;
         BackRender back;
-
+        int xtestx = 0;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
