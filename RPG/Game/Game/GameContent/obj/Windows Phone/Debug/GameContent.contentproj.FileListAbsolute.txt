@@ -1,0 +1,2 @@
+H:\CSCE315\proj3\Game\Game\GameContent\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
+\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\GameContent\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
