@@ -1,0 +1,21 @@
+[**Intro to level**]
+
+After swimming for a while, you begin to just drift down the river and
+emerge onto the bank of an adjoining lake.  You dry off and see smoke 
+and a feint sound of what seems like a civilization.  the ozone seems 
+to have stabalized now, but it is getting late and you would like to 
+investigate the city in the distance.  
+Goal: Get into the city before night fall or the gates will close and
+you will be locked out of the city...
+
+[**In this level**]
+Transition to a castle/city level.  Introducing the knights/gurds in 
+the city.  
+	Time limit: 300 seconds
+
+--Alternate option--
+If you don't make it within the time limit, return to this same level 
+except have the gate locked without any keys around, with more enemies 
+and have you survive untill you find a good place for shelter...
+if that is completed successfully, return back to this level and try 
+again..

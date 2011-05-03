@@ -1,0 +1,9 @@
+[**Intro to level**]
+
+You've made it into the city and need to quickly find an inn that 
+you can skeak into before the knight guards come and find you...
+
+[**In this level**]
+Another race level find the exit quickly. no key is present so you 
+cannot pass through the gate in the north.  
+	Time limit:  30 seconds
