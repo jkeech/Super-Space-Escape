@@ -1,0 +1,14 @@
+[**Intro to level**]
+
+The creatures on this planet could really be a problem, but you 
+realize that there are bigger issues on this planet.  Because your 
+ship has crash-landed it has ignited the ozone layer of the planet 
+and for now all you can do is survive until you find help or find 
+a way to escape from this horrid planet.
+Goal: Find the exit before time runs out (ozone layer for this part 
+of the planet is gone) or you will die...
+
+[**In this level**]
+Introduce the time limit concept and give a reason for why levels 
+are timed. 
+	Time limit 60 seconds. (rough estimate change if needed)
