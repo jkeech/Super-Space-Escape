@@ -1,0 +1,22 @@
+[**Intro to level**]
+
+You awake with the stench of scorched earth filling your nostrils. 
+You open your eyes and realize that you are no longer on board your 
+spaceship. You see the burnt trees and the remains of your ship 
+lying in a smoldering heap of twisted melting metal, while smaller 
+bits of your ship come falling down being vaporized as they enter 
+this planet's atmosphere.  You don't see any of your ship mates here 
+and assume the worst. The surrounding don't look familiar and the 
+sounds off in the distance tell you that surviving this and returning 
+back to [insert home planet name] isn't going to be easy...
+
+[**In this level**]
+I was thinking that this would be more of a tutorial level that gets 
+the player acustomed to the game basics:
+	moving
+	inventory
+	items (picking up and or equiping weapons)
+	fighting monsters
+	time limit (unlimited on this level)
+Pale red tile with the x in it I was going to have as the end of 
+level icon.
