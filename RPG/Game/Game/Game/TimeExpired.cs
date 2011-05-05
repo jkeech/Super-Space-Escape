@@ -81,12 +81,8 @@ namespace Game
                 TouchCollection tc = TouchPanel.GetState();
                 foreach (TouchLocation tl in tc)
                 {
-                    if ((tl.Position.X >= 0) && (tl.Position.X <= 100) && (tl.Position.Y >= 0) && (tl.Position.Y <= 100)) // test coords
-                    {
                         play_again = true;
-                        //this.play_again = true;
                         return; // return before timer runs out
-                    }
                 }
 
                 sb.DrawString(sf, (10-Convert.ToInt32(g_o_time)).ToString(), d_time_pos, Color.White);
@@ -104,7 +100,6 @@ namespace Game
         public void shutDown() // send here when timer runs out, game over screen and shut down
         {
             play_again = false;
-            return;
         }
 
     }
