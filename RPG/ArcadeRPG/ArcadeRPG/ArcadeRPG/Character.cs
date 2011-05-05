@@ -148,6 +148,10 @@ namespace ArcadeRPG
 
                 
         }
+        public bool hasKey()
+        {
+            return true;
+        }
     }
 
     class Enemy

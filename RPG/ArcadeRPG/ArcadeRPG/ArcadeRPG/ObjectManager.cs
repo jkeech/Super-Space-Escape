@@ -175,5 +175,34 @@ namespace ArcadeRPG
 
             return null;
         }
+        public bool checkForGateAt(int x, int y, int width, int height)
+        {
+
+            int tx = (x) / game_state.tile_engine.getTileSize();
+            int ty = (y + height - 10) / game_state.tile_engine.getTileSize();
+
+            Tile t = objects_layer.getTile(tx, ty);
+            int type = t.getTexture();
+
+            if (type == -1)
+            {
+                //Bottom Right
+                tx = (x + width) / game_state.tile_engine.getTileSize();
+                ty = (y + height - 10) / game_state.tile_engine.getTileSize();
+
+
+                t = objects_layer.getTile(tx, ty);
+                type = t.getTexture();
+                if (type == -1)
+                {
+                    return false;
+                }
+            }
+            if ((type == /*gateID*/) || (type == /*gateID*/))
+            {
+                return true;
+            }
+            return false;
+        }//checkForGateAt
     }
 }

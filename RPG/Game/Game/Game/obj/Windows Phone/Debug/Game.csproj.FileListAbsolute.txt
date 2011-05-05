@@ -146,3 +146,9 @@ H:\Super-Space-Escape\RPG\Game\Game\Game\obj\Windows Phone\Debug\WMAppManifest.x
 H:\Super-Space-Escape\RPG\Game\Game\Game\obj\Windows Phone\Debug\WMAppManifest.xml
 H:\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Game.xap
 H:\Super-Space-Escape\RPG\Game\Game\Game\obj\Windows Phone\Debug\XapCacheFile.xml
+H:\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Game.xap
+H:\Super-Space-Escape\RPG\Game\Game\Game\obj\Windows Phone\Debug\XapCacheFile.xml
+H:\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\AppManifest.xaml
+H:\Super-Space-Escape\RPG\Game\Game\Game\obj\Windows Phone\Debug\WMAppManifest.xml.g
+H:\Super-Space-Escape\RPG\Game\Game\Game\obj\Windows Phone\Debug\WMAppManifest.xml
+bin\Windows Phone\Debug\GameThumbnail.png
