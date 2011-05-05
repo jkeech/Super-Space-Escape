@@ -371,11 +371,13 @@ namespace ArcadeRPG
                     if (!(a * tile_size >= width * tile_size || a * tile_size < 0 || b * tile_size >= height * tile_size || b * tile_size < 0))
                     {
                         temp_texture = map[1].getTile(a, b).getTexture();//get texture of this tile
-
-                        sourceR = new Rectangle((temp_texture % (texture_layers[1].Width / 32)) * tile_size * 2, 0, tile_size * 2, tile_size * 2);
-                        drawR = new Rectangle((countx * tile_size * 2) - (xdisp * 2), (county * tile_size * 2) - (ydisp * 2), (tile_size * 2), (tile_size * 2));
-                        if (drawR.Left < 801 && drawR.Right > -1)
-                            tile_batch.Draw(texture_layers[1], drawR, sourceR, new Color(200, 200, 200, 60));
+                        if (temp_texture != -1)
+                        {
+                            sourceR = new Rectangle((temp_texture % (texture_layers[1].Width / 32)) * tile_size * 2, 0, tile_size * 2, tile_size * 2);
+                            drawR = new Rectangle((countx * tile_size * 2) - (xdisp * 2), (county * tile_size * 2) - (ydisp * 2), (tile_size * 2), (tile_size * 2));
+                            if (drawR.Left < 801 && drawR.Right > -1)
+                                tile_batch.Draw(texture_layers[1], drawR, sourceR, new Color(200, 200, 200, 60));
+                        }
                     }
                     county++;
                 }
