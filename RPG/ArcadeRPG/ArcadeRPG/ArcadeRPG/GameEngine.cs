@@ -435,7 +435,7 @@ namespace ArcadeRPG
                 bullet_sprite.loc.Y = bullet.y - offset_y;
                 bullet_sprite.Draw(spriteBatch);
             }
-            // tileEngine.drawForeground(local_player.getX(), local_player.getY());
+            game_state.tile_engine.getCurrentMap().drawForeground(spriteBatch,game_state.local_player.getX(), game_state.local_player.getY());
             game_state.fx_engine.Draw(spriteBatch,offset_x, offset_y);
             //Draw HUD
             spriteBatch.Draw(uparrow, uparrowpos, null, trans, 0, imageOffset, 3.0f, SpriteEffects.None, 0);
