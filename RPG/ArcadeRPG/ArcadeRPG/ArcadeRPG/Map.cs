@@ -310,7 +310,7 @@ namespace ArcadeRPG
             int brcornery;//bottom right corner, ending off screen
             double swidth = 800 / tile_size;//screen width, based on tiles
             double sheight = 480 / tile_size;//screen width, based on tiles
-            if (sprite_x < 400 - (tile_size / 2))
+            if (sprite_x < 400 - (tile_size / 2)-16)
             {
                 tlcornerx = 0;
                 brcornerx = (int)swidth + 1;
@@ -320,7 +320,7 @@ namespace ArcadeRPG
             {
                 tlcornerx = sprite_position[0] - (int)Math.Floor(swidth / 2) - 1;
 
-                if (sprite_x > (width * tile_size) - 400 - (tile_size / 2))
+                if (sprite_x > (width * tile_size) - 400 - (tile_size / 2) - 16)
                 {
                     tlcornerx = width - (int)swidth;
                     brcornerx = width;
@@ -330,7 +330,7 @@ namespace ArcadeRPG
                     brcornerx = sprite_position[0] + (int)Math.Floor(swidth / 2) + 1;
             }
 
-            if (sprite_y < 240 - (tile_size / 2))
+            if (sprite_y < 240 - (tile_size / 2) - 16)
             {
                 tlcornery = 0;
                 brcornery = (int)sheight + 1;
@@ -340,7 +340,7 @@ namespace ArcadeRPG
             {
                 tlcornery = sprite_position[2] - (int)Math.Floor(sheight / 2) - 1;
 
-                if (sprite_y > (height * tile_size) - 240 - (tile_size / 2))
+                if (sprite_y > (height * tile_size) - 240 - (tile_size / 2) - 16)
                 {
                     tlcornery = height - (int)sheight;
                     brcornery = height;
