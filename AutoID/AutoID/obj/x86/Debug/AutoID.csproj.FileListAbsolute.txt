@@ -1,9 +1,0 @@
-H:\CSCE315\project3\AutoID\AutoID\bin\Debug\AutoID.exe
-H:\CSCE315\project3\AutoID\AutoID\bin\Debug\AutoID.pdb
-H:\CSCE315\project3\AutoID\AutoID\obj\x86\Debug\ResolveAssemblyReference.cache
-H:\CSCE315\project3\AutoID\AutoID\obj\x86\Debug\AutoID.Properties.Resources.resources
-H:\CSCE315\project3\AutoID\AutoID\obj\x86\Debug\GenerateResource.read.1.tlog
-H:\CSCE315\project3\AutoID\AutoID\obj\x86\Debug\GenerateResource.write.1.tlog
-H:\CSCE315\project3\AutoID\AutoID\obj\x86\Debug\AutoID.exe
-H:\CSCE315\project3\AutoID\AutoID\obj\x86\Debug\AutoID.pdb
-H:\CSCE315\project3\AutoID\AutoID\obj\x86\Debug\AutoID.mainForm.resources
