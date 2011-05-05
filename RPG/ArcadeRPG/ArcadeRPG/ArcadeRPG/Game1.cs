@@ -22,7 +22,6 @@ namespace ArcadeRPG
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-<<<<<<< HEAD
         SpriteFont displayFont; // in separate file (fonts subfolder). arbitrary
         SpriteFont itemfont; // ^^
         SpriteFont expiredfont; // ^^
