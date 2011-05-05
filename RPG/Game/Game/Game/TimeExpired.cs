@@ -22,10 +22,8 @@ namespace Game
         private Vector2 offset;
         public Boolean play_again;
         private double g_o_time=0;
-
-        private TimeSpan timeLeft = TimeSpan.FromSeconds(10.0); // grant the player a certain time to decide if they want to play again
         private Vector2 d_time_pos;
-
+        private double MAX_TIME = 10;
 
         public TimeExpired()
         {
@@ -52,6 +50,13 @@ namespace Game
             }
         }
 
+        public void reset()
+        {
+            play_again = false;
+            state = State.HIDE;
+            g_o_time = 0;
+        }
+
         public void loadContent(ContentManager contman) // load placeholder menu for time expired
         {
             timeoutpic = contman.Load<Texture2D>("Menus\\OutOfTime");
@@ -71,7 +76,7 @@ namespace Game
             //if user doesnt click to play again in that amount of time, auto exit
 
             g_o_time += gt.ElapsedGameTime.TotalSeconds;
-            if (g_o_time >= 10)
+            if (g_o_time >= MAX_TIME)
             {
                 shutDown();
                 return;
@@ -79,12 +84,11 @@ namespace Game
             else
             {
                 TouchCollection tc = TouchPanel.GetState();
-                foreach (TouchLocation tl in tc)
+                if(tc.Count > 0) 
                 {
-                        play_again = true;
-                        return; // return before timer runs out
+                    play_again = true;
+                    return; // return before timer runs out
                 }
-
                 sb.DrawString(sf, (10-Convert.ToInt32(g_o_time)).ToString(), d_time_pos, Color.White);
             }
 
