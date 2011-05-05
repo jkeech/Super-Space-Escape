@@ -17,6 +17,7 @@
 *.lib
 *.sbr
 *.scc
+*.db
 [Bb]in
 [Dd]ebug*/
 obj/
