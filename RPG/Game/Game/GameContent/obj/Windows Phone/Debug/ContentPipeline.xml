@@ -7,8 +7,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\pic.xnb</Output>
       <Time>2011-05-03T14:13:16.3377396-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\pic.xnb</Output>
+      <Time>2011-05-03T18:22:05.9753-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Pictures\arrowdown.png</Source>
@@ -16,8 +21,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\arrowdown.xnb</Output>
       <Time>2011-05-03T14:13:15.6201626-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\arrowdown.xnb</Output>
+      <Time>2011-05-03T18:22:05.881396-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Pictures\arrowleft.png</Source>
@@ -25,8 +35,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\arrowleft.xnb</Output>
       <Time>2011-05-03T14:13:15.6357621-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\arrowleft.xnb</Output>
+      <Time>2011-05-03T18:22:05.891384-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Pictures\arrowright.png</Source>
@@ -34,8 +49,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\arrowright.xnb</Output>
       <Time>2011-05-03T14:13:15.6357621-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\arrowright.xnb</Output>
+      <Time>2011-05-03T18:22:05.900377-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Pictures\arrowup.png</Source>
@@ -43,8 +63,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\arrowup.xnb</Output>
       <Time>2011-05-03T14:13:15.6513616-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\arrowup.xnb</Output>
+      <Time>2011-05-03T18:22:05.911363-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Pictures\backpack.jpg</Source>
@@ -52,8 +77,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\backpack.xnb</Output>
       <Time>2011-05-03T14:13:15.6669611-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\backpack.xnb</Output>
+      <Time>2011-05-03T18:22:05.922354-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Pictures\gun.jpg</Source>
@@ -61,8 +91,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\gun.xnb</Output>
       <Time>2011-05-03T14:13:16.3221401-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\gun.xnb</Output>
+      <Time>2011-05-03T18:22:05.95532-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Pictures\healthbar.png</Source>
@@ -70,8 +105,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\healthbar.xnb</Output>
       <Time>2011-05-03T14:13:16.3377396-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\healthbar.xnb</Output>
+      <Time>2011-05-03T18:22:05.965312-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Menus\Welcome.png</Source>
@@ -79,8 +119,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Menus\Welcome.xnb</Output>
       <Time>2011-05-03T14:13:15.4017696-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Menus\Welcome.xnb</Output>
+      <Time>2011-05-03T18:22:05.784493-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Menus\OutOfTime.png</Source>
@@ -88,8 +133,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Menus\OutOfTime.xnb</Output>
       <Time>2011-05-03T14:13:15.1677771-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Menus\OutOfTime.xnb</Output>
+      <Time>2011-05-03T18:22:05.561724-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Menus\Instructions.png</Source>
@@ -97,8 +147,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Menus\Instructions.xnb</Output>
       <Time>2011-05-03T14:13:14.3566031-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Menus\Instructions.xnb</Output>
+      <Time>2011-05-03T18:22:04.697582-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Pictures\dummyitem.png</Source>
@@ -106,8 +161,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\dummyitem.xnb</Output>
       <Time>2011-05-03T14:13:16.2909411-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\dummyitem.xnb</Output>
+      <Time>2011-05-03T18:22:05.942336-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Menus\Inventory.png</Source>
@@ -115,8 +175,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Menus\Inventory.xnb</Output>
       <Time>2011-05-03T14:13:15.0741801-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Menus\Inventory.xnb</Output>
+      <Time>2011-05-03T18:22:05.405877-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Menus\Instructions2.png</Source>
@@ -124,8 +189,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Menus\Instructions2.xnb</Output>
       <Time>2011-05-03T14:13:14.8557871-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Menus\Instructions2.xnb</Output>
+      <Time>2011-05-03T18:22:05.074204-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Audio\Waves\boo_laugh.wav</Source>
@@ -133,8 +203,13 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\boo_laugh.xnb</Output>
       <Time>2011-05-03T14:13:13.6702251-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\boo_laugh.xnb</Output>
+      <Time>2011-05-03T18:22:03.630648-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Audio\Waves\enemy_down.wav</Source>
@@ -142,8 +217,13 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\enemy_down.xnb</Output>
       <Time>2011-05-03T14:13:13.6858246-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\enemy_down.xnb</Output>
+      <Time>2011-05-03T18:22:03.654623-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Audio\Waves\mario_dies.wav</Source>
@@ -151,8 +231,13 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_dies.xnb</Output>
       <Time>2011-05-03T14:13:13.7014241-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_dies.xnb</Output>
+      <Time>2011-05-03T18:22:03.670608-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Audio\Waves\mario_enemy_contact.wav</Source>
@@ -160,8 +245,13 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_enemy_contact.xnb</Output>
       <Time>2011-05-03T14:13:13.7170236-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_enemy_contact.xnb</Output>
+      <Time>2011-05-03T18:22:03.681596-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Audio\Waves\mario_gets_coin.wav</Source>
@@ -169,8 +259,13 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_gets_coin.xnb</Output>
       <Time>2011-05-03T14:13:13.7326231-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_gets_coin.xnb</Output>
+      <Time>2011-05-03T18:22:03.691594-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Audio\Waves\mario_got_coin.wav</Source>
@@ -178,8 +273,13 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_got_coin.xnb</Output>
       <Time>2011-05-03T14:13:13.7482226-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_got_coin.xnb</Output>
+      <Time>2011-05-03T18:22:03.710566-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Audio\Waves\mario_got_it.wav</Source>
@@ -187,8 +287,13 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_got_it.xnb</Output>
       <Time>2011-05-03T14:13:13.8106206-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_got_it.xnb</Output>
+      <Time>2011-05-03T18:22:03.787494-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Audio\Waves\mario_got_key.wav</Source>
@@ -196,8 +301,13 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_got_key.xnb</Output>
       <Time>2011-05-03T14:13:13.8418196-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_got_key.xnb</Output>
+      <Time>2011-05-03T18:22:03.820457-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Audio\Waves\mario_jumps.wav</Source>
@@ -205,8 +315,13 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_jumps.xnb</Output>
       <Time>2011-05-03T14:13:13.8574191-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_jumps.xnb</Output>
+      <Time>2011-05-03T18:22:03.831446-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Audio\Waves\mario_new_level.wav</Source>
@@ -214,8 +329,13 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_new_level.xnb</Output>
       <Time>2011-05-03T14:13:13.8730186-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_new_level.xnb</Output>
+      <Time>2011-05-03T18:22:03.844433-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Audio\Waves\mario_ow_wow.wav</Source>
@@ -223,8 +343,13 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_ow_wow.xnb</Output>
       <Time>2011-05-03T14:13:13.8886181-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_ow_wow.xnb</Output>
+      <Time>2011-05-03T18:22:03.872405-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Audio\Waves\mario_power_up.wav</Source>
@@ -232,8 +357,13 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_power_up.xnb</Output>
       <Time>2011-05-03T14:13:13.9666156-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_power_up.xnb</Output>
+      <Time>2011-05-03T18:22:03.890391-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Audio\Waves\mario_smashes_brick.wav</Source>
@@ -241,8 +371,13 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_smashes_brick.xnb</Output>
       <Time>2011-05-03T14:13:13.9978146-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_smashes_brick.xnb</Output>
+      <Time>2011-05-03T18:22:03.908376-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Audio\Waves\mario_takes_damage.wav</Source>
@@ -250,8 +385,13 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_takes_damage.xnb</Output>
       <Time>2011-05-03T14:13:14.0134141-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_takes_damage.xnb</Output>
+      <Time>2011-05-03T18:22:03.921359-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Audio\Waves\mario_thank_you_for_playing_game.wav</Source>
@@ -259,8 +399,13 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_thank_you_for_playing_game.xnb</Output>
       <Time>2011-05-03T14:13:14.0290136-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_thank_you_for_playing_game.xnb</Output>
+      <Time>2011-05-03T18:22:03.961321-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Audio\Waves\mario_throwing_fireball.wav</Source>
@@ -268,8 +413,13 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_throwing_fireball.xnb</Output>
       <Time>2011-05-03T14:13:14.0446131-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_throwing_fireball.xnb</Output>
+      <Time>2011-05-03T18:22:03.971313-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Audio\Waves\mario_ya_haha.wav</Source>
@@ -277,8 +427,13 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_ya_haha.xnb</Output>
       <Time>2011-05-03T14:13:14.0758121-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_ya_haha.xnb</Output>
+      <Time>2011-05-03T18:22:04.013274-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Audio\Waves\mario_yipee.wav</Source>
@@ -286,8 +441,13 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_yipee.xnb</Output>
       <Time>2011-05-03T14:13:14.0914116-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_yipee.xnb</Output>
+      <Time>2011-05-03T18:22:04.04723-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Audio\Waves\power_star.wav</Source>
@@ -295,8 +455,13 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\power_star.xnb</Output>
       <Time>2011-05-03T14:13:14.1070111-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\power_star.xnb</Output>
+      <Time>2011-05-03T18:22:04.090193-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Audio\Waves\thunder.wav</Source>
@@ -304,8 +469,13 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\thunder.xnb</Output>
       <Time>2011-05-03T14:13:14.1226106-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\thunder.xnb</Output>
+      <Time>2011-05-03T18:22:04.105175-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Audio\Waves\yoshi_spitting.wav</Source>
@@ -313,8 +483,13 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\yoshi_spitting.xnb</Output>
       <Time>2011-05-03T14:13:14.1382101-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\yoshi_spitting.xnb</Output>
+      <Time>2011-05-03T18:22:04.118159-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Fonts\StatsFont.spritefont</Source>
@@ -322,8 +497,13 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Fonts\StatsFont.xnb</Output>
       <Time>2011-05-03T14:13:14.1694091-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Fonts\StatsFont.xnb</Output>
+      <Time>2011-05-03T18:22:04.1821-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Fonts\ItemFont.spritefont</Source>
@@ -331,8 +511,13 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Fonts\ItemFont.xnb</Output>
       <Time>2011-05-03T14:13:14.1694091-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Fonts\ItemFont.xnb</Output>
+      <Time>2011-05-03T18:22:04.164118-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <Item>
       <Source>Fonts\TimeExpired.spritefont</Source>
@@ -340,8 +525,13 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Fonts\TimeExpired.xnb</Output>
       <Time>2011-05-03T14:13:14.1850086-05:00</Time>
+=======
+      <Output>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Fonts\TimeExpired.xnb</Output>
+      <Time>2011-05-03T18:22:04.193083-05:00</Time>
+>>>>>>> upstream/master
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -349,10 +539,17 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
+<<<<<<< HEAD
       <RootDirectory>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\GameContent\</RootDirectory>
       <LoggerRootDirectory>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\</LoggerRootDirectory>
       <IntermediateDirectory>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\GameContent\obj\Windows Phone\Debug\</IntermediateDirectory>
       <OutputDirectory>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\</OutputDirectory>
+=======
+      <RootDirectory>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\GameContent\</RootDirectory>
+      <LoggerRootDirectory>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\</LoggerRootDirectory>
+      <IntermediateDirectory>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\GameContent\obj\Windows Phone\Debug\</IntermediateDirectory>
+      <OutputDirectory>H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\</OutputDirectory>
+>>>>>>> upstream/master
     </Settings>
     <Assemblies>
       <Assembly>
