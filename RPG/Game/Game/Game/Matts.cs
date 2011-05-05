@@ -291,8 +291,12 @@ namespace Game
                     spriteBatch.End();
                     //hide
                     timex.Hide();
-                    //spriteBatch.Begin();
+
+                    // reset game here before playing again
+                    this.currTime = TimeSpan.FromSeconds(5.0);
+                    this.timeOut = false;
                     playGame(gameTime);
+                    timex.reset();
                 }
                 else if (!timex.play_again && timex.get_remaining_time() >= 10)
                     //timex.shutDown();
