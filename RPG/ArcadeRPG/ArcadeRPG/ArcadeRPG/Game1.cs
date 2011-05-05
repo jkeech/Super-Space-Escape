@@ -21,6 +21,10 @@ namespace ArcadeRPG
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        TileEngine tileEngine;
+        List<Texture2D> tiles;
+        BackRender back;
+        int xtestx = 0;
         GameEngine game_engine;
 
         public Game1()

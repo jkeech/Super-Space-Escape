@@ -303,48 +303,49 @@ namespace ArcadeRPG
             sprite_y = y;
             sprite_position = get_cur_tile_pos();
             int[] bounds = new int[4];
-            bool at_edge = false;
+            bool at_edgex = false;
+            bool at_edgey = false;
             int tlcornerx;//top left corner, ending off screen
             int tlcornery;
             int brcornerx;
             int brcornery;//bottom right corner, ending off screen
             double swidth = 800 / tile_size;//screen width, based on tiles
             double sheight = 480 / tile_size;//screen width, based on tiles
-            if (sprite_x < 400 - (tile_size / 2)-16)
+            if (sprite_x < 400 - (tile_size / 2) )
             {
                 tlcornerx = 0;
                 brcornerx = (int)swidth + 1;
-                at_edge = true;
+                at_edgex = true;
             }
             else
             {
                 tlcornerx = sprite_position[0] - (int)Math.Floor(swidth / 2) - 1;
 
-                if (sprite_x > (width * tile_size) - 400 - (tile_size / 2) - 16)
+                if (sprite_x > (width * tile_size) - 400 - (tile_size / 2))
                 {
                     tlcornerx = width - (int)swidth;
                     brcornerx = width;
-                    at_edge = true;
+                    at_edgex = true;
                 }
                 else
                     brcornerx = sprite_position[0] + (int)Math.Floor(swidth / 2) + 1;
             }
 
-            if (sprite_y < 240 - (tile_size / 2) - 16)
+            if (sprite_y < 240 - (tile_size / 2) )
             {
                 tlcornery = 0;
                 brcornery = (int)sheight + 1;
-                at_edge = true;
+                at_edgey = true;
             }
             else
             {
                 tlcornery = sprite_position[2] - (int)Math.Floor(sheight / 2) - 1;
 
-                if (sprite_y > (height * tile_size) - 240 - (tile_size / 2) - 16)
+                if (sprite_y > (height * tile_size) - 240 - (tile_size / 2) )
                 {
                     tlcornery = height - (int)sheight;
                     brcornery = height;
-                    at_edge = true;
+                    at_edgey = true;
                 }
                 else
                     brcornery = sprite_position[2] + (int)Math.Floor(sheight / 2) + 1;
@@ -363,21 +364,22 @@ namespace ArcadeRPG
 
                     int xdisp = 0;
                     int ydisp = 0;
-                    if (!at_edge)
+                    if (!at_edgex)
                     {
-                        xdisp = sprite_position[1];
-                        ydisp = sprite_position[3];
+                        xdisp = sprite_position[1] + tile_size;
+                    }
+                    if (!at_edgey)
+                    {
+                        ydisp = sprite_position[3] + tile_size;
                     }
                     if (!(a * tile_size >= width * tile_size || a * tile_size < 0 || b * tile_size >= height * tile_size || b * tile_size < 0))
                     {
                         temp_texture = map[1].getTile(a, b).getTexture();//get texture of this tile
-                        if (temp_texture != -1)
-                        {
-                            sourceR = new Rectangle((temp_texture % (texture_layers[1].Width / 32)) * tile_size * 2, 0, tile_size * 2, tile_size * 2);
-                            drawR = new Rectangle((countx * tile_size * 2) - (xdisp * 2), (county * tile_size * 2) - (ydisp * 2), (tile_size * 2), (tile_size * 2));
-                            if (drawR.Left < 801 && drawR.Right > -1)
-                                tile_batch.Draw(texture_layers[1], drawR, sourceR, new Color(200, 200, 200, 60));
-                        }
+
+                        sourceR = new Rectangle((temp_texture % (texture_layers[1].Width / 32)) * tile_size , (temp_texture % (texture_layers[1].Width / 32)) * tile_size, tile_size , tile_size );
+                        drawR = new Rectangle((countx * 2 * tile_size) - (xdisp*2), (county *2* tile_size) - (ydisp*2), tile_size, tile_size);
+                        if (drawR.Left < (801-16) && drawR.Right > -17)
+                            tile_batch.Draw(texture_layers[1], drawR, sourceR, new Color(200, 200, 200, 60));
                     }
                     county++;
                 }
