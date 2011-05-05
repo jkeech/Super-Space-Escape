@@ -311,11 +311,7 @@ namespace ArcadeRPG
             int brcornery;//bottom right corner, ending off screen
             double swidth = 800 / tile_size;//screen width, based on tiles
             double sheight = 480 / tile_size;//screen width, based on tiles
-<<<<<<< HEAD
             if (sprite_x < 400 - (tile_size / 2) )
-=======
-            if (sprite_x < 400 - (tile_size / 2)-16)
->>>>>>> upstream/master
             {
                 tlcornerx = 0;
                 brcornerx = (int)swidth + 1;
@@ -325,7 +321,7 @@ namespace ArcadeRPG
             {
                 tlcornerx = sprite_position[0] - (int)Math.Floor(swidth / 2) - 1;
 
-                if (sprite_x > (width * tile_size) - 400 - (tile_size / 2) - 16)
+                if (sprite_x > (width * tile_size) - 400 - (tile_size / 2))
                 {
                     tlcornerx = width - (int)swidth;
                     brcornerx = width;
@@ -335,11 +331,7 @@ namespace ArcadeRPG
                     brcornerx = sprite_position[0] + (int)Math.Floor(swidth / 2) + 1;
             }
 
-<<<<<<< HEAD
             if (sprite_y < 240 - (tile_size / 2) )
-=======
-            if (sprite_y < 240 - (tile_size / 2) - 16)
->>>>>>> upstream/master
             {
                 tlcornery = 0;
                 brcornery = (int)sheight + 1;
@@ -349,11 +341,7 @@ namespace ArcadeRPG
             {
                 tlcornery = sprite_position[2] - (int)Math.Floor(sheight / 2) - 1;
 
-<<<<<<< HEAD
                 if (sprite_y > (height * tile_size) - 240 - (tile_size / 2) )
-=======
-                if (sprite_y > (height * tile_size) - 240 - (tile_size / 2) - 16)
->>>>>>> upstream/master
                 {
                     tlcornery = height - (int)sheight;
                     brcornery = height;
@@ -387,21 +375,11 @@ namespace ArcadeRPG
                     if (!(a * tile_size >= width * tile_size || a * tile_size < 0 || b * tile_size >= height * tile_size || b * tile_size < 0))
                     {
                         temp_texture = map[1].getTile(a, b).getTexture();//get texture of this tile
-<<<<<<< HEAD
 
                         sourceR = new Rectangle((temp_texture % (texture_layers[1].Width / 32)) * tile_size , (temp_texture % (texture_layers[1].Width / 32)) * tile_size, tile_size , tile_size );
                         drawR = new Rectangle((countx * 2 * tile_size) - (xdisp*2), (county *2* tile_size) - (ydisp*2), tile_size, tile_size);
                         if (drawR.Left < (801-16) && drawR.Right > -17)
                             tile_batch.Draw(texture_layers[1], drawR, sourceR, new Color(200, 200, 200, 60));
-=======
-                        if (temp_texture != -1)
-                        {
-                            sourceR = new Rectangle((temp_texture % (texture_layers[1].Width / 32)) * tile_size * 2, 0, tile_size * 2, tile_size * 2);
-                            drawR = new Rectangle((countx * tile_size * 2) - (xdisp * 2), (county * tile_size * 2) - (ydisp * 2), (tile_size * 2), (tile_size * 2));
-                            if (drawR.Left < 801 && drawR.Right > -1)
-                                tile_batch.Draw(texture_layers[1], drawR, sourceR, new Color(200, 200, 200, 60));
-                        }
->>>>>>> upstream/master
                     }
                     county++;
                 }
