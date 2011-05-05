@@ -1,2 +1,0 @@
-H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPGContent\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
-\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPGContent\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
