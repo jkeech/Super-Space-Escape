@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\sprite.xnb</Output>
-      <Time>2011-04-19T19:10:29.4378681-05:00</Time>
+      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\sprite.xnb</Output>
+      <Time>2011-05-03T17:23:49.056671-05:00</Time>
     </Item>
     <Item>
       <Source>clouds.png</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\clouds.xnb</Output>
-      <Time>2011-04-07T09:36:23.2923561-05:00</Time>
+      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\clouds.xnb</Output>
+      <Time>2011-05-03T17:23:48.613115-05:00</Time>
     </Item>
     <Item>
       <Source>tiles.png</Source>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\tiles.xnb</Output>
-      <Time>2011-04-07T09:36:23.5733561-05:00</Time>
+      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\tiles.xnb</Output>
+      <Time>2011-05-03T17:23:49.080648-05:00</Time>
     </Item>
     <Item>
       <Source>objects_cropped.png</Source>
@@ -34,8 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\objects_cropped.xnb</Output>
-      <Time>2011-04-19T10:49:55.5478155-05:00</Time>
+      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\objects_cropped.xnb</Output>
+      <Time>2011-05-03T17:23:48.979748-05:00</Time>
     </Item>
     <Item>
       <Source>player_gun.png</Source>
@@ -43,8 +43,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_gun.xnb</Output>
-      <Time>2011-04-22T12:25:41.555517-05:00</Time>
+      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_gun.xnb</Output>
+      <Time>2011-05-03T17:23:48.989738-05:00</Time>
     </Item>
     <Item>
       <Source>player_no.png</Source>
@@ -52,8 +52,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_no.xnb</Output>
-      <Time>2011-04-22T12:25:50.082981-05:00</Time>
+      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_no.xnb</Output>
+      <Time>2011-05-03T17:23:49.000727-05:00</Time>
     </Item>
     <Item>
       <Source>player_sword.png</Source>
@@ -61,8 +61,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_sword.xnb</Output>
-      <Time>2011-04-22T12:26:04.640409-05:00</Time>
+      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_sword.xnb</Output>
+      <Time>2011-05-03T17:23:49.011718-05:00</Time>
     </Item>
     <Item>
       <Source>player_sword_attack.png</Source>
@@ -70,8 +70,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_sword_attack.xnb</Output>
-      <Time>2011-04-22T12:25:57.43762-05:00</Time>
+      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_sword_attack.xnb</Output>
+      <Time>2011-05-03T17:23:49.021707-05:00</Time>
     </Item>
     <Item>
       <Source>objects1.png</Source>
@@ -79,8 +79,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\objects1.xnb</Output>
-      <Time>2011-04-21T10:20:58-05:00</Time>
+      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\objects1.xnb</Output>
+      <Time>2011-05-03T17:23:48.968759-05:00</Time>
     </Item>
     <Item>
       <Source>grunt.png</Source>
@@ -88,8 +88,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\grunt.xnb</Output>
-      <Time>2011-04-26T16:47:13.986709-05:00</Time>
+      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\grunt.xnb</Output>
+      <Time>2011-05-03T17:23:48.668062-05:00</Time>
     </Item>
     <Item>
       <Source>bullet.png</Source>
@@ -97,8 +97,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\bullet.xnb</Output>
-      <Time>2011-04-17T21:27:33.7110133-05:00</Time>
+      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\bullet.xnb</Output>
+      <Time>2011-05-03T17:23:48.600129-05:00</Time>
     </Item>
     <Item>
       <Source>fire.png</Source>
@@ -106,8 +106,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\fire.xnb</Output>
-      <Time>2011-04-17T21:35:09.0760133-05:00</Time>
+      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\fire.xnb</Output>
+      <Time>2011-05-03T17:23:48.633099-05:00</Time>
     </Item>
     <Item>
       <Source>background_cropped.png</Source>
@@ -115,8 +115,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\background_cropped.xnb</Output>
-      <Time>2011-04-19T10:49:59.1836327-05:00</Time>
+      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\background_cropped.xnb</Output>
+      <Time>2011-05-03T17:23:48.566162-05:00</Time>
     </Item>
     <Item>
       <Source>foreground_cropped.png</Source>
@@ -124,8 +124,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\foreground_cropped.xnb</Output>
-      <Time>2011-04-19T10:49:59.2026213-05:00</Time>
+      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\foreground_cropped.xnb</Output>
+      <Time>2011-05-03T17:23:48.657071-05:00</Time>
     </Item>
     <Item>
       <Source>expl.png</Source>
@@ -133,8 +133,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\expl.xnb</Output>
-      <Time>2011-04-21T09:43:32.427871-05:00</Time>
+      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\expl.xnb</Output>
+      <Time>2011-05-03T17:23:48.624104-05:00</Time>
     </Item>
     <Item>
       <Source>beetles.png</Source>
@@ -142,8 +142,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\beetles.xnb</Output>
-      <Time>2011-04-26T16:46:36.347386-05:00</Time>
+      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\beetles.xnb</Output>
+      <Time>2011-05-03T17:23:48.57815-05:00</Time>
     </Item>
     <Item>
       <Source>berserker.png</Source>
@@ -151,8 +151,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\berserker.xnb</Output>
-      <Time>2011-04-26T16:46:58.460251-05:00</Time>
+      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\berserker.xnb</Output>
+      <Time>2011-05-03T17:23:48.589141-05:00</Time>
     </Item>
     <Item>
       <Source>arrowdown.png</Source>
@@ -160,8 +160,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowdown.xnb</Output>
-      <Time>2011-04-07T10:03:46.5873561-05:00</Time>
+      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowdown.xnb</Output>
+      <Time>2011-05-03T17:23:48.435293-05:00</Time>
     </Item>
     <Item>
       <Source>arrowleft.png</Source>
@@ -169,8 +169,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowleft.xnb</Output>
-      <Time>2011-04-07T10:03:46.6233561-05:00</Time>
+      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowleft.xnb</Output>
+      <Time>2011-05-03T17:23:48.488246-05:00</Time>
     </Item>
     <Item>
       <Source>arrowright.png</Source>
@@ -178,8 +178,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowright.xnb</Output>
-      <Time>2011-04-07T10:03:46.6623561-05:00</Time>
+      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowright.xnb</Output>
+      <Time>2011-05-03T17:23:48.515213-05:00</Time>
     </Item>
     <Item>
       <Source>arrowup.png</Source>
@@ -187,8 +187,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowup.xnb</Output>
-      <Time>2011-04-07T10:03:46.7413561-05:00</Time>
+      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowup.xnb</Output>
+      <Time>2011-05-03T17:23:48.53819-05:00</Time>
     </Item>
     <Item>
       <Source>shoot.wav</Source>
@@ -196,8 +196,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\shoot.xnb</Output>
-      <Time>2011-04-17T22:13:12.439714-05:00</Time>
+      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\shoot.xnb</Output>
+      <Time>2011-05-03T17:23:49.045682-05:00</Time>
     </Item>
     <Item>
       <Source>sword_swing.wav</Source>
@@ -205,8 +205,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\sword_swing.xnb</Output>
-      <Time>2011-04-22T13:41:56-05:00</Time>
+      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\sword_swing.xnb</Output>
+      <Time>2011-05-03T17:23:49.069659-05:00</Time>
     </Item>
     <Item>
       <Source>hurt.wav</Source>
@@ -214,8 +214,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\hurt.xnb</Output>
-      <Time>2011-04-17T23:07:11.919602-05:00</Time>
+      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\hurt.xnb</Output>
+      <Time>2011-05-03T17:23:48.680051-05:00</Time>
     </Item>
     <Item>
       <Source>01AttackPanda1.wav</Source>
@@ -223,8 +223,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\01AttackPanda1.xnb</Output>
-      <Time>2011-04-19T10:41:15.5831298-05:00</Time>
+      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\01AttackPanda1.xnb</Output>
+      <Time>2011-05-03T17:23:48.338391-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -232,10 +232,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPGContent\</RootDirectory>
-      <LoggerRootDirectory>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\</LoggerRootDirectory>
-      <IntermediateDirectory>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPGContent\obj\Windows Phone\Debug\</IntermediateDirectory>
-      <OutputDirectory>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\</OutputDirectory>
+      <RootDirectory>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPGContent\</RootDirectory>
+      <LoggerRootDirectory>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\</LoggerRootDirectory>
+      <IntermediateDirectory>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPGContent\obj\Windows Phone\Debug\</IntermediateDirectory>
+      <OutputDirectory>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -264,7 +264,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2011-03-21T10:49:38.7602349-05:00</Value>
+        <Value>2011-03-21T10:55:30.7668241-05:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

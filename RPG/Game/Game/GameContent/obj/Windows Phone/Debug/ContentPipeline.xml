@@ -7,7 +7,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\pic.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\pic.xnb</Output>
       <Time>2011-05-03T14:13:16.3377396-05:00</Time>
     </Item>
     <Item>
@@ -16,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\arrowdown.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\arrowdown.xnb</Output>
       <Time>2011-05-03T14:13:15.6201626-05:00</Time>
     </Item>
     <Item>
@@ -25,7 +25,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\arrowleft.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\arrowleft.xnb</Output>
       <Time>2011-05-03T14:13:15.6357621-05:00</Time>
     </Item>
     <Item>
@@ -34,7 +34,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\arrowright.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\arrowright.xnb</Output>
       <Time>2011-05-03T14:13:15.6357621-05:00</Time>
     </Item>
     <Item>
@@ -43,7 +43,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\arrowup.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\arrowup.xnb</Output>
       <Time>2011-05-03T14:13:15.6513616-05:00</Time>
     </Item>
     <Item>
@@ -52,7 +52,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\backpack.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\backpack.xnb</Output>
       <Time>2011-05-03T14:13:15.6669611-05:00</Time>
     </Item>
     <Item>
@@ -61,7 +61,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\gun.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\gun.xnb</Output>
       <Time>2011-05-03T14:13:16.3221401-05:00</Time>
     </Item>
     <Item>
@@ -70,7 +70,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\healthbar.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\healthbar.xnb</Output>
       <Time>2011-05-03T14:13:16.3377396-05:00</Time>
     </Item>
     <Item>
@@ -79,7 +79,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Menus\Welcome.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Menus\Welcome.xnb</Output>
       <Time>2011-05-03T14:13:15.4017696-05:00</Time>
     </Item>
     <Item>
@@ -88,7 +88,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Menus\OutOfTime.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Menus\OutOfTime.xnb</Output>
       <Time>2011-05-03T14:13:15.1677771-05:00</Time>
     </Item>
     <Item>
@@ -97,7 +97,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Menus\Instructions.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Menus\Instructions.xnb</Output>
       <Time>2011-05-03T14:13:14.3566031-05:00</Time>
     </Item>
     <Item>
@@ -106,7 +106,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\dummyitem.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Pictures\dummyitem.xnb</Output>
       <Time>2011-05-03T14:13:16.2909411-05:00</Time>
     </Item>
     <Item>
@@ -115,7 +115,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Menus\Inventory.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Menus\Inventory.xnb</Output>
       <Time>2011-05-03T14:13:15.0741801-05:00</Time>
     </Item>
     <Item>
@@ -124,7 +124,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Menus\Instructions2.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Menus\Instructions2.xnb</Output>
       <Time>2011-05-03T14:13:14.8557871-05:00</Time>
     </Item>
     <Item>
@@ -133,7 +133,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\boo_laugh.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\boo_laugh.xnb</Output>
       <Time>2011-05-03T14:13:13.6702251-05:00</Time>
     </Item>
     <Item>
@@ -142,7 +142,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\enemy_down.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\enemy_down.xnb</Output>
       <Time>2011-05-03T14:13:13.6858246-05:00</Time>
     </Item>
     <Item>
@@ -151,7 +151,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_dies.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_dies.xnb</Output>
       <Time>2011-05-03T14:13:13.7014241-05:00</Time>
     </Item>
     <Item>
@@ -160,7 +160,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_enemy_contact.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_enemy_contact.xnb</Output>
       <Time>2011-05-03T14:13:13.7170236-05:00</Time>
     </Item>
     <Item>
@@ -169,7 +169,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_gets_coin.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_gets_coin.xnb</Output>
       <Time>2011-05-03T14:13:13.7326231-05:00</Time>
     </Item>
     <Item>
@@ -178,7 +178,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_got_coin.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_got_coin.xnb</Output>
       <Time>2011-05-03T14:13:13.7482226-05:00</Time>
     </Item>
     <Item>
@@ -187,7 +187,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_got_it.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_got_it.xnb</Output>
       <Time>2011-05-03T14:13:13.8106206-05:00</Time>
     </Item>
     <Item>
@@ -196,7 +196,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_got_key.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_got_key.xnb</Output>
       <Time>2011-05-03T14:13:13.8418196-05:00</Time>
     </Item>
     <Item>
@@ -205,7 +205,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_jumps.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_jumps.xnb</Output>
       <Time>2011-05-03T14:13:13.8574191-05:00</Time>
     </Item>
     <Item>
@@ -214,7 +214,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_new_level.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_new_level.xnb</Output>
       <Time>2011-05-03T14:13:13.8730186-05:00</Time>
     </Item>
     <Item>
@@ -223,7 +223,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_ow_wow.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_ow_wow.xnb</Output>
       <Time>2011-05-03T14:13:13.8886181-05:00</Time>
     </Item>
     <Item>
@@ -232,7 +232,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_power_up.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_power_up.xnb</Output>
       <Time>2011-05-03T14:13:13.9666156-05:00</Time>
     </Item>
     <Item>
@@ -241,7 +241,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_smashes_brick.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_smashes_brick.xnb</Output>
       <Time>2011-05-03T14:13:13.9978146-05:00</Time>
     </Item>
     <Item>
@@ -250,7 +250,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_takes_damage.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_takes_damage.xnb</Output>
       <Time>2011-05-03T14:13:14.0134141-05:00</Time>
     </Item>
     <Item>
@@ -259,7 +259,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_thank_you_for_playing_game.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_thank_you_for_playing_game.xnb</Output>
       <Time>2011-05-03T14:13:14.0290136-05:00</Time>
     </Item>
     <Item>
@@ -268,7 +268,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_throwing_fireball.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_throwing_fireball.xnb</Output>
       <Time>2011-05-03T14:13:14.0446131-05:00</Time>
     </Item>
     <Item>
@@ -277,7 +277,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_ya_haha.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_ya_haha.xnb</Output>
       <Time>2011-05-03T14:13:14.0758121-05:00</Time>
     </Item>
     <Item>
@@ -286,7 +286,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_yipee.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\mario_yipee.xnb</Output>
       <Time>2011-05-03T14:13:14.0914116-05:00</Time>
     </Item>
     <Item>
@@ -295,7 +295,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\power_star.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\power_star.xnb</Output>
       <Time>2011-05-03T14:13:14.1070111-05:00</Time>
     </Item>
     <Item>
@@ -304,7 +304,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\thunder.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\thunder.xnb</Output>
       <Time>2011-05-03T14:13:14.1226106-05:00</Time>
     </Item>
     <Item>
@@ -313,7 +313,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\yoshi_spitting.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Audio\Waves\yoshi_spitting.xnb</Output>
       <Time>2011-05-03T14:13:14.1382101-05:00</Time>
     </Item>
     <Item>
@@ -322,7 +322,7 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Fonts\StatsFont.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Fonts\StatsFont.xnb</Output>
       <Time>2011-05-03T14:13:14.1694091-05:00</Time>
     </Item>
     <Item>
@@ -331,7 +331,7 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Fonts\ItemFont.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Fonts\ItemFont.xnb</Output>
       <Time>2011-05-03T14:13:14.1694091-05:00</Time>
     </Item>
     <Item>
@@ -340,7 +340,7 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\Fonts\TimeExpired.xnb</Output>
+      <Output>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\Fonts\TimeExpired.xnb</Output>
       <Time>2011-05-03T14:13:14.1850086-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
@@ -349,10 +349,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\GameContent\</RootDirectory>
-      <LoggerRootDirectory>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\</LoggerRootDirectory>
-      <IntermediateDirectory>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\GameContent\obj\Windows Phone\Debug\</IntermediateDirectory>
-      <OutputDirectory>\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\Game\bin\Windows Phone\Debug\Content\</OutputDirectory>
+      <RootDirectory>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\GameContent\</RootDirectory>
+      <LoggerRootDirectory>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\</LoggerRootDirectory>
+      <IntermediateDirectory>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\GameContent\obj\Windows Phone\Debug\</IntermediateDirectory>
+      <OutputDirectory>H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\Game\bin\Windows Phone\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -381,7 +381,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2011-03-21T10:55:30.7668241-05:00</Value>
+        <Value>2011-04-14T05:38:35.3118628-05:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

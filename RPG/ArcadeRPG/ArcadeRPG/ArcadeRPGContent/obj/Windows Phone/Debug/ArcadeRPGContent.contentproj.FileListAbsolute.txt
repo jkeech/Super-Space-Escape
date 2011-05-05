@@ -1,2 +1,3 @@
 H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPGContent\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
 \\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPGContent\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
+\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPGContent\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
