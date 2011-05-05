@@ -186,6 +186,7 @@ namespace ArcadeRPG
 
         void idle(Enemy monster)
         {
+            //THIS IS FOR DEBUG PURPOSES
             PathFind pf = new PathFind(game_state);
             int mons_tile_x = (monster.getX() + (monster.getWidth() / 2)) / game_state.tile_engine.getTileSize();
             int mons_tiel_y = (monster.getY() + (monster.getHeight())) / game_state.tile_engine.getTileSize();

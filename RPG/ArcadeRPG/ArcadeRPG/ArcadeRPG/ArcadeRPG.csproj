@@ -85,13 +85,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Backpack.cs" />
     <Compile Include="BackRender.cs" />
     <Compile Include="BulletEngine.cs" />
     <Compile Include="Character.cs" />
     <Compile Include="GameEngine.cs" />
     <Compile Include="EffectsEngine.cs" />
+    <Compile Include="GameOver.cs" />
     <Compile Include="GameState.cs" />
     <Compile Include="CollisionEngine.cs" />
+    <Compile Include="Instructions.cs" />
+    <Compile Include="Instructions2.cs" />
+    <Compile Include="Introduction.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="MonsterEngine.cs" />
     <Compile Include="ObjectManager.cs" />
@@ -102,6 +107,7 @@
     <Compile Include="TileEngine.cs" />
     <Compile Include="TileLayer.cs" />
     <Compile Include="TileLookup.cs" />
+    <Compile Include="TimeExpired.cs" />
     <None Include="Properties\AppManifest.xml">
       <XnaPlatformSpecific>true</XnaPlatformSpecific>
     </None>

@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>sprite.png</Source>
+      <Name>sprite</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>Z:\Github\proj\Super-Space-Escape\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\sprite.xnb</Output>
+      <Time>2011-05-05T16:44:16.765672-05:00</Time>
+    </Item>
+    <Item>
+      <Source>clouds.png</Source>
+      <Name>clouds</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>Z:\Github\proj\Super-Space-Escape\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\clouds.xnb</Output>
+      <Time>2011-05-05T16:44:16.379061-05:00</Time>
+    </Item>
+    <Item>
+      <Source>tiles.png</Source>
+      <Name>tiles</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>Z:\Github\proj\Super-Space-Escape\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\tiles.xnb</Output>
+      <Time>2011-05-05T16:44:16.78865-05:00</Time>
+    </Item>
+    <Item>
+      <Source>objects_cropped.png</Source>
+      <Name>objects_cropped</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>Z:\Github\proj\Super-Space-Escape\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\objects_cropped.xnb</Output>
+      <Time>2011-05-05T16:44:16.683759-05:00</Time>
+    </Item>
+    <Item>
+      <Source>player_gun.png</Source>
+      <Name>player_gun</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>Z:\Github\proj\Super-Space-Escape\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_gun.xnb</Output>
+      <Time>2011-05-05T16:44:16.694746-05:00</Time>
+    </Item>
+    <Item>
+      <Source>player_no.png</Source>
+      <Name>player_no</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>Z:\Github\proj\Super-Space-Escape\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_no.xnb</Output>
+      <Time>2011-05-05T16:44:16.704736-05:00</Time>
+    </Item>
+    <Item>
+      <Source>player_sword.png</Source>
+      <Name>player_sword</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>Z:\Github\proj\Super-Space-Escape\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_sword.xnb</Output>
+      <Time>2011-05-05T16:44:16.715723-05:00</Time>
+    </Item>
+    <Item>
+      <Source>player_sword_attack.png</Source>
+      <Name>player_sword_attack</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>Z:\Github\proj\Super-Space-Escape\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_sword_attack.xnb</Output>
+      <Time>2011-05-05T16:44:16.726712-05:00</Time>
+    </Item>
+    <Item>
+      <Source>objects1.png</Source>
+      <Name>objects1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>Z:\Github\proj\Super-Space-Escape\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\objects1.xnb</Output>
+      <Time>2011-05-05T16:44:16.674762-05:00</Time>
+    </Item>
+    <Item>
+      <Source>grunt.png</Source>
+      <Name>grunt</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>Z:\Github\proj\Super-Space-Escape\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\grunt.xnb</Output>
+      <Time>2011-05-05T16:44:16.423015-05:00</Time>
+    </Item>
+    <Item>
+      <Source>bullet.png</Source>
+      <Name>bullet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>Z:\Github\proj\Super-Space-Escape\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\bullet.xnb</Output>
+      <Time>2011-05-05T16:44:16.367072-05:00</Time>
+    </Item>
+    <Item>
+      <Source>fire.png</Source>
+      <Name>fire</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>Z:\Github\proj\Super-Space-Escape\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\fire.xnb</Output>
+      <Time>2011-05-05T16:44:16.400041-05:00</Time>
+    </Item>
+    <Item>
+      <Source>background_cropped.png</Source>
+      <Name>background_cropped</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>Z:\Github\proj\Super-Space-Escape\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\background_cropped.xnb</Output>
+      <Time>2011-05-05T16:44:16.331112-05:00</Time>
+    </Item>
+    <Item>
+      <Source>foreground_cropped.png</Source>
+      <Name>foreground_cropped</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>Z:\Github\proj\Super-Space-Escape\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\foreground_cropped.xnb</Output>
+      <Time>2011-05-05T16:44:16.412029-05:00</Time>
+    </Item>
+    <Item>
+      <Source>expl.png</Source>
+      <Name>expl</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>Z:\Github\proj\Super-Space-Escape\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\expl.xnb</Output>
+      <Time>2011-05-05T16:44:16.389054-05:00</Time>
+    </Item>
+    <Item>
+      <Source>beetles.png</Source>
+      <Name>beetles</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>Z:\Github\proj\Super-Space-Escape\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\beetles.xnb</Output>
+      <Time>2011-05-05T16:44:16.342096-05:00</Time>
+    </Item>
+    <Item>
+      <Source>berserker.png</Source>
+      <Name>berserker</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>Z:\Github\proj\Super-Space-Escape\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\berserker.xnb</Output>
+      <Time>2011-05-05T16:44:16.356085-05:00</Time>
+    </Item>
+    <Item>
+      <Source>arrowdown.png</Source>
+      <Name>arrowdown</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>Z:\Github\proj\Super-Space-Escape\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowdown.xnb</Output>
+      <Time>2011-05-05T16:44:16.291149-05:00</Time>
+    </Item>
+    <Item>
+      <Source>arrowleft.png</Source>
+      <Name>arrowleft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>Z:\Github\proj\Super-Space-Escape\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowleft.xnb</Output>
+      <Time>2011-05-05T16:44:16.300141-05:00</Time>
+    </Item>
+    <Item>
+      <Source>arrowright.png</Source>
+      <Name>arrowright</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>Z:\Github\proj\Super-Space-Escape\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowright.xnb</Output>
+      <Time>2011-05-05T16:44:16.310129-05:00</Time>
+    </Item>
+    <Item>
+      <Source>arrowup.png</Source>
+      <Name>arrowup</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>Z:\Github\proj\Super-Space-Escape\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowup.xnb</Output>
+      <Time>2011-05-05T16:44:16.320123-05:00</Time>
+    </Item>
+    <Item>
+      <Source>shoot.wav</Source>
+      <Name>shoot</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>Z:\Github\proj\Super-Space-Escape\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\shoot.xnb</Output>
+      <Time>2011-05-05T16:44:16.751686-05:00</Time>
+    </Item>
+    <Item>
+      <Source>sword_swing.wav</Source>
+      <Name>sword_swing</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>Z:\Github\proj\Super-Space-Escape\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\sword_swing.xnb</Output>
+      <Time>2011-05-05T16:44:16.777663-05:00</Time>
+    </Item>
+    <Item>
+      <Source>hurt.wav</Source>
+      <Name>hurt</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>Z:\Github\proj\Super-Space-Escape\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\hurt.xnb</Output>
+      <Time>2011-05-05T16:44:16.436004-05:00</Time>
+    </Item>
+    <Item>
+      <Source>01AttackPanda1.wav</Source>
+      <Name>01AttackPanda1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>Z:\Github\proj\Super-Space-Escape\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\01AttackPanda1.xnb</Output>
+      <Time>2011-05-05T16:44:16.249188-05:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>WindowsPhone</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>Z:\Github\proj\Super-Space-Escape\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPGContent\</RootDirectory>
+      <LoggerRootDirectory>Z:\Github\proj\Super-Space-Escape\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\</LoggerRootDirectory>
+      <IntermediateDirectory>Z:\Github\proj\Super-Space-Escape\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPGContent\obj\Windows Phone\Debug\</IntermediateDirectory>
+      <OutputDirectory>Z:\Github\proj\Super-Space-Escape\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T12:41:18-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T12:41:18-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2011-03-21T10:50:09.9231505-05:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>
