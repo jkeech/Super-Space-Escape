@@ -29,9 +29,11 @@ namespace ArcadeRPG
         PlayerDir dir;
         public ColToken col_tok;
         public bool moving;
+        public bool hurt;
         int attack;
         int speed;
         int health;
+        int max_health;
         /// <summary>
         /// Constructor for a Player object
         /// </summary>
@@ -46,7 +48,8 @@ namespace ArcadeRPG
             last_y = y = yLoc;
             width = pWidth;
             height = pHeight;
-            health = 100;
+
+            max_health = health = 100;
             speed = 3;
             attack = 0;
             activeWeapon = weaponType.NONE;
@@ -55,6 +58,7 @@ namespace ArcadeRPG
             moving = false;
             col_tok = null;
             inventory = new List<Item>();
+            hurt = false;
         }
 
         /// <summary>
@@ -93,6 +97,16 @@ namespace ArcadeRPG
         public int getSpeed()
         {
             return speed;
+        }
+
+        public int getHealth()
+        {
+            return health;
+        }
+
+        public int getMaxHealth()
+        {
+            return max_health;
         }
 
         public weaponType getWeapon()
@@ -140,7 +154,10 @@ namespace ArcadeRPG
 
         }
 
-
+        public void setHealth(int _health)
+        {
+            health = _health;
+        }
 
         public void setDirection(PlayerDir _dir)
         {
