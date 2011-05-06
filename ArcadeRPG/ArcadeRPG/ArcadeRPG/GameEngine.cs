@@ -95,14 +95,13 @@ namespace ArcadeRPG
 
 
         //***************************MISC*********************//
-        public TimeSpan currTime = TimeSpan.FromSeconds(60.0); // grant the player a certain time per round
+        public TimeSpan currTime = TimeSpan.FromSeconds(120.0); // grant the player a certain time per round
         // currTime will be 90 and count down each second, checking against 0 each second,  for each level
 
         Boolean timeOut; // alerts program when timer for roundtime has expired
         bool button_release = false;
         Vector2 imageOffset = new Vector2(0, 0); //origin
         //*****************************************************//
-
 
 
         public GameEngine()
@@ -418,7 +417,7 @@ namespace ArcadeRPG
 
             currTime -= gameTime.ElapsedGameTime; // start timer on actual game
 
-            if ((currTime.Seconds <= 0) && (currTime.Milliseconds <= 0))
+            if ((currTime.Minutes <= 0) && (currTime.Seconds <= 0) && (currTime.Milliseconds <= 0))
             {
                 timeOut = true; // if round time has run out, display the time expired screen (setting this bool to true will flag the menu later)
             }
@@ -579,7 +578,7 @@ namespace ArcadeRPG
                 else
                 {
                     spriteBatch.DrawString(displayFont, timeLeft, timeLeftPos, Color.Black);
-                    spriteBatch.DrawString(displayFont, currTime.Seconds.ToString(), timePos, Color.Black);
+                    spriteBatch.DrawString(displayFont, (currTime.Minutes*60+currTime.Seconds).ToString(), timePos, Color.Black);
                 }
 
             } // end backpack button NOT pressed if
