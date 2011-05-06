@@ -42,6 +42,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="levels\Level_2%28coll%29.lvl">
+      <Name>Level_2%28coll%29</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Compile Include="sprite.png">
       <Name>sprite</Name>
       <Importer>TextureImporter</Importer>
