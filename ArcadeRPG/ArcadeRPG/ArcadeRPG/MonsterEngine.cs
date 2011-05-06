@@ -33,14 +33,16 @@ namespace ArcadeRPG
         {
             //Load grunt!
             //decision_matrix[(int)enemyType.GRUNT, (int)actionDecision.ADVANCE, (int)actionFactor.DP] = .3f; //Wants to advance towards player
-            decision_matrix[(int)enemyType.GRUNT, (int)actionDecision.FIRE, (int)actionFactor.AL] = .4f; //Wants to shoot player
-            decision_matrix[(int)enemyType.GRUNT, (int)actionDecision.ALIGN, (int)actionFactor.DP] = .4f; //Wants to shoot player
+            //decision_matrix[(int)enemyType.GRUNT, (int)actionDecision.FIRE, (int)actionFactor.AL] = .4f; //Wants to shoot player
+            //decision_matrix[(int)enemyType.GRUNT, (int)actionDecision.ALIGN, (int)actionFactor.DP] = .4f; //Wants to align with player
+            decision_matrix[(int)enemyType.GRUNT, (int)actionDecision.FLEE, (int)actionFactor.HL] = .7f;//wants to flee from player
 
             //Load Berserker
-            decision_matrix[(int)enemyType.BERSERKER, (int)actionDecision.ADVANCE, (int)actionFactor.DP] = .7f; //Wants to advance towards player
+            //decision_matrix[(int)enemyType.BERSERKER, (int)actionDecision.ADVANCE, (int)actionFactor.DP] = .7f; //Wants to advance towards player
+            decision_matrix[(int)enemyType.BERSERKER, (int)actionDecision.FLEE, (int)actionFactor.HL] = .7f; //Wants to advance towards player
 
             //Load Beetle
-            decision_matrix[(int)enemyType.BEETLE, (int)actionDecision.ADVANCE, (int)actionFactor.DP] = .4f; //Wants to advance towards player
+            //decision_matrix[(int)enemyType.BEETLE, (int)actionDecision.ADVANCE, (int)actionFactor.DP] = .4f; //Wants to advance towards player
             decision_matrix[(int)enemyType.BEETLE, (int)actionDecision.FLEE, (int)actionFactor.HL] = .7f; //Wants to run towards player
         }
 
@@ -120,26 +122,55 @@ namespace ArcadeRPG
         //Functions to calculate actions
         void flee(Enemy monster)
         {
-            /*
+
+            PathFind pf = new PathFind(game_state);
             int dist_x = game_state.local_player.getX() - monster.getX();
             int dist_y = game_state.local_player.getY() - monster.getY();
-            
-            if(Math.Abs(dist_x) < Math.Abs(dist_y)) {
-                //Flee in the X direction
-                if(dist_x > 0) {
-                    monster.setX(monster.getX() - monster.getSpeed());
-                } else {
-                    monster.setX(monster.getX() + monster.getSpeed());
+            int mons_tile_x = (monster.getX() + (monster.getWidth() / 2)) / game_state.tile_engine.getTileSize();
+            int mons_tile_y = (monster.getY() + (monster.getHeight() / 2)) / game_state.tile_engine.getTileSize();
+            int pl_tile_x = game_state.local_player.getX() / game_state.tile_engine.getTileSize();
+            int pl_tile_y = game_state.local_player.getY() / game_state.tile_engine.getTileSize();
+            Random r = new Random();
+            int mons_tile_xr = mons_tile_x;
+            int mons_tile_yr = mons_tile_y;
+            //int pl_tile_yr = pl_tile_y + r.Next(-5, 5);
+            //int pl_tile_xr = pl_tile_x + r.Next(-5, 5);
+            if (Math.Abs(dist_x) < Math.Abs(dist_y))
+            {
+                //Flee in the Y direction from the player
+                if (dist_y <= 0)
+                {
+                    mons_tile_yr += r.Next(-5, -10);
+                    mons_tile_xr += r.Next(-10, 10);
+                    monster.setPath(pf.FindPath(mons_tile_x, mons_tile_y, mons_tile_xr, mons_tile_yr));
                 }
-            } else {
-                //Flee in the Y direction
-                if(dist_y > 0) {
-                    monster.setY(monster.getY() - monster.getSpeed());
-                } else {
-                    monster.setY(monster.getY() + monster.getSpeed());
+                else
+                {
+                    mons_tile_yr += r.Next(5, 10);
+                    mons_tile_xr += r.Next(-10, 10);
+                    monster.setPath(pf.FindPath(mons_tile_x, mons_tile_y, mons_tile_xr, mons_tile_yr));
                 }
             }
-             * */
+            else
+            {
+                //Flee in the x direction from the player
+                if (dist_x <= 0)
+                {
+                    mons_tile_yr += r.Next(-10, 10);
+                    mons_tile_xr += r.Next(5, 10);
+                    monster.setPath(pf.FindPath(mons_tile_x, mons_tile_y, mons_tile_xr, mons_tile_yr));
+                }
+                else
+                {
+                    mons_tile_yr += r.Next(-10, 10);
+                    mons_tile_xr += r.Next(5, 10);
+                    monster.setPath(pf.FindPath(mons_tile_x, mons_tile_y, mons_tile_xr, mons_tile_yr));
+                }
+                monster.setPath(pf.FindPath(mons_tile_x, mons_tile_y, mons_tile_xr, mons_tile_yr));
+            }
+
+            //monster.setPath(pf.FindPath(mons_tile_x, mons_tile_y, mons_tile_xr, mons_tile_yr));
+            
         }
 
         void align(Enemy monster)
@@ -182,10 +213,19 @@ namespace ArcadeRPG
         void idle(Enemy monster)
         {
             //THIS IS FOR DEBUG PURPOSES
+            //PathFind pf = new PathFind(game_state);
+            //int mons_tile_x = (monster.getX() + (monster.getWidth() / 2)) / game_state.tile_engine.getTileSize();
+            //int mons_tiel_y = (monster.getY() + (monster.getHeight())) / game_state.tile_engine.getTileSize();
+            //monster.setPath(pf.FindPath(mons_tile_x, mons_tiel_y, 1, 1));
+
             PathFind pf = new PathFind(game_state);
             int mons_tile_x = (monster.getX() + (monster.getWidth() / 2)) / game_state.tile_engine.getTileSize();
-            int mons_tiel_y = (monster.getY() + (monster.getHeight())) / game_state.tile_engine.getTileSize();
-            monster.setPath(pf.FindPath(mons_tile_x, mons_tiel_y, 1, 1));
+            int mons_tile_y = (monster.getY() + (monster.getHeight() / 2)) / game_state.tile_engine.getTileSize();
+            Random r = new Random();
+            int mons_tile_xr = mons_tile_x + r.Next(-10, 10);
+            int mons_tile_yr = mons_tile_y + r.Next(-10, 10);
+            monster.setPath(pf.FindPath(mons_tile_x, mons_tile_y, mons_tile_xr, mons_tile_yr));
+
             /*
             //Random number
             System.Random generator = new System.Random();
