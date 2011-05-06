@@ -42,10 +42,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="levels\Level_2%28coll%29.lvl">
-      <Name>Level_2%28coll%29</Name>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <Compile Include="sprite.png">
       <Name>sprite</Name>
       <Importer>TextureImporter</Importer>
@@ -201,6 +197,11 @@
     </Compile>
     <Compile Include="backpack.png">
       <Name>backpack</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="item_background.png">
+      <Name>item_background</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

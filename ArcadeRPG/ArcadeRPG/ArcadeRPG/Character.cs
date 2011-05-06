@@ -155,8 +155,11 @@ namespace ArcadeRPG
         public void addItem(Item item)
         {
             inventory.Add(item);
+        }
 
-
+        public void removeItem(Item item)
+        {
+            inventory.Remove(item);
         }
     }
 
@@ -376,6 +379,7 @@ namespace ArcadeRPG
         int defenseBonus;
         itemType type;
         int time;
+        int textureID;
         //each weapon has a type and attack bonus, and an animation later on
 
         private string name; // name of item
@@ -389,7 +393,7 @@ namespace ArcadeRPG
         private Vector2 itempos;
 
         //constructor
-        public Item(itemType _type, int _ab, int _sb, int _db, int _time)
+        public Item(itemType _type, int _ab, int _sb, int _db, int _time, int texID)
         {
             color = Color.White;
             offset = new Vector2(0, 0); // don't offset image once drawn on screen (for simplicity)
@@ -409,6 +413,7 @@ namespace ArcadeRPG
             speedBonus = _sb;
             defenseBonus = _db;
             time = _time;
+            textureID = texID;
         }
         //gets the attack bonus to add on later
         public int getAttackBonus()
@@ -420,6 +425,11 @@ namespace ArcadeRPG
         public itemType getType()
         {
             return type;
+        }
+
+        public int getTexture()
+        {
+            return textureID;
         }
 
         public void loadContent(ContentManager contman)
