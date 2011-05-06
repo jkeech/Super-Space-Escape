@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading;
 using System.Linq;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
@@ -76,6 +77,9 @@ namespace ArcadeRPG
         Vector2 leftarrowpos = new Vector2(15, 385);
         Vector2 rightarrowpos = new Vector2(85, 385); //positions for each arrow
         Vector2 fire_button_pos = new Vector2(700, 385);
+
+        Rectangle health_bar_rec;
+        static int health_bar_width = 200;
         //****************************************************//
 
         //**************DISPLAY STRINGS******************//
@@ -97,6 +101,7 @@ namespace ArcadeRPG
         //***************************MISC*********************//
         public TimeSpan currTime = TimeSpan.FromSeconds(60.0); // grant the player a certain time per round
         // currTime will be 90 and count down each second, checking against 0 each second,  for each level
+        public int hurt_time = 3000;
 
         Boolean timeOut; // alerts program when timer for roundtime has expired
         bool button_release = false;
@@ -134,6 +139,7 @@ namespace ArcadeRPG
                 game_state.local_player.getWidth(),
                 game_state.local_player.getHeight(),
                 ColType.PLAYER);
+
 
 
             //Content.RootDirectory = "Content";
@@ -226,6 +232,7 @@ namespace ArcadeRPG
             //********************************LOADING GRAPHIC SPRITES********************************//
             backpack = Content.Load<Texture2D>("backpack"); // loading backpack
             healthbar = Content.Load<Texture2D>("healthbar"); // load health bar
+            health_bar_rec = new Rectangle((int)healthpos.X, (int)healthpos.Y, health_bar_width, 30);
             //**************************************************************************************//
 
 
@@ -308,7 +315,9 @@ namespace ArcadeRPG
                     {
                         game_state.local_player.setX(pot_x);
                         game_state.local_player.setY(pot_y);
-                        System.Diagnostics.Debug.WriteLine("Stuff: {0},{1}", pot_x, pot_y);
+
+
+                        //System.Diagnostics.Debug.WriteLine("Stuff: {0},{1}", pot_x, pot_y);
 
                         Item item = game_state.obj_mang.getItemAt(pot_x, pot_y, game_state.local_player.getWidth(), game_state.local_player.getHeight());
                         if (item != null)
@@ -335,10 +344,7 @@ namespace ArcadeRPG
                         }
 
                     }
-                    else
-                    {
-                        game_state.local_player.col_tok.ResetCollisions();
-                    }
+
                 }
                 else if (tl.State == TouchLocationState.Released)
                 {
@@ -415,7 +421,34 @@ namespace ArcadeRPG
                     game_state.bullet_engine.RemoveBullet(sword_bullet);
                 }
             }
+            List<Collision> cols = game_state.local_player.col_tok.GetCollisions();
+            for (int j = 0; j < cols.Count(); ++j)
+            {
+                Collision coll = cols.ElementAt(j);
+                if (coll.type != ColType.MAP)
+                {
+                    if (!game_state.local_player.hurt)
+                    {
+                        //Player gets hurt!
+                        game_state.local_player.setHealth(game_state.local_player.getHealth() - 3);
+                        game_state.local_player.hurt = true;
+                        double new_width = ((double)health_bar_width) * (double)((double)game_state.local_player.getHealth() / (double)game_state.local_player.getMaxHealth());
+                        health_bar_rec.Width = (int)new_width;
+                        //Get hurt by a little
+                        hurt_time = 500;
+                    }
+                }
+            }
+            game_state.local_player.col_tok.ResetCollisions();
+            game_state.local_player.col_tok.update(game_state.local_player.getX(), game_state.local_player.getY());
 
+            if(game_state.local_player.hurt) {
+                hurt_time -= gameTime.ElapsedGameTime.Milliseconds;
+                if (hurt_time <= 0)
+                {
+                    game_state.local_player.hurt = false;
+                }
+            }
             currTime -= gameTime.ElapsedGameTime; // start timer on actual game
 
             if ((currTime.Seconds <= 0) && (currTime.Milliseconds <= 0))
@@ -557,7 +590,8 @@ namespace ArcadeRPG
 
                 //***********************DRAWING GRAPHIC SPRITES***********************//
                 spriteBatch.Draw(backpack, backpackpos, null, trans, 0, imageOffset, 0.4f, SpriteEffects.None, 0); //draw the backpack "button"
-                spriteBatch.Draw(healthbar, healthpos, null, trans, 0, imageOffset, 0.25f, SpriteEffects.None, 0);  //draw health bar
+                
+                spriteBatch.Draw(healthbar, health_bar_rec, null, trans);  //draw health bar
                 //********************************************************************//
 
 
@@ -637,7 +671,6 @@ namespace ArcadeRPG
             } // end else
 
         }//end drawitems function
-
 
 
 
