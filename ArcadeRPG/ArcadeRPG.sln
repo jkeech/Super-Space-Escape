@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcadeRPG", "ArcadeRPG\ArcadeRPG\ArcadeRPG.csproj", "{A977DA74-6D48-49C8-AD5C-FCFE5400670E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcadeRPGContent", "ArcadeRPG\ArcadeRPGContent\ArcadeRPGContent.contentproj", "{43B9B268-C948-496C-9C95-9D86CFC1ABA5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Windows Phone = Debug|Windows Phone
+		Release|Windows Phone = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A977DA74-6D48-49C8-AD5C-FCFE5400670E}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{A977DA74-6D48-49C8-AD5C-FCFE5400670E}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
+		{A977DA74-6D48-49C8-AD5C-FCFE5400670E}.Debug|Windows Phone.Deploy.0 = Debug|Windows Phone
+		{A977DA74-6D48-49C8-AD5C-FCFE5400670E}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{A977DA74-6D48-49C8-AD5C-FCFE5400670E}.Release|Windows Phone.Build.0 = Release|Windows Phone
+		{A977DA74-6D48-49C8-AD5C-FCFE5400670E}.Release|Windows Phone.Deploy.0 = Release|Windows Phone
+		{43B9B268-C948-496C-9C95-9D86CFC1ABA5}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{43B9B268-C948-496C-9C95-9D86CFC1ABA5}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
