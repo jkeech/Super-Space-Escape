@@ -32,9 +32,9 @@ namespace ArcadeRPG
         void LoadDecisionMatrix()
         {
             //Load grunt!
-            //decision_matrix[(int)enemyType.GRUNT, (int)actionDecision.ADVANCE, (int)actionFactor.DP] = .4f; //Wants to advance towards player
-            decision_matrix[(int)enemyType.GRUNT, (int)actionDecision.FIRE, (int)actionFactor.AL] = .7f; //Wants to shoot player
-            //decision_matrix[(int)enemyType.GRUNT, (int)actionDecision.ALIGN, (int)actionFactor.DP] = .3f; //Wants to shoot player
+            //decision_matrix[(int)enemyType.GRUNT, (int)actionDecision.ADVANCE, (int)actionFactor.DP] = .3f; //Wants to advance towards player
+            decision_matrix[(int)enemyType.GRUNT, (int)actionDecision.FIRE, (int)actionFactor.AL] = .4f; //Wants to shoot player
+            decision_matrix[(int)enemyType.GRUNT, (int)actionDecision.ALIGN, (int)actionFactor.DP] = .4f; //Wants to shoot player
 
             //Load Berserker
             decision_matrix[(int)enemyType.BERSERKER, (int)actionDecision.ADVANCE, (int)actionFactor.DP] = .7f; //Wants to advance towards player
@@ -144,44 +144,39 @@ namespace ArcadeRPG
 
         void align(Enemy monster)
         {
-            /*
+
+            PathFind pf = new PathFind(game_state);
             int dist_x = game_state.local_player.getX() - monster.getX();
             int dist_y = game_state.local_player.getY() - monster.getY();
+            int mons_tile_x = (monster.getX() + (monster.getWidth() / 2)) / game_state.tile_engine.getTileSize();
+            int mons_tile_y = (monster.getY() + (monster.getHeight() / 2)) / game_state.tile_engine.getTileSize();
+            int pl_tile_x = game_state.local_player.getX() / game_state.tile_engine.getTileSize();
+            int pl_tile_y = game_state.local_player.getY() / game_state.tile_engine.getTileSize();
 
+            
             if (Math.Abs(dist_x) < Math.Abs(dist_y))
             {
-                //Advance in the X direction
-                if (dist_x > 0)
-                {
-                    monster.setX(monster.getX() + monster.getSpeed());
-                }
-                else
-                {
-                    monster.setX(monster.getX() - monster.getSpeed());
-                }
+                //Advance in the X direction toward the player
+
+                monster.setPath(pf.FindPath(mons_tile_x, mons_tile_y, pl_tile_x, mons_tile_y));
             }
             else
             {
-                //Advance in the Y direction
-                if (dist_y > 0)
-                {
-                    monster.setY(monster.getY() + monster.getSpeed());
-                }
-                else
-                {
-                    monster.setY(monster.getY() - monster.getSpeed());
-                }
+                //Advance in the Y direction toward the player
+
+                monster.setPath(pf.FindPath(mons_tile_x, mons_tile_y, mons_tile_x, pl_tile_y-1));
             }
-            */
+            
         }
         void advance(Enemy monster)
         {
             PathFind pf = new PathFind(game_state);
             int mons_tile_x = (monster.getX() + (monster.getWidth() / 2)) / game_state.tile_engine.getTileSize();
-            int mons_tiel_y = (monster.getY() + (monster.getHeight() / 2)) / game_state.tile_engine.getTileSize();
+            int mons_tile_y = (monster.getY() + (monster.getHeight() / 2)) / game_state.tile_engine.getTileSize();
             int pl_tile_x = game_state.local_player.getX()/game_state.tile_engine.getTileSize();
             int pl_tile_y = game_state.local_player.getY()/game_state.tile_engine.getTileSize();
-            monster.setPath(pf.FindPath(mons_tile_x, mons_tiel_y, pl_tile_x, pl_tile_y));
+            pl_tile_y += 1;//get the enemies to head toward the bottom of the player so that they follow you on the bridge
+            monster.setPath(pf.FindPath(mons_tile_x, mons_tile_y, pl_tile_x, pl_tile_y));
         }
 
         void idle(Enemy monster)
@@ -269,10 +264,14 @@ namespace ArcadeRPG
                     fire_x = monster.getX() + monster.getWidth();
                 }
             }
-            if(fire)
+            if (fire)
             {
                 game_state.bullet_engine.fire(fire_x, fire_y, dir, bulletOwner.ENEMY, bulletType.SMALL);
                 fire = false;
+            }
+            else
+            {
+                this.advance(monster);
             }
              //Place holder till bullet system works
         }
