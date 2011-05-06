@@ -32,8 +32,9 @@ namespace ArcadeRPG
         void LoadDecisionMatrix()
         {
             //Load grunt!
-            decision_matrix[(int)enemyType.GRUNT, (int)actionDecision.IDLE, (int)actionFactor.DP] = .4f; //Wants to advance towards player
-            
+            //decision_matrix[(int)enemyType.GRUNT, (int)actionDecision.ADVANCE, (int)actionFactor.DP] = .3f; //Wants to advance towards player
+            decision_matrix[(int)enemyType.GRUNT, (int)actionDecision.FIRE, (int)actionFactor.AL] = .4f; //Wants to shoot player
+            decision_matrix[(int)enemyType.GRUNT, (int)actionDecision.ALIGN, (int)actionFactor.DP] = .4f; //Wants to shoot player
 
             //Load Berserker
             decision_matrix[(int)enemyType.BERSERKER, (int)actionDecision.ADVANCE, (int)actionFactor.DP] = .7f; //Wants to advance towards player
@@ -143,44 +144,39 @@ namespace ArcadeRPG
 
         void align(Enemy monster)
         {
-            /*
+
+            PathFind pf = new PathFind(game_state);
             int dist_x = game_state.local_player.getX() - monster.getX();
             int dist_y = game_state.local_player.getY() - monster.getY();
+            int mons_tile_x = (monster.getX() + (monster.getWidth() / 2)) / game_state.tile_engine.getTileSize();
+            int mons_tile_y = (monster.getY() + (monster.getHeight() / 2)) / game_state.tile_engine.getTileSize();
+            int pl_tile_x = game_state.local_player.getX() / game_state.tile_engine.getTileSize();
+            int pl_tile_y = game_state.local_player.getY() / game_state.tile_engine.getTileSize();
 
+            
             if (Math.Abs(dist_x) < Math.Abs(dist_y))
             {
-                //Advance in the X direction
-                if (dist_x > 0)
-                {
-                    monster.setX(monster.getX() + monster.getSpeed());
-                }
-                else
-                {
-                    monster.setX(monster.getX() - monster.getSpeed());
-                }
+                //Advance in the X direction toward the player
+
+                monster.setPath(pf.FindPath(mons_tile_x, mons_tile_y, pl_tile_x, mons_tile_y));
             }
             else
             {
-                //Advance in the Y direction
-                if (dist_y > 0)
-                {
-                    monster.setY(monster.getY() + monster.getSpeed());
-                }
-                else
-                {
-                    monster.setY(monster.getY() - monster.getSpeed());
-                }
+                //Advance in the Y direction toward the player
+
+                monster.setPath(pf.FindPath(mons_tile_x, mons_tile_y, mons_tile_x, pl_tile_y-1));
             }
-            */
+            
         }
         void advance(Enemy monster)
         {
             PathFind pf = new PathFind(game_state);
             int mons_tile_x = (monster.getX() + (monster.getWidth() / 2)) / game_state.tile_engine.getTileSize();
-            int mons_tiel_y = (monster.getY() + (monster.getHeight() / 2)) / game_state.tile_engine.getTileSize();
+            int mons_tile_y = (monster.getY() + (monster.getHeight() / 2)) / game_state.tile_engine.getTileSize();
             int pl_tile_x = game_state.local_player.getX()/game_state.tile_engine.getTileSize();
             int pl_tile_y = game_state.local_player.getY()/game_state.tile_engine.getTileSize();
-            monster.setPath(pf.FindPath(mons_tile_x, mons_tiel_y, pl_tile_x, pl_tile_y));
+            pl_tile_y += 1;//get the enemies to head toward the bottom of the player so that they follow you on the bridge
+            monster.setPath(pf.FindPath(mons_tile_x, mons_tile_y, pl_tile_x, pl_tile_y));
         }
 
         void idle(Enemy monster)
@@ -223,7 +219,61 @@ namespace ArcadeRPG
 
         void fire(Enemy monster)
         {
-            //Place holder till bullet system works
+            int player_x = game_state.local_player.getX();
+            int player_y = game_state.local_player.getY();
+            int monster_x = monster.getX();
+            int monster_y = monster.getY();
+            int fire_x = 0;
+            int fire_y = 0;
+            int min = 0;
+            int max = 0;
+            PlayerDir dir = PlayerDir.UP;
+            Random random = new Random(); 
+            bool fire = false;
+            if (player_x < monster_x + monster.getWidth() && player_x > monster_x - monster.getWidth())
+            {
+                fire = true;
+                min = monster.getX();
+                max = monster.getX()+monster.getWidth();
+                fire_x = random.Next(min,max);
+                if (monster_y - player_y >= 0)
+                {
+                    dir = PlayerDir.UP;
+                    fire_y = monster.getY() + 5;
+                }
+                else
+                {
+                    dir = PlayerDir.DOWN;
+                    fire_y = monster.getY() + monster.getHeight();
+                }
+            }
+            else if (player_y < monster_y + monster.getHeight() && player_y > monster_y - monster.getHeight())
+            {
+                fire = true;
+                min = monster.getY();
+                max = monster.getY() + monster.getHeight();
+                fire_y = random.Next(min, max);
+                if (monster_x - player_x >= 0)
+                {
+                    dir = PlayerDir.LEFT;
+                    fire_x = monster.getX() - 5;
+                }
+                else
+                {
+                    dir = PlayerDir.RIGHT;
+                    fire_x = monster.getX() + monster.getWidth();
+                }
+            }
+            if (fire)
+            {
+                game_state.bullet_engine.fire(fire_x, fire_y, dir, bulletOwner.ENEMY, bulletType.SMALL);
+                fire = false;
+            }
+            else
+            {
+                this.advance(monster);
+            }
+             //Place holder till bullet system works
         }
 
         void move_towards_target(Enemy monster)
@@ -310,7 +360,7 @@ namespace ArcadeRPG
                     List<Collision> cols = monster.col_tok.GetCollisions();
                     for (int j = 0; j < cols.Count(); ++j)
                     {
-                        if (cols.ElementAt(j).type == ColType.BULLET)
+                        if (cols.ElementAt(j).type == ColType.BULLET )
                         {
                             //MAGIC NUMBER
                             monster.setHealth(monster.getHealth() - 5);
