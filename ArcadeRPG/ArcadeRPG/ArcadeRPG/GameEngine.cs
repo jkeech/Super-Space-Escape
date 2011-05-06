@@ -171,7 +171,7 @@ namespace ArcadeRPG
             tiles.Add(texturef);
             tiles.Add(textureo);
             game_state.tile_engine = new TileEngine(32, tiles);
-            game_state.tile_engine.loadLevel("Level_2");
+            game_state.tile_engine.loadLevel("Level_2(coll)");
 
             game_state.obj_mang.load(game_state.tile_engine.getCurrentMap().getLayer(LayerType.OBJECTS));
             //back_layer = tileEngine.getLayer(LayerType.BACKGROUND);
@@ -416,6 +416,7 @@ namespace ArcadeRPG
             }
 
             currTime -= gameTime.ElapsedGameTime; // start timer on actual game
+
 
             if ((currTime.Minutes <= 0) && (currTime.Seconds <= 0) && (currTime.Milliseconds <= 0))
             {

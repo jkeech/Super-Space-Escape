@@ -1,0 +1,7 @@
+H:\CSCE315\proj3\Game\Game\GameContent\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
+\\filer\zpollock\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Game\Game\GameContent\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
+<<<<<<< HEAD
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\Projectstuff\Super-Space-Escape\RPG\Game\Game\GameContent\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
+=======
+H:\CSCE315\project3\Super-Space-Escape\RPG\Game\Game\GameContent\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
+>>>>>>> upstream/master
