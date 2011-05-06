@@ -100,7 +100,7 @@ namespace ArcadeRPG
 
 
         //***************************MISC*********************//
-        public TimeSpan currTime = TimeSpan.FromSeconds(120.0); // grant the player a certain time per round
+        public TimeSpan currTime = TimeSpan.FromSeconds(600.0); // grant the player a certain time per round
         // currTime will be 90 and count down each second, checking against 0 each second,  for each level
         public int hurt_time = 3000;
 
