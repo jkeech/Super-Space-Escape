@@ -55,6 +55,7 @@ namespace ArcadeRPG
         Texture2D leftarrow;
         Texture2D rightarrow; // graphics for "keypad"
         Texture2D fire_button;
+        Texture2D item_background;
         //*************************************************//
 
 
@@ -99,7 +100,7 @@ namespace ArcadeRPG
 
 
         //***************************MISC*********************//
-        public TimeSpan currTime = TimeSpan.FromSeconds(60.0); // grant the player a certain time per round
+        public TimeSpan currTime = TimeSpan.FromSeconds(120.0); // grant the player a certain time per round
         // currTime will be 90 and count down each second, checking against 0 each second,  for each level
         public int hurt_time = 3000;
 
@@ -107,7 +108,6 @@ namespace ArcadeRPG
         bool button_release = false;
         Vector2 imageOffset = new Vector2(0, 0); //origin
         //*****************************************************//
-
 
 
         public GameEngine()
@@ -221,6 +221,7 @@ namespace ArcadeRPG
             leftarrow = Content.Load<Texture2D>("arrowleft");
             rightarrow = Content.Load<Texture2D>("arrowright"); // components for "keypad" HUD
             fire_button = Content.Load<Texture2D>("fire");
+            item_background = Content.Load<Texture2D>("item_background");
 
             game_state.fx_engine.LoadSound(Content, "shoot", soundType.SHOOT);
             game_state.fx_engine.LoadSound(Content, "hurt", soundType.HURT);
@@ -397,12 +398,36 @@ namespace ArcadeRPG
                     }
                     else
                     {
+                        Vector2 formatpos = new Vector2(275, 125);
+                        int tileSize = game_state.tile_engine.getTileSize();
 
-                            if ((tl.Position.X >= 642) && (tl.Position.X <= 758) && (tl.Position.Y >= 360) && (tl.Position.Y <= 435)) // coordinates of the "exit" button in inventory
+                        Item toRemove = null;
+                        foreach (Item i in game_state.local_player.getInventory())
+                        {
+                            Rectangle dest = new Rectangle((int)formatpos.X, (int)formatpos.Y, 300, 40);
+                            if(dest.Contains((int)tl.Position.X,(int)tl.Position.Y))
                             {
-                                backpackmenu.backpack_touched = false; //user has exited, return to main game screen
-
+                                //menu item Clicked
+                                switch (i.getType())
+                                {
+                                    case itemType.LASER: game_state.local_player.setWeapon(weaponType.LASER); break;
+                                    case itemType.SWORD: game_state.local_player.setWeapon(weaponType.SWORD); break;
+                                    case itemType.ATT_BOOST:
+                                    case itemType.DEF_BOOST: toRemove = i; break;
+                                    case itemType.KEY:
+                                    default: break;
+                                }
+                                backpackmenu.backpack_touched = false;  // exit from inventory now
                             }
+                            formatpos.Y += 50;
+                        }
+                        if (toRemove != null)
+                            game_state.local_player.removeItem(toRemove);
+
+                        if ((tl.Position.X >= 642) && (tl.Position.X <= 758) && (tl.Position.Y >= 360) && (tl.Position.Y <= 435)) // coordinates of the "exit" button in inventory
+                        {
+                            backpackmenu.backpack_touched = false; //user has exited, return to main game screen
+                        }
                     }
 
                     character_sprite[(int)game_state.local_player.getWeapon()].StopAnimating();
@@ -451,7 +476,8 @@ namespace ArcadeRPG
             }
             currTime -= gameTime.ElapsedGameTime; // start timer on actual game
 
-            if ((currTime.Seconds <= 0) && (currTime.Milliseconds <= 0))
+
+            if ((currTime.Minutes <= 0) && (currTime.Seconds <= 0) && (currTime.Milliseconds <= 0))
             {
                 timeOut = true; // if round time has run out, display the time expired screen (setting this bool to true will flag the menu later)
             }
@@ -557,22 +583,6 @@ namespace ArcadeRPG
 
             //Draw HUD
 
-
-
-
-            // Process touch events (mouse click in emulator)
-            /*
-            TouchCollection touchCollection = TouchPanel.GetState();
-            foreach (TouchLocation tl in touchCollection)
-            // for each place the screen has been touched at the point of "getState"
-            {
-                if ((tl.Position.X >= 725) && (tl.Position.X <= 745) && (tl.Position.Y >= 425) && (tl.Position.Y <= 450)) // backpack icon is touched
-                {
-                    backpackmenu.backpack_touched = true;
-                }
-
-            } // end "for each" tl loop
-            */
             //begin operations on display textures
             //gets spritebatch in a state to be 'ready' to draw
             if (!backpackmenu.backpack_touched)
@@ -613,7 +623,7 @@ namespace ArcadeRPG
                 else
                 {
                     spriteBatch.DrawString(displayFont, timeLeft, timeLeftPos, Color.Black);
-                    spriteBatch.DrawString(displayFont, currTime.Seconds.ToString(), timePos, Color.Black);
+                    spriteBatch.DrawString(displayFont, (currTime.Minutes*60+currTime.Seconds).ToString(), timePos, Color.Black);
                 }
 
             } // end backpack button NOT pressed if
@@ -653,19 +663,23 @@ namespace ArcadeRPG
                 //draws (each) item on inventory screen
                 foreach (Item i in game_state.local_player.getInventory())
                 {
-                    //display format: name, type, boost
+                    //display format: Item image, image name
+
+                    // Draw item image to screen
+                    i.setPos(formatpos);
+                    int tileSize = game_state.tile_engine.getTileSize();
+                    Rectangle dest = new Rectangle((int)formatpos.X,(int)formatpos.Y,tileSize,tileSize);
+                    Rectangle imageSource = new Rectangle((i.getTexture() % (tiles[2].Width / tileSize)) * tileSize,(i.getTexture() / (tiles[2].Width / tileSize)) * tileSize,tileSize,tileSize);
+                    sb.Draw(item_background, new Vector2(formatpos.X - 4, formatpos.Y - 4), Color.White);
+                    sb.Draw(tiles[2], dest, imageSource, Color.White);
+
+                    // Draw item name to screen
+                    formatpos.X += 50;
                     i.setPos(formatpos);
                     sb.DrawString(sf, i.getName(), i.getPos(), Color.White, 0, imageOffset, 1.0f, SpriteEffects.None, 0);
 
-                    formatpos.X += 100;
-                    i.setPos(formatpos); // need to move starting display position to the right to not run into the name already printed
-                    sb.DrawString(sf, i.getType().ToString(), i.getPos(), Color.White, 0, imageOffset, 1.0f, SpriteEffects.None, 0);
-
-                    formatpos.X += 100;
-                    i.setPos(formatpos); // need to move starting display position to the right to not run into the name already printed
-                    sb.DrawString(sf, i.getBoost().ToString(), i.getPos(), Color.White, 0, imageOffset, 1.0f, SpriteEffects.None, 0);
-
-                    formatpos.Y += 40;
+                    // Reset position for next item
+                    formatpos.Y += 50;
                     formatpos.X = origx; // re-allign for next item to be displayed
                 }
             } // end else

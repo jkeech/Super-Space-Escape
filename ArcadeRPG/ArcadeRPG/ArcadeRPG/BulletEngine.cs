@@ -92,7 +92,7 @@ namespace ArcadeRPG
                     List<Collision> cols = bullet.col_tok.GetCollisions();
                     for (int j = 0; j < cols.Count(); ++j)
                     {
-                        if (bullet.owner == bulletOwner.PLAYER && cols.ElementAt(j).type == ColType.PLAYER)
+                        if ((bullet.owner == bulletOwner.PLAYER && cols.ElementAt(j).type == ColType.PLAYER) || (bullet.owner == bulletOwner.ENEMY && cols.ElementAt(j).type == ColType.MONSTER))
                         {
                             continue;
                         } else {

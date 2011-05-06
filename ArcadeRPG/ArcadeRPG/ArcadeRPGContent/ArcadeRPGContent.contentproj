@@ -200,6 +200,11 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+    <Compile Include="item_background.png">
+      <Name>item_background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
     <Content Include="levels\maze.lvl">
       <Name>maze</Name>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
