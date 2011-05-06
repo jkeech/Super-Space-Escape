@@ -95,7 +95,7 @@ namespace ArcadeRPG
 
 
         //***************************MISC*********************//
-        public TimeSpan currTime = TimeSpan.FromSeconds(120.0); // grant the player a certain time per round
+        public TimeSpan currTime = TimeSpan.FromSeconds(600.0); // grant the player a certain time per round
         // currTime will be 90 and count down each second, checking against 0 each second,  for each level
 
         Boolean timeOut; // alerts program when timer for roundtime has expired
@@ -171,7 +171,7 @@ namespace ArcadeRPG
             tiles.Add(texturef);
             tiles.Add(textureo);
             game_state.tile_engine = new TileEngine(32, tiles);
-            game_state.tile_engine.loadLevel("Level_2(coll)");
+            game_state.tile_engine.loadLevel("Level_2");
 
             game_state.obj_mang.load(game_state.tile_engine.getCurrentMap().getLayer(LayerType.OBJECTS));
             //back_layer = tileEngine.getLayer(LayerType.BACKGROUND);
@@ -417,11 +417,8 @@ namespace ArcadeRPG
 
             currTime -= gameTime.ElapsedGameTime; // start timer on actual game
 
-<<<<<<< HEAD
-            if ((currTime.Minutes <= 0)&&(currTime.Seconds <= 0) && (currTime.Milliseconds <= 0))
-=======
+
             if ((currTime.Minutes <= 0) && (currTime.Seconds <= 0) && (currTime.Milliseconds <= 0))
->>>>>>> upstream/master
             {
                 timeOut = true; // if round time has run out, display the time expired screen (setting this bool to true will flag the menu later)
             }
@@ -582,11 +579,7 @@ namespace ArcadeRPG
                 else
                 {
                     spriteBatch.DrawString(displayFont, timeLeft, timeLeftPos, Color.Black);
-<<<<<<< HEAD
-                    spriteBatch.DrawString(displayFont, ((currTime.Minutes*60)+currTime.Seconds).ToString(), timePos, Color.Black);
-=======
                     spriteBatch.DrawString(displayFont, (currTime.Minutes*60+currTime.Seconds).ToString(), timePos, Color.Black);
->>>>>>> upstream/master
                 }
 
             } // end backpack button NOT pressed if
