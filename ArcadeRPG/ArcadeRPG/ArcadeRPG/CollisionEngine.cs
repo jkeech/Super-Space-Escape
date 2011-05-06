@@ -23,7 +23,7 @@ namespace ArcadeRPG
     class ColToken
     {
         CollisionEngine ce;
-
+        
         int engine_id;
         public int loc_x, loc_y;
         public int width, height;

@@ -150,19 +150,19 @@ namespace ArcadeRPG
                 switch (item_type)
                 {
                     case itemType.LASER:
-                        new_item = new Item(itemType.LASER, 3, 0, 0, 0);
+                        new_item = new Item(itemType.LASER, 3, 0, 0, 0, type);
                         break;
                     case itemType.SWORD:
-                        new_item = new Item(itemType.SWORD, 3, 0, 0, 0);
+                        new_item = new Item(itemType.SWORD, 3, 0, 0, 0, type);
                         break;
                     case itemType.ATT_BOOST:
-                        new_item = new Item(itemType.ATT_BOOST, 5, 0, 0, 15);
+                        new_item = new Item(itemType.ATT_BOOST, 5, 0, 0, 15, type);
                         break;
                     case itemType.DEF_BOOST:
-                        new_item = new Item(itemType.DEF_BOOST, 0, 0, 5, 15);
+                        new_item = new Item(itemType.DEF_BOOST, 0, 0, 5, 15, type);
                         break;
                     case itemType.KEY:
-                        new_item = new Item(itemType.KEY, 0, 0, 0, 0);
+                        new_item = new Item(itemType.KEY, 0, 0, 0, 0, type);
                         break;
                     default:
                         new_item = null;
