@@ -606,7 +606,7 @@ namespace ArcadeRPG
 
 
             //format display on screen for string to be drawn
-            Vector2 formatpos = new Vector2(275, 125);
+            Vector2 formatpos = new Vector2(150, 125);
             float origx = formatpos.X;
 
             if (game_state.local_player.getInventory().Count == 0) // no items collected, display a message
@@ -622,13 +622,10 @@ namespace ArcadeRPG
                     i.setPos(formatpos);
                     sb.DrawString(sf, i.getName(), i.getPos(), Color.White, 0, imageOffset, 1.0f, SpriteEffects.None, 0);
 
-                    formatpos.X += 100;
+                    formatpos.X += 200;
                     i.setPos(formatpos); // need to move starting display position to the right to not run into the name already printed
                     sb.DrawString(sf, i.getType().ToString(), i.getPos(), Color.White, 0, imageOffset, 1.0f, SpriteEffects.None, 0);
 
-                    formatpos.X += 100;
-                    i.setPos(formatpos); // need to move starting display position to the right to not run into the name already printed
-                    sb.DrawString(sf, i.getBoost().ToString(), i.getPos(), Color.White, 0, imageOffset, 1.0f, SpriteEffects.None, 0);
 
                     formatpos.Y += 40;
                     formatpos.X = origx; // re-allign for next item to be displayed

@@ -393,7 +393,15 @@ namespace ArcadeRPG
         {
             color = Color.White;
             offset = new Vector2(0, 0); // don't offset image once drawn on screen (for simplicity)
-            name = "dummyitem"; // placeholder
+            switch (_type)
+            {
+                case itemType.ATT_BOOST: name = "Attack Boost"; break;
+                case itemType.DEF_BOOST: name = "Defense Boost"; break;
+                case itemType.KEY: name = "Key of Knowledge"; break;
+                case itemType.LASER: name = "Laser of Death"; break;
+                case itemType.SWORD: name = "Sword of Righteousness"; break;
+                default: name = "Unknown"; break;
+            }
             boost = 0; // placeholder
             collected = false; // user by default hasnt collected the item yet
             attackBonus = _ab;
