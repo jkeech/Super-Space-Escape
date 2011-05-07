@@ -92,12 +92,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\objects1.png" />
     <None Include="Resources\background_cropped.png" />
     <Content Include="Resources\collision.png" />
     <None Include="Resources\eraser_tile.png" />
     <None Include="Resources\foreground_cropped.png" />
     <Content Include="Resources\grid.png" />
-    <None Include="Resources\objects_cropped.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
