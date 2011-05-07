@@ -35,11 +35,11 @@ namespace ArcadeRPG
             //decision_matrix[(int)enemyType.GRUNT, (int)actionDecision.ADVANCE, (int)actionFactor.DP] = .3f; //Wants to advance towards player
             //decision_matrix[(int)enemyType.GRUNT, (int)actionDecision.FIRE, (int)actionFactor.AL] = .4f; //Wants to shoot player
             //decision_matrix[(int)enemyType.GRUNT, (int)actionDecision.ALIGN, (int)actionFactor.DP] = .4f; //Wants to align with player
-            decision_matrix[(int)enemyType.GRUNT, (int)actionDecision.FLEE, (int)actionFactor.HL] = .7f;//wants to flee from player
+            decision_matrix[(int)enemyType.GRUNT, (int)actionDecision.IDLE, (int)actionFactor.HL] = .7f;//wants to flee from player
 
             //Load Berserker
             //decision_matrix[(int)enemyType.BERSERKER, (int)actionDecision.ADVANCE, (int)actionFactor.DP] = .7f; //Wants to advance towards player
-            decision_matrix[(int)enemyType.BERSERKER, (int)actionDecision.FLEE, (int)actionFactor.HL] = .7f; //Wants to advance towards player
+            decision_matrix[(int)enemyType.BERSERKER, (int)actionDecision.ADVANCE, (int)actionFactor.DP] = .7f; //Wants to advance towards player
 
             //Load Beetle
             //decision_matrix[(int)enemyType.BEETLE, (int)actionDecision.ADVANCE, (int)actionFactor.DP] = .4f; //Wants to advance towards player
@@ -142,12 +142,20 @@ namespace ArcadeRPG
                 {
                     mons_tile_yr += r.Next(-5, -10);
                     mons_tile_xr += r.Next(-10, 10);
+                    if (mons_tile_yr < 0)
+                        mons_tile_yr = 0;
+                    if (mons_tile_xr < 0)
+                        mons_tile_xr = 0;
                     monster.setPath(pf.FindPath(mons_tile_x, mons_tile_y, mons_tile_xr, mons_tile_yr));
                 }
                 else
                 {
                     mons_tile_yr += r.Next(5, 10);
                     mons_tile_xr += r.Next(-10, 10);
+                    if (mons_tile_yr < 0)
+                        mons_tile_yr = 0;
+                    if (mons_tile_xr < 0)
+                        mons_tile_xr = 0;
                     monster.setPath(pf.FindPath(mons_tile_x, mons_tile_y, mons_tile_xr, mons_tile_yr));
                 }
             }
@@ -158,12 +166,20 @@ namespace ArcadeRPG
                 {
                     mons_tile_yr += r.Next(-10, 10);
                     mons_tile_xr += r.Next(5, 10);
+                    if (mons_tile_yr < 0)
+                        mons_tile_yr = 0;
+                    if (mons_tile_xr < 0)
+                        mons_tile_xr = 0;
                     monster.setPath(pf.FindPath(mons_tile_x, mons_tile_y, mons_tile_xr, mons_tile_yr));
                 }
                 else
                 {
                     mons_tile_yr += r.Next(-10, 10);
                     mons_tile_xr += r.Next(5, 10);
+                    if (mons_tile_yr < 0)
+                        mons_tile_yr = 0;
+                    if (mons_tile_xr < 0)
+                        mons_tile_xr = 0;
                     monster.setPath(pf.FindPath(mons_tile_x, mons_tile_y, mons_tile_xr, mons_tile_yr));
                 }
                 monster.setPath(pf.FindPath(mons_tile_x, mons_tile_y, mons_tile_xr, mons_tile_yr));
@@ -224,6 +240,10 @@ namespace ArcadeRPG
             Random r = new Random();
             int mons_tile_xr = mons_tile_x + r.Next(-10, 10);
             int mons_tile_yr = mons_tile_y + r.Next(-10, 10);
+            if (mons_tile_yr < 0)
+                mons_tile_yr = 0;
+            if (mons_tile_xr < 0)
+                mons_tile_xr = 0;
             monster.setPath(pf.FindPath(mons_tile_x, mons_tile_y, mons_tile_xr, mons_tile_yr));
 
             /*
@@ -275,7 +295,7 @@ namespace ArcadeRPG
                 fire = true;
                 min = monster.getX();
                 max = monster.getX()+monster.getWidth();
-                fire_x = random.Next(min,max);
+                fire_x = random.Next(min,max); 
                 if (monster_y - player_y >= 0)
                 {
                     dir = PlayerDir.UP;
@@ -351,12 +371,18 @@ namespace ArcadeRPG
                 {
                     monster.setY(monster.getY() + monster.getSpeed());
                     monster.setDirection(PlayerDir.DOWN);
+
                 }
                 else
                 {
                     monster.setY(monster.getY() - monster.getSpeed());
                     monster.setDirection(PlayerDir.UP);
+
                 }
+            }
+            if (monster.getLastDirection() != monster.getDirection())
+            {
+                monster.getSprite().StartAnimating((int)monster.getDirection() * 3, ((int)monster.getDirection() * 3) + 2);
             }
         }
 
@@ -384,7 +410,7 @@ namespace ArcadeRPG
         public void AddMonster(Enemy monster)
         {
             //Request collision token and push monster to monster list
-            monster.col_tok = game_state.coll_engine.register_object(monster.getX(), monster.getY(), monster.getWidth(), monster.getHeight(), ColType.MONSTER);
+            monster.col_tok = game_state.coll_engine.register_object(monster, ColType.MONSTER);
             monsters.Add(monster);
         }
 
@@ -397,13 +423,25 @@ namespace ArcadeRPG
                 if (monster.col_tok.HasCollisions())//&& monster.col_tok.GetHitType() == ColType.BULLET)
                 {
 
-                    List<Collision> cols = monster.col_tok.GetCollisions();
+                    List<ColToken> cols = monster.col_tok.GetCollisions();
                     for (int j = 0; j < cols.Count(); ++j)
                     {
-                        if (cols.ElementAt(j).type == ColType.BULLET )
+                        if (cols.ElementAt(j).GetLocalType() == ColType.BULLET )
                         {
                             //MAGIC NUMBER
-                            monster.setHealth(monster.getHealth() - 5);
+                            Bullet bull = (Bullet)cols.ElementAt(j).GetParent();
+                            int damage = 0;
+                            switch (bull.type) 
+                            {
+                                case bulletType.SMALL:
+                                    damage = 5;
+                                    break;
+                                case bulletType.SWORD:
+                                    damage = 10;
+                                    break;
+
+                            }
+                            monster.setHealth(monster.getHealth() - (game_state.local_player.getAttack()+damage));
                             //dmg_sound.Play();
                             if (monster.getHealth() <= 0)
                             {
@@ -413,7 +451,7 @@ namespace ArcadeRPG
                             }
                             game_state.fx_engine.RequestSound(soundType.HURT);
                         }
-                        else if (cols.ElementAt(j).type == ColType.MAP)
+                        else if (cols.ElementAt(j).GetLocalType() == ColType.MAP)
                         {
                             //monster.revertX();
                             //monster.revertY();

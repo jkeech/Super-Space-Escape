@@ -114,6 +114,16 @@ namespace ArcadeRPG
             return activeWeapon;
         }
 
+        public int getAttack()
+        {
+            return attack;
+        }
+
+
+        public void setAttack(int _attack)
+        {
+            attack = _attack;
+        }
         /// <summary>
         /// Sets the current x coordinate of the player
         /// </summary>
