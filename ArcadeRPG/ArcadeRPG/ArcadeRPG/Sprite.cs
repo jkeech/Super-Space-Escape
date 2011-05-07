@@ -115,6 +115,24 @@ namespace ArcadeRPG
             }
         }
 
+        public void Draw(SpriteBatch batch, bool fade, Color color)
+        {
+            int alpha;
+            if(fade)
+            {
+                alpha = DateTime.Now.Millisecond % 255;
+            }
+            else
+            { 
+                alpha = 255;
+            }
+            Color transColor = new Color(color.R, color.G, color.B, alpha);
+            if (frames[cur_frame] != null)
+            {
+                batch.Draw(spr_data, loc, frames[cur_frame], transColor);
+            }
+        }
+
         public void Draw(SpriteBatch batch, int x, int y)
         {
             if (frames[cur_frame] != null)
@@ -123,10 +141,10 @@ namespace ArcadeRPG
             }
         }
 
-        public void Draw(SpriteBatch batch, int frame)
+        public void Draw(SpriteBatch batch, int frame, bool fade, Color color)
         {
             cur_frame = frame;
-            Draw(batch);
+            Draw(batch, fade, color);
         }
 
         /// <summary>
