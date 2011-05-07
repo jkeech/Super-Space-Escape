@@ -1,0 +1,129 @@
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\sprite.xnb
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\clouds.xnb
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\tiles.xnb
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\objects_cropped.xnb
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_gun.xnb
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_no.xnb
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_sword.xnb
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_sword_attack.xnb
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\objects1.xnb
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\grunt.xnb
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\bullet.xnb
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\fire.xnb
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\background_cropped.xnb
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\foreground_cropped.xnb
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\expl.xnb
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowdown.xnb
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowleft.xnb
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowright.xnb
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowup.xnb
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\shoot.xnb
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\sword_swing.xnb
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\hurt.xnb
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\01AttackPanda1.xnb
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\levels\maze.lvl
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\levels\level0.txt
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\levels\Level_2.lvl
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\levels\maze(2).lvl
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\levels\poffworld.lvl
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\levels\poffworld2.lvl
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\ArcadeRPG.dll
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\ArcadeRPG.pdb
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\obj\Windows Phone\Debug\ArcadeRPG.dll
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\obj\Windows Phone\Debug\ArcadeRPG.pdb
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\AppManifest.xaml
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\obj\Windows Phone\Debug\WMAppManifest.xml.g
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\obj\Windows Phone\Debug\WMAppManifest.xml
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\ArcadeRPG.xap
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\obj\Windows Phone\Debug\XapCacheFile.xml
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\sprite.xnb
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\clouds.xnb
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\tiles.xnb
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\objects_cropped.xnb
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_gun.xnb
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_no.xnb
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_sword.xnb
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_sword_attack.xnb
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\objects1.xnb
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\grunt.xnb
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\bullet.xnb
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\fire.xnb
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\background_cropped.xnb
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\foreground_cropped.xnb
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\expl.xnb
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowdown.xnb
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowleft.xnb
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowright.xnb
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowup.xnb
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\shoot.xnb
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\sword_swing.xnb
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\hurt.xnb
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\01AttackPanda1.xnb
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\levels\maze.lvl
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\levels\level0.txt
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\levels\Level_2.lvl
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\levels\maze(2).lvl
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\levels\poffworld.lvl
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\levels\poffworld2.lvl
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\ArcadeRPG.dll
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\ArcadeRPG.pdb
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\obj\Windows Phone\Debug\ArcadeRPG.dll
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\obj\Windows Phone\Debug\ArcadeRPG.pdb
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\AppManifest.xaml
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\obj\Windows Phone\Debug\WMAppManifest.xml.g
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\obj\Windows Phone\Debug\WMAppManifest.xml
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\ArcadeRPG.xap
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\obj\Windows Phone\Debug\XapCacheFile.xml
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\beetles.xnb
+\\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\berserker.xnb
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\beetles.xnb
+H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\berserker.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\sprite.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\clouds.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\tiles.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\objects_cropped.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_gun.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_no.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_sword.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_sword_attack.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\objects1.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\grunt.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\bullet.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\fire.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\background_cropped.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\foreground_cropped.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\expl.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\beetles.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\berserker.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowdown.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowleft.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowright.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowup.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\shoot.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\sword_swing.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\hurt.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\01AttackPanda1.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\levels\maze.lvl
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\levels\level0.txt
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\levels\levels.txt
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\levels\maze(2).lvl
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\levels\poffworld.lvl
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\levels\poffworld2.lvl
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\ArcadeRPG.dll
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\ArcadeRPG.pdb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\obj\Windows Phone\Debug\ArcadeRPG.dll
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\obj\Windows Phone\Debug\ArcadeRPG.pdb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\AppManifest.xaml
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\obj\Windows Phone\Debug\WMAppManifest.xml.g
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\obj\Windows Phone\Debug\WMAppManifest.xml
+bin\Windows Phone\Debug\GameThumbnail.png
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\ArcadeRPG.xap
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\obj\Windows Phone\Debug\XapCacheFile.xml
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\levels\Level_2.lvl
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\levels\Level_3.lvl
