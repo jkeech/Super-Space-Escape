@@ -20,11 +20,19 @@ namespace ArcadeRPG
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+<<<<<<< HEAD
+=======
+
+>>>>>>> ba924ebf9b697d96e8655bded425c992abcdf2f6
         TileEngine tileEngine;
         List<Texture2D> tiles;
         BackRender back;
         int xtestx = 0;
         GameEngine game_engine;
+<<<<<<< HEAD
+=======
+
+>>>>>>> ba924ebf9b697d96e8655bded425c992abcdf2f6
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);

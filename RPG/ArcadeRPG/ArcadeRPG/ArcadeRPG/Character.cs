@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Content;
+
 
 namespace ArcadeRPG
 {
     enum PlayerDir { UP, RIGHT, DOWN, LEFT };
     enum enemyType { GRUNT, BERSERKER, BEETLE, NUM_ENEM };
-    enum weaponType { NONE, SWORD, LASER, GRENADE};
-    enum itemType {NONE, SWORD, LASER, ATT_BOOST, DEF_BOOST, KEY, NUM_ITEMS };
+    enum weaponType { NONE, SWORD, LASER, GRENADE };
+    enum itemType { NONE, SWORD, LASER, ATT_BOOST, DEF_BOOST, KEY, NUM_ITEMS };
     //just the basics on types
     /// <summary>
     /// Holds the data for the player
@@ -56,6 +60,12 @@ namespace ArcadeRPG
         /// <summary>
         /// Returns the current x coordinate of the player
         /// </summary>
+        /// 
+        public List<Item> getInventory()
+        {
+            return inventory;
+        }
+
         public int getX()
         {
             return x;
@@ -127,7 +137,7 @@ namespace ArcadeRPG
             activeWeapon = _weapon;
             //not perfectly implemented yet
             //will also change other aspects of weapon including type and animation
-            
+
         }
 
 
@@ -146,7 +156,7 @@ namespace ArcadeRPG
         {
             inventory.Add(item);
 
-                
+
         }
     }
 
@@ -205,10 +215,10 @@ namespace ArcadeRPG
                 max_health = health = 15;
             }
 
-            
+
         }
 
-         /// <summary>
+        /// <summary>
         /// Returns the current x coordinate of the enemy
         /// </summary>
         public int getX()
@@ -258,10 +268,11 @@ namespace ArcadeRPG
 
         public enemyType getType()
         {
-            return eType; 
+            return eType;
         }
 
-        public Sprite getSprite() {
+        public Sprite getSprite()
+        {
             return sprite;
         }
 
@@ -274,7 +285,7 @@ namespace ArcadeRPG
         {
             last_dir = dir;
             dir = _dir;
-        
+
         }
 
         public void setPath(List<Node> _path)
@@ -367,10 +378,24 @@ namespace ArcadeRPG
         int time;
         //each weapon has a type and attack bonus, and an animation later on
 
+        private string name; // name of item
+        public Boolean collected;
+        private int boost; // what the item can do for the user (i.e., boost attack by 5, then boost will = 5). to be implemented in derived classes
+        private Vector2 offset; // default offset for drawing a sprite (keep it zero for consistency)
+        private Color color; // for drawing function, keep it white for draw to draw no layer in front of item to be drawn
+
+        //no time limit, items will last duration of level. upon level "advance", items that are ATTACK/DEFENSE/SPEED will be cleared out of item vector in main class
+        private Texture2D itempic;
+        private Vector2 itempos;
+
         //constructor
         public Item(itemType _type, int _ab, int _sb, int _db, int _time)
         {
-        
+            color = Color.White;
+            offset = new Vector2(0, 0); // don't offset image once drawn on screen (for simplicity)
+            name = "dummyitem"; // placeholder
+            boost = 0; // placeholder
+            collected = false; // user by default hasnt collected the item yet
             attackBonus = _ab;
             type = _type;
             speedBonus = _sb;
@@ -378,10 +403,9 @@ namespace ArcadeRPG
             time = _time;
         }
         //gets the attack bonus to add on later
-        public int getAttackBonus(){
-            
-           
-           return attackBonus;
+        public int getAttackBonus()
+        {
+            return attackBonus;
         }
         //distiguishes the weapon type
 
@@ -390,7 +414,39 @@ namespace ArcadeRPG
             return type;
         }
 
-    }
+        public void loadContent(ContentManager contman)
+        {
+            itempic = contman.Load<Texture2D>("Pictures\\dummyitem");
+        }
+
+        public void setPos(Vector2 v2)
+        {
+            itempos.X = v2.X;
+            itempos.Y = v2.Y;
+        }
+
+        public Vector2 getPos()
+        {
+            return itempos;
+        }
+
+        public Texture2D get2D()
+        {
+            return itempic;
+        }
+
+        public int getBoost()
+        {
+            return boost;
+        }
+
+        public string getName()
+        {
+            return name;
+        }
+
+
+    }//end item class
 
 
 }

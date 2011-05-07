@@ -7,8 +7,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\sprite.xnb</Output>
       <Time>2011-05-04T22:53:46.3330078-05:00</Time>
+=======
+      <Output>Z:\Github\proj\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\sprite.xnb</Output>
+      <Time>2011-05-05T18:12:32.01698-05:00</Time>
+>>>>>>> ba924ebf9b697d96e8655bded425c992abcdf2f6
     </Item>
     <Item>
       <Source>clouds.png</Source>
@@ -16,8 +21,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\clouds.xnb</Output>
       <Time>2011-05-04T22:53:46.3085937-05:00</Time>
+=======
+      <Output>Z:\Github\proj\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\clouds.xnb</Output>
+      <Time>2011-05-05T18:12:31.569428-05:00</Time>
+>>>>>>> ba924ebf9b697d96e8655bded425c992abcdf2f6
     </Item>
     <Item>
       <Source>tiles.png</Source>
@@ -25,8 +35,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\tiles.xnb</Output>
       <Time>2011-05-04T22:53:47.140625-05:00</Time>
+=======
+      <Output>Z:\Github\proj\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\tiles.xnb</Output>
+      <Time>2011-05-05T18:12:32.041954-05:00</Time>
+>>>>>>> ba924ebf9b697d96e8655bded425c992abcdf2f6
     </Item>
     <Item>
       <Source>objects_cropped.png</Source>
@@ -34,8 +49,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\objects_cropped.xnb</Output>
       <Time>2011-05-04T22:53:46.3193359-05:00</Time>
+=======
+      <Output>Z:\Github\proj\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\objects_cropped.xnb</Output>
+      <Time>2011-05-05T18:12:31.900097-05:00</Time>
+>>>>>>> ba924ebf9b697d96e8655bded425c992abcdf2f6
     </Item>
     <Item>
       <Source>player_gun.png</Source>
@@ -43,8 +63,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_gun.xnb</Output>
       <Time>2011-05-04T22:53:46.3193359-05:00</Time>
+=======
+      <Output>Z:\Github\proj\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_gun.xnb</Output>
+      <Time>2011-05-05T18:12:31.949048-05:00</Time>
+>>>>>>> ba924ebf9b697d96e8655bded425c992abcdf2f6
     </Item>
     <Item>
       <Source>player_no.png</Source>
@@ -52,8 +77,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_no.xnb</Output>
       <Time>2011-05-04T22:53:46.3193359-05:00</Time>
+=======
+      <Output>Z:\Github\proj\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_no.xnb</Output>
+      <Time>2011-05-05T18:12:31.960036-05:00</Time>
+>>>>>>> ba924ebf9b697d96e8655bded425c992abcdf2f6
     </Item>
     <Item>
       <Source>player_sword.png</Source>
@@ -61,8 +91,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_sword.xnb</Output>
       <Time>2011-05-04T22:53:46.3310546-05:00</Time>
+=======
+      <Output>Z:\Github\proj\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_sword.xnb</Output>
+      <Time>2011-05-05T18:12:31.970027-05:00</Time>
+>>>>>>> ba924ebf9b697d96e8655bded425c992abcdf2f6
     </Item>
     <Item>
       <Source>player_sword_attack.png</Source>
@@ -70,8 +105,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_sword_attack.xnb</Output>
       <Time>2011-05-04T22:53:46.3320312-05:00</Time>
+=======
+      <Output>Z:\Github\proj\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_sword_attack.xnb</Output>
+      <Time>2011-05-05T18:12:31.980018-05:00</Time>
+>>>>>>> ba924ebf9b697d96e8655bded425c992abcdf2f6
     </Item>
     <Item>
       <Source>objects1.png</Source>
@@ -79,8 +119,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\objects1.xnb</Output>
       <Time>2011-05-04T22:53:46.3183593-05:00</Time>
+=======
+      <Output>Z:\Github\proj\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\objects1.xnb</Output>
+      <Time>2011-05-05T18:12:31.890106-05:00</Time>
+>>>>>>> ba924ebf9b697d96e8655bded425c992abcdf2f6
     </Item>
     <Item>
       <Source>grunt.png</Source>
@@ -88,8 +133,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\grunt.xnb</Output>
       <Time>2011-05-04T22:53:46.3095703-05:00</Time>
+=======
+      <Output>Z:\Github\proj\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\grunt.xnb</Output>
+      <Time>2011-05-05T18:12:31.609389-05:00</Time>
+>>>>>>> ba924ebf9b697d96e8655bded425c992abcdf2f6
     </Item>
     <Item>
       <Source>bullet.png</Source>
@@ -97,8 +147,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\bullet.xnb</Output>
       <Time>2011-05-04T22:53:46.3076171-05:00</Time>
+=======
+      <Output>Z:\Github\proj\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\bullet.xnb</Output>
+      <Time>2011-05-05T18:12:31.558438-05:00</Time>
+>>>>>>> ba924ebf9b697d96e8655bded425c992abcdf2f6
     </Item>
     <Item>
       <Source>fire.png</Source>
@@ -106,8 +161,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\fire.xnb</Output>
       <Time>2011-05-04T22:53:46.3095703-05:00</Time>
+=======
+      <Output>Z:\Github\proj\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\fire.xnb</Output>
+      <Time>2011-05-05T18:12:31.589407-05:00</Time>
+>>>>>>> ba924ebf9b697d96e8655bded425c992abcdf2f6
     </Item>
     <Item>
       <Source>background_cropped.png</Source>
@@ -115,8 +175,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\background_cropped.xnb</Output>
       <Time>2011-05-04T22:53:46.3066406-05:00</Time>
+=======
+      <Output>Z:\Github\proj\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\background_cropped.xnb</Output>
+      <Time>2011-05-05T18:12:31.523473-05:00</Time>
+>>>>>>> ba924ebf9b697d96e8655bded425c992abcdf2f6
     </Item>
     <Item>
       <Source>foreground_cropped.png</Source>
@@ -124,8 +189,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\foreground_cropped.xnb</Output>
       <Time>2011-05-04T22:53:46.3095703-05:00</Time>
+=======
+      <Output>Z:\Github\proj\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\foreground_cropped.xnb</Output>
+      <Time>2011-05-05T18:12:31.599398-05:00</Time>
+>>>>>>> ba924ebf9b697d96e8655bded425c992abcdf2f6
     </Item>
     <Item>
       <Source>expl.png</Source>
@@ -133,8 +203,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\expl.xnb</Output>
       <Time>2011-05-04T22:53:46.3085937-05:00</Time>
+=======
+      <Output>Z:\Github\proj\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\expl.xnb</Output>
+      <Time>2011-05-05T18:12:31.579418-05:00</Time>
+>>>>>>> ba924ebf9b697d96e8655bded425c992abcdf2f6
     </Item>
     <Item>
       <Source>beetles.png</Source>
@@ -142,8 +217,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\beetles.xnb</Output>
       <Time>2011-05-04T22:53:46.3076171-05:00</Time>
+=======
+      <Output>Z:\Github\proj\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\beetles.xnb</Output>
+      <Time>2011-05-05T18:12:31.533464-05:00</Time>
+>>>>>>> ba924ebf9b697d96e8655bded425c992abcdf2f6
     </Item>
     <Item>
       <Source>berserker.png</Source>
@@ -151,8 +231,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\berserker.xnb</Output>
       <Time>2011-05-04T22:53:46.3076171-05:00</Time>
+=======
+      <Output>Z:\Github\proj\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\berserker.xnb</Output>
+      <Time>2011-05-05T18:12:31.548448-05:00</Time>
+>>>>>>> ba924ebf9b697d96e8655bded425c992abcdf2f6
     </Item>
     <Item>
       <Source>arrowdown.png</Source>
@@ -160,8 +245,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowdown.xnb</Output>
       <Time>2011-05-04T22:53:46.305664-05:00</Time>
+=======
+      <Output>Z:\Github\proj\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowdown.xnb</Output>
+      <Time>2011-05-05T18:12:31.482515-05:00</Time>
+>>>>>>> ba924ebf9b697d96e8655bded425c992abcdf2f6
     </Item>
     <Item>
       <Source>arrowleft.png</Source>
@@ -169,8 +259,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowleft.xnb</Output>
       <Time>2011-05-04T22:53:46.305664-05:00</Time>
+=======
+      <Output>Z:\Github\proj\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowleft.xnb</Output>
+      <Time>2011-05-05T18:12:31.493503-05:00</Time>
+>>>>>>> ba924ebf9b697d96e8655bded425c992abcdf2f6
     </Item>
     <Item>
       <Source>arrowright.png</Source>
@@ -178,8 +273,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowright.xnb</Output>
       <Time>2011-05-04T22:53:46.3066406-05:00</Time>
+=======
+      <Output>Z:\Github\proj\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowright.xnb</Output>
+      <Time>2011-05-05T18:12:31.502494-05:00</Time>
+>>>>>>> ba924ebf9b697d96e8655bded425c992abcdf2f6
     </Item>
     <Item>
       <Source>arrowup.png</Source>
@@ -187,8 +287,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowup.xnb</Output>
       <Time>2011-05-04T22:53:46.3066406-05:00</Time>
+=======
+      <Output>Z:\Github\proj\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowup.xnb</Output>
+      <Time>2011-05-05T18:12:31.512484-05:00</Time>
+>>>>>>> ba924ebf9b697d96e8655bded425c992abcdf2f6
     </Item>
     <Item>
       <Source>shoot.wav</Source>
@@ -196,8 +301,13 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\shoot.xnb</Output>
       <Time>2011-05-04T22:53:46.3330078-05:00</Time>
+=======
+      <Output>Z:\Github\proj\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\shoot.xnb</Output>
+      <Time>2011-05-05T18:12:32.00599-05:00</Time>
+>>>>>>> ba924ebf9b697d96e8655bded425c992abcdf2f6
     </Item>
     <Item>
       <Source>sword_swing.wav</Source>
@@ -205,8 +315,13 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\sword_swing.xnb</Output>
       <Time>2011-05-04T22:53:46.3339843-05:00</Time>
+=======
+      <Output>Z:\Github\proj\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\sword_swing.xnb</Output>
+      <Time>2011-05-05T18:12:32.028969-05:00</Time>
+>>>>>>> ba924ebf9b697d96e8655bded425c992abcdf2f6
     </Item>
     <Item>
       <Source>hurt.wav</Source>
@@ -214,8 +329,13 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\hurt.xnb</Output>
       <Time>2011-05-04T22:53:46.3105468-05:00</Time>
+=======
+      <Output>Z:\Github\proj\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\hurt.xnb</Output>
+      <Time>2011-05-05T18:12:31.676323-05:00</Time>
+>>>>>>> ba924ebf9b697d96e8655bded425c992abcdf2f6
     </Item>
     <Item>
       <Source>01AttackPanda1.wav</Source>
@@ -223,8 +343,13 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\01AttackPanda1.xnb</Output>
       <Time>2011-05-04T22:53:46.3017578-05:00</Time>
+=======
+      <Output>Z:\Github\proj\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\01AttackPanda1.xnb</Output>
+      <Time>2011-05-05T18:12:31.44056-05:00</Time>
+>>>>>>> ba924ebf9b697d96e8655bded425c992abcdf2f6
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -232,10 +357,17 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
+<<<<<<< HEAD
       <RootDirectory>C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPGContent\</RootDirectory>
       <LoggerRootDirectory>C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\</LoggerRootDirectory>
       <IntermediateDirectory>C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPGContent\obj\Windows Phone\Debug\</IntermediateDirectory>
       <OutputDirectory>C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\</OutputDirectory>
+=======
+      <RootDirectory>Z:\Github\proj\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPGContent\</RootDirectory>
+      <LoggerRootDirectory>Z:\Github\proj\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\</LoggerRootDirectory>
+      <IntermediateDirectory>Z:\Github\proj\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPGContent\obj\Windows Phone\Debug\</IntermediateDirectory>
+      <OutputDirectory>Z:\Github\proj\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\</OutputDirectory>
+>>>>>>> ba924ebf9b697d96e8655bded425c992abcdf2f6
     </Settings>
     <Assemblies>
       <Assembly>
@@ -263,8 +395,13 @@
         <Value>2010-08-23T12:41:18-05:00</Value>
       </Assembly>
       <Assembly>
+<<<<<<< HEAD
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
         <Value>2011-04-02T03:16:33.9628906-05:00</Value>
+=======
+        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2011-03-21T10:50:09.9231505-05:00</Value>
+>>>>>>> ba924ebf9b697d96e8655bded425c992abcdf2f6
       </Assembly>
     </Assemblies>
   </Asset>
