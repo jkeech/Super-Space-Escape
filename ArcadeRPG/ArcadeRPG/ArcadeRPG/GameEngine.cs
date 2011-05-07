@@ -33,6 +33,7 @@ namespace ArcadeRPG
         int sword_delay = 0;
         int att_boost_delay = 0;
         int def_boost_delay = 0;
+        int exit = 13;
         //*******************************************************//
 
 
@@ -176,9 +177,7 @@ namespace ArcadeRPG
             tiles.Add(texturef);
             tiles.Add(textureo);
             game_state.tile_engine = new TileEngine(32, tiles);
-            game_state.tile_engine.loadLevel("Level_2");
-
-            game_state.obj_mang.load(game_state.tile_engine.getCurrentMap().getLayer(LayerType.OBJECTS));
+            
             //back_layer = tileEngine.getLayer(LayerType.BACKGROUND);
             //Character Sprite
             character_sprite[(int)weaponType.NONE].Load(Content, "player_no", 32, 36, 200);
@@ -193,9 +192,10 @@ namespace ArcadeRPG
             monster_texture[(int)enemyType.BERSERKER] = Content.Load<Texture2D>("berserker");
             //monster_sprites[(int)enemyType.GRUNT].Load(monster_texture[(int)enemyType.GRUNT], 32, 48);
             //monster_sprites[(int)enemyType.GRUNT].StartAnimating((int)PlayerDir.UP * 3, ((int)PlayerDir.UP * 3) + 2);
-
+            LoadLevel(0);
             bullet_sprite.Load(Content, "bullet", 9, 9, 0);
             sword_sprite.Load(Content, "player_sword_attack", 32, 36, 0);
+
 
             //game_state.monster_engine.AddMonster(new Enemy(500, 240, 48, 54, enemyType.GRUNT));
             //game_state.monster_engine.AddMonster(new Enemy(300, 400, 48, 54, enemyType.GRUNT));
@@ -254,7 +254,40 @@ namespace ArcadeRPG
         public void UnloadContent()
         {
         }
+        public void LoadLevel(int level_num)
+        {
+            game_state.obj_mang.Clear();
+            
+            game_state.tile_engine.loadLevel(level_num);//needs to be changed to level_0
 
+            game_state.obj_mang.load(game_state.tile_engine.getCurrentMap().getLayer(LayerType.OBJECTS));
+            //game_state.monster_engine.AddMonster(new Enemy(500, 240, 48, 54, enemyType.GRUNT));
+            //game_state.monster_engine.AddMonster(new Enemy(300, 400, 48, 54, enemyType.GRUNT));
+            for (int i = 0; i < game_state.monster_engine.GetMonsters().Count(); ++i)
+            {
+                Enemy new_enemy = game_state.monster_engine.GetMonsters().ElementAt(i);
+                Sprite enemy_sprite = new Sprite();
+                int new_enemy_type = (int)new_enemy.getType();
+          
+                enemy_sprite.Load(monster_texture[new_enemy_type], new_enemy.getWidth(), new_enemy.getHeight(), 200);
+                new_enemy.setSprite(enemy_sprite);
+                //game_state.monster_engine.AddMonster(new_enemy);
+            }
+            /*
+            game_state.monster_engine = new MonsterEngine(game_state);
+            game_state.coll_engine = new CollisionEngine(game_state);
+            game_state.fx_engine = new EffectsEngine(game_state);
+            game_state.obj_mang = new ObjectManager(game_state);
+            */
+        }
+        public bool testAtExit(int x, int y)
+        {
+            int tileT=game_state.tile_engine.getMap(game_state.tile_engine.getCurrentLevel()).getLayer(0).getTile(x/32, y/32).getTexture();
+            if (tileT == exit)
+                return true;
+            else
+                return false;
+        }
         /// <summary>
         /// Allows the game to run logic such as updating the world,
         /// checking for collisions, gathering input, and playing audio.
@@ -532,6 +565,11 @@ namespace ArcadeRPG
             game_state.coll_engine.Update();
 
             game_state.fx_engine.Update();
+            if (testAtExit( game_state.local_player.getX(),(game_state.local_player.getY()+game_state.local_player.getHeight()-1))||testAtExit( game_state.local_player.getX()+game_state.local_player.getWidth(),(game_state.local_player.getY()+game_state.local_player.getHeight())))
+            {
+                int tempn = game_state.tile_engine.getCurrentLevel() + 1;
+                LoadLevel(tempn);
+            }
 
         }
 

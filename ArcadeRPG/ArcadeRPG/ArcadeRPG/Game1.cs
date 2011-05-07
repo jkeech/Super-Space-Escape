@@ -10,7 +10,6 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Input.Touch;
 using Microsoft.Xna.Framework.Media;
 
-
 namespace ArcadeRPG
 {
 
@@ -21,6 +20,7 @@ namespace ArcadeRPG
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+
 
         SpriteFont displayFont; // in separate file (fonts subfolder). arbitrary
         SpriteFont itemfont; // ^^
@@ -40,29 +40,25 @@ namespace ArcadeRPG
 
         TouchCollection tcinstruct; // to be used in the instruction screens at the beginning
 
+        TileEngine tileEngine;
+        List<Texture2D> tiles;
+        BackRender back;
+        int xtestx = 0;
         GameEngine game_engine;
+
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
-            Content.RootDirectory = "Content";
-
-            TargetElapsedTime = TimeSpan.FromTicks(333333);
-
-            intro = new Introduction();
-            instruct = new Instructions();
-            instruct2 = new Instructions2();
-            gameover = new GameOver();
-            timex = new TimeExpired(); // instantiate menus
-
-
-            // use the whole screen
-            graphics.IsFullScreen = true;
 
             game_engine = new GameEngine();
 
-        }
 
+            Content.RootDirectory = "Content";
+
+            // Frame rate is 30 fps by default for Windows Phone.
+            TargetElapsedTime = TimeSpan.FromTicks(333333);
+        }
 
 
         /// <summary>
@@ -73,6 +69,8 @@ namespace ArcadeRPG
         /// </summary>
         protected override void Initialize()
         {
+            // TODO: Add your initialization logic here
+
             base.Initialize();
         }
 
@@ -85,14 +83,6 @@ namespace ArcadeRPG
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            //***********************************LOADING MENUS***************************************//
-            intro.loadContent(Content);
-            timex.loadContent(Content);
-            instruct.loadContent(Content);
-            instruct2.loadContent(Content);
-            gameover.loadContent(Content);
-            //***************************************************************************************//
-
             game_engine.LoadContent(Content);
 
         }
@@ -103,7 +93,7 @@ namespace ArcadeRPG
         /// </summary>
         protected override void UnloadContent()
         {
-
+            // TODO: Unload any non ContentManager content here
         }
 
         /// <summary>
@@ -117,47 +107,7 @@ namespace ArcadeRPG
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            if (intro.isShowing()) // if the introduction screen is showing, continue showing until introTime runs out (5 seconds)
-            {
-                intro.update(gameTime);
-            }
-            else if (instruct.isShowing()) // if instructions are showing, continue showing for 5 seconds and let it advance
-            {
-                instruct.update(gameTime, tcinstruct);
-            }
-            else if (instruct2.isShowing()) // if second instructions are showing, continue showing
-            {
-                instruct2.update(gameTime, tcinstruct);
-            }
-            else if (timex.isShowing()) // user ran out of time, time expired screen is up. will wait here for user to choose to play again or not
-            {
-
-                if (timex.play_again) // user wants to play again
-                {
-                    timex.Hide(); // so hide game screen and
-                    game_engine.Update(gameTime); // go to game environment
-                }
-                else if (!timex.play_again) // user wants to quit or time ran out so
-                {
-                    timex.Hide();
-                    spriteBatch.Begin();
-                    gameover.Show(spriteBatch); // exit game
-                    spriteBatch.End();
-                }
-
-            }
-            else if (gameover.isShowing()) // game over screen is showing
-            {
-                gameover.update(gameTime);
-                if (gameover.exit)
-                {
-                    this.Exit(); // end game
-                }
-            }
-            else
-            {
-                game_engine.Update(gameTime);
-            }
+            game_engine.Update(gameTime);
 
 
             base.Update(gameTime);
@@ -170,50 +120,14 @@ namespace ArcadeRPG
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
+            spriteBatch.Begin();
 
-            if (intro.isShowing())
-            {
-                spriteBatch.Begin();
-                intro.Show(spriteBatch); // show intro screen until timer runs out
-                spriteBatch.End();
-            }
-            else if (instruct.isShowing())
-            {
-                spriteBatch.Begin();
-                instruct.Show(spriteBatch); // show instructions screen until timer runs out
-                spriteBatch.End();
-            }
-            else if (instruct2.isShowing())
-            {
-                spriteBatch.Begin();
-                instruct2.Show(spriteBatch); // show instructions screen until timer runs out
-                spriteBatch.End();
-            }
-            else if (timex.isShowing())
-            {
+            game_engine.Draw(gameTime, spriteBatch);
 
-                spriteBatch.Begin();
-                timex.Show(spriteBatch, displayFont); // show time expired screen until user makes a selection
-                timex.update(spriteBatch, expiredfont, gameTime);
-                spriteBatch.End();
-
-            }
-            else if (gameover.isShowing())
-            {
-                spriteBatch.Begin();
-                gameover.Show(spriteBatch);
-                spriteBatch.End();
-            }
-            else // no menus displayed
-            {
-                spriteBatch.Begin();
-                game_engine.Draw(gameTime, spriteBatch);
-                spriteBatch.End(); // go to game environment
-            }
-
+            spriteBatch.End();
+            // TODO: Add your drawing code here
 
             base.Draw(gameTime);
-        } // end draw function
-
-    } // end class
-} // end program
+        }
+    }
+}
