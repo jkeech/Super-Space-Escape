@@ -31,12 +31,11 @@ namespace ArcadeRPG
         Bullet sword_bullet; //Little trick to create a "bullet" object to do damage
         bool sword_swing = false;
         int sword_delay = 0;
-<<<<<<< HEAD
         int exit = 13;
-=======
+
         bool boost_active = false;
         int boost_delay = 0;
->>>>>>> upstream/master
+
         //*******************************************************//
 
 
@@ -560,7 +559,7 @@ namespace ArcadeRPG
             game_state.coll_engine.Update();
 
             game_state.fx_engine.Update();
-            if (testAtExit( game_state.local_player.getX(),(game_state.local_player.getY()+game_state.local_player.getHeight()-1)))
+            if (testAtExit( game_state.local_player.getX(),(game_state.local_player.getY()+game_state.local_player.getHeight()-1))||testAtExit( game_state.local_player.getX()+game_state.local_player.getWidth(),(game_state.local_player.getY()+game_state.local_player.getHeight())))
             {
                 int tempn = game_state.tile_engine.getCurrentLevel() + 1;
                 LoadLevel(tempn);
