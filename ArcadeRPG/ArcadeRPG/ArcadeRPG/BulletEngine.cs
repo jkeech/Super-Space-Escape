@@ -94,10 +94,43 @@ namespace ArcadeRPG
                     List<ColToken> cols = bullet.col_tok.GetCollisions();
                     for (int j = 0; j < cols.Count(); ++j)
                     {
-                        if ((bullet.owner == bulletOwner.PLAYER && cols.ElementAt(j).GetLocalType() == ColType.PLAYER) || (bullet.owner == bulletOwner.ENEMY && cols.ElementAt(j).GetLocalType() == ColType.MONSTER))
+                        if ((bullet.owner == bulletOwner.PLAYER && cols.ElementAt(j).GetLocalType() == ColType.PLAYER))
                         {
                             continue;
                         } else {
+                            ColToken hit = cols.ElementAt(j);
+                            if (hit.GetLocalType() == ColType.MONSTER)
+                            {
+                                Enemy monster = (Enemy)hit.GetParent();
+                                int damage = 0;
+                                switch (bullet.type)
+                                {
+                                    case bulletType.SMALL:
+                                        damage = 5;
+                                        break;
+                                    case bulletType.SWORD:
+                                        damage = 10;
+                                        break;
+
+                                }
+                                monster.setHealth(monster.getHealth() - (game_state.local_player.getAttackBonus() + damage));
+                                game_state.fx_engine.RequestSound(soundType.HURT);
+                            }
+                            else if (hit.GetLocalType() == ColType.PLAYER)
+                            {
+                                int damage = 0;
+                                switch (bullet.type)
+                                {
+                                    case bulletType.SMALL:
+                                        damage = 5;
+                                        break;
+                                    case bulletType.SWORD:
+                                        damage = 10;
+                                        break;
+
+                                }
+                                game_state.local_player.setHealth(game_state.local_player.getHealth() + game_state.local_player.getDefenseBonus() - damage);
+                            }
                             game_state.coll_engine.remove_object(bullet.col_tok);
                             bullet.col_tok.ResetCollisions();
                             bullets.RemoveAt(i);
