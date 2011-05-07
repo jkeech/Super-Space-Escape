@@ -121,10 +121,6 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <None Include="levels\level0.txt">
-      <Name>level0</Name>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <Compile Include="grunt.png">
       <Name>grunt</Name>
       <Importer>TextureImporter</Importer>
@@ -170,6 +166,10 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+    <None Include="levels\Crash_%28Level 1%29_tutorial.lvl">
+      <Name>Crash_%28Level 1%29_tutorial</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="levels\levels.txt">
       <Name>levels</Name>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -214,10 +214,10 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
     </Compile>
-    <Content Include="levels\maze.lvl">
-      <Name>maze</Name>
+    <None Include="levels\Level_1.lvl">
+      <Name>Level_1</Name>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </None>
     <None Include="levels\Level_2.lvl">
       <Name>Level_2</Name>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -226,16 +226,20 @@
       <Name>Level_3</Name>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="levels\maze%282%29.lvl">
-      <Name>maze%282%29</Name>
+    <None Include="levels\Level_4.lvl">
+      <Name>Level_4</Name>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="levels\poffworld.lvl">
-      <Name>poffworld</Name>
+    <None Include="levels\Level_5.lvl">
+      <Name>Level_5</Name>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="levels\poffworld2.lvl">
-      <Name>poffworld2</Name>
+    <None Include="levels\Level_6.lvl">
+      <Name>Level_6</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="levels\Level_7.lvl">
+      <Name>Level_7</Name>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="StatsFont.spritefont">

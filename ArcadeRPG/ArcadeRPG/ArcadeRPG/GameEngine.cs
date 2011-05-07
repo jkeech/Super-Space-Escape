@@ -31,6 +31,7 @@ namespace ArcadeRPG
         Bullet sword_bullet; //Little trick to create a "bullet" object to do damage
         bool sword_swing = false;
         int sword_delay = 0;
+        int exit = 13;
         //*******************************************************//
 
 
@@ -277,7 +278,14 @@ namespace ArcadeRPG
             game_state.obj_mang = new ObjectManager(game_state);
             */
         }
-
+        public bool testAtExit(int x, int y)
+        {
+            int tileT=game_state.tile_engine.getMap(game_state.tile_engine.getCurrentLevel()).getLayer(0).getTile(x/32, y/32).getTexture();
+            if (tileT == exit)
+                return true;
+            else
+                return false;
+        }
         /// <summary>
         /// Allows the game to run logic such as updating the world,
         /// checking for collisions, gathering input, and playing audio.
@@ -510,7 +518,7 @@ namespace ArcadeRPG
             game_state.coll_engine.Update();
 
             game_state.fx_engine.Update();
-            if (game_state.local_player.getX() > 200)
+            if (testAtExit( game_state.local_player.getX(),(game_state.local_player.getY()+game_state.local_player.getHeight()-1)))
             {
                 int tempn = game_state.tile_engine.getCurrentLevel() + 1;
                 LoadLevel(tempn);
