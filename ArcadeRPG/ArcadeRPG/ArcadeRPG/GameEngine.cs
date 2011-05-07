@@ -192,10 +192,7 @@ namespace ArcadeRPG
             LoadLevel(0);
             bullet_sprite.Load(Content, "bullet", 9, 9, 0);
             sword_sprite.Load(Content, "player_sword_attack", 32, 36, 0);
-<<<<<<< HEAD
-     
-            
-=======
+
 
             //game_state.monster_engine.AddMonster(new Enemy(500, 240, 48, 54, enemyType.GRUNT));
             //game_state.monster_engine.AddMonster(new Enemy(300, 400, 48, 54, enemyType.GRUNT));
@@ -210,7 +207,6 @@ namespace ArcadeRPG
                 //game_state.monster_engine.AddMonster(new_enemy);
             }
 
->>>>>>> ba924ebf9b697d96e8655bded425c992abcdf2f6
             game_state.bullet_engine = new BulletEngine(game_state);
             //character_sprite.StartAnimating(6, 8);
             // TODO: use this.Content to load your game content here

@@ -42,6 +42,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ItemFont.spritefont">
+      <Name>ItemFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
     <Compile Include="sprite.png">
       <Name>sprite</Name>
       <Importer>TextureImporter</Importer>
@@ -106,15 +111,15 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+    <Compile Include="TimeExpired.spritefont">
+      <Name>TimeExpired</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
     <Compile Include="Welcome.png">
       <Name>Welcome</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="ItemFont.spritefont">
-      <Name>ItemFont</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
     </Compile>
     <None Include="levels\level0.txt">
       <Name>level0</Name>
@@ -165,12 +170,10 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-<<<<<<< HEAD
     <None Include="levels\levels.txt">
       <Name>levels</Name>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-=======
     <Compile Include="GameOver.png">
       <Name>GameOver</Name>
       <Importer>TextureImporter</Importer>
@@ -201,9 +204,6 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-<<<<<<< HEAD
->>>>>>> ba924ebf9b697d96e8655bded425c992abcdf2f6
-=======
     <Compile Include="item_background.png">
       <Name>item_background</Name>
       <Importer>TextureImporter</Importer>
@@ -214,7 +214,6 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
     </Compile>
->>>>>>> upstream/master
     <Content Include="levels\maze.lvl">
       <Name>maze</Name>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -241,11 +240,6 @@
     </None>
     <Compile Include="StatsFont.spritefont">
       <Name>StatsFont</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-    </Compile>
-    <Compile Include="TimeExpired.spritefont">
-      <Name>TimeExpired</Name>
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
     </Compile>
