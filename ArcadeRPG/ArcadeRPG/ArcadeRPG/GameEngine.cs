@@ -31,8 +31,8 @@ namespace ArcadeRPG
         Bullet sword_bullet; //Little trick to create a "bullet" object to do damage
         bool sword_swing = false;
         int sword_delay = 0;
-        bool boost_active = false;
-        int boost_delay = 0;
+        int att_boost_delay = 0;
+        int def_boost_delay = 0;
         //*******************************************************//
 
 
@@ -412,8 +412,8 @@ namespace ArcadeRPG
                                 {
                                     case itemType.LASER: game_state.local_player.setWeapon(weaponType.LASER); break;
                                     case itemType.SWORD: game_state.local_player.setWeapon(weaponType.SWORD); break;
-                                    case itemType.ATT_BOOST: toRemove = i; boost_delay = 10000; boost_active = true; game_state.local_player.setAttackBonus(5); break;
-                                    case itemType.DEF_BOOST: toRemove = i; boost_delay = 10000; boost_active = true; game_state.local_player.setAttackBonus(5); break;
+                                    case itemType.ATT_BOOST: toRemove = i; att_boost_delay = 10000; game_state.local_player.setAttackBonus(5); break;
+                                    case itemType.DEF_BOOST: toRemove = i; def_boost_delay = 10000; game_state.local_player.setDefenseBonus(5); break;
                                     case itemType.KEY:
                                     default: break;
                                 }
@@ -447,13 +447,20 @@ namespace ArcadeRPG
                 }
             }
 
-            if (boost_active)
+            if (game_state.local_player.getAttackBonus() > 0)
             {
-                boost_delay -= gameTime.ElapsedGameTime.Milliseconds;
-                if (boost_delay <= 0)
+                att_boost_delay -= gameTime.ElapsedGameTime.Milliseconds;
+                if (att_boost_delay <= 0)
                 {
-                    boost_active = false;
                     game_state.local_player.setAttackBonus(0);
+                }
+            }
+
+            if (game_state.local_player.getDefenseBonus() > 0)
+            {
+                def_boost_delay -= gameTime.ElapsedGameTime.Milliseconds;
+                if (def_boost_delay <= 0)
+                {
                     game_state.local_player.setDefenseBonus(0);
                 }
             }
@@ -492,6 +499,7 @@ namespace ArcadeRPG
                             damage = enem.getAttack();
                         }
                         //Player gets hurt!
+
                         game_state.local_player.setHealth(game_state.local_player.getHealth() + game_state.local_player.getDefenseBonus() - damage);
                         game_state.local_player.hurt = true;
                         double new_width = ((double)health_bar_width) * (double)((double)game_state.local_player.getHealth() / (double)game_state.local_player.getMaxHealth());
@@ -565,16 +573,43 @@ namespace ArcadeRPG
                     character_sprite[(int)game_state.local_player.getWeapon()].loc.Y = (480 / 2) - 16;// - (32 / 2);
 
             }
+
+            // Fade a color over the player if they are hurt or have a boost active
+            bool shouldFadeHurt = game_state.local_player.hurt;
+            bool shouldFadeAttack = game_state.local_player.getAttackBonus() > 0;
+            bool shouldFadeDefense = game_state.local_player.getDefenseBonus() > 0;
+            Color toFade;
+            if (shouldFadeHurt)
+            {
+                toFade = Color.Red;
+            }
+            else if (shouldFadeAttack && shouldFadeDefense)
+            {
+                toFade = Color.LightGreen;
+            }
+            else if (shouldFadeAttack)
+            {
+                toFade = Color.LightYellow;
+            }
+            else if (shouldFadeDefense)
+            {
+                toFade = Color.LightBlue;
+            }
+            else
+            {
+                toFade = Color.White;
+            }
+
             //character_sprite.cur_frame 
             if (sword_swing)
             {
 
                 sword_sprite.loc = character_sprite[(int)game_state.local_player.getWeapon()].loc;
-                sword_sprite.Draw(spriteBatch, (int)game_state.local_player.getDirection());
+                sword_sprite.Draw(spriteBatch, (int)game_state.local_player.getDirection(), (shouldFadeHurt || shouldFadeAttack || shouldFadeDefense), toFade);
             }
             else
             {
-                character_sprite[(int)game_state.local_player.getWeapon()].Draw(spriteBatch);
+                character_sprite[(int)game_state.local_player.getWeapon()].Draw(spriteBatch, (shouldFadeHurt || shouldFadeAttack || shouldFadeDefense), toFade);
             }
 
             //Draw monsters
