@@ -30,8 +30,10 @@ namespace ArcadeRPG
         ColType local_type;
 
         List<Collision> collisions;
+        List<ColToken> cols;
+        object parent;
         public bool updated_this_frame;
-
+        /*
         public ColToken(int x, int y, int _width, int _height, int _engine_id, ColType type, CollisionEngine _ce)
         {
             loc_x = x;
@@ -44,12 +46,33 @@ namespace ArcadeRPG
             collisions = new List<Collision>();
             updated_this_frame = false;
         }
+        */
+        public ColToken(ColType type, CollisionEngine _ce, int _engine_id, object _parent)
+        {
+            local_type = type;
+            ce = _ce;
+            parent = _parent;
+            updated_this_frame = false;
+            cols = new List<ColToken>();
+            engine_id = _engine_id;
+        }
 
         public void update(int x, int y)
         {
-            
+            /*
             loc_x = x;
             loc_y = y;
+            if (!updated_this_frame)
+            {
+                ce.mark(this);
+                updated_this_frame = true;
+            }
+             * */
+            update();
+        }
+
+        public void update()
+        {
             if (!updated_this_frame)
             {
                 ce.mark(this);
@@ -75,9 +98,24 @@ namespace ArcadeRPG
 
         }
 
+        public void Collision(ColToken tok)
+        {
+            if (!cols.Contains(tok))
+            {
+                cols.Add(tok);
+            }
+        }
+
         public bool HasCollisions()
         {
+            /*
             if (collisions.Count() > 0)
+            {
+                return true;
+            }
+            return false;
+             * */
+            if (cols.Count() > 0)
             {
                 return true;
             }
@@ -89,14 +127,21 @@ namespace ArcadeRPG
             return local_type;
         }
 
-        public List<Collision> GetCollisions()
+        public object GetParent()
         {
-            return collisions;
+            return parent;
+        }
+
+        public List<ColToken> GetCollisions()
+        {
+            //return collisions;
+            return cols;
         }
 
         public void ResetCollisions()
         {
-            collisions.Clear();
+            //collisions.Clear();
+            cols.Clear();
         }
     }
 
@@ -120,9 +165,9 @@ namespace ArcadeRPG
             marked_objects.Add(tok);
         }
 
-        public ColToken register_object(int x, int y, int width, int height, ColType type)
+        public ColToken register_object(object parent, ColType type)
         {
-            ColToken new_object = new ColToken(x, y, width, height, unique_id++, type, this);
+            ColToken new_object = new ColToken(type, this, unique_id++, parent);
             all_objects.Add(new_object);
 
             return new_object;
@@ -141,9 +186,36 @@ namespace ArcadeRPG
             for (int i = 0; i < marked_objects.Count(); ++i)
             {
                 ColToken obj = marked_objects.ElementAt(i);
+                int loc_x = 0, loc_y = 0, width = 0, height = 0;
+                switch (obj.GetLocalType())
+                {
+                    case ColType.PLAYER:
+                        Player temp_pl = (Player)obj.GetParent();
+                        loc_x = temp_pl.getX();
+                        loc_y = temp_pl.getY();
+                        width = temp_pl.getWidth();
+                        height = temp_pl.getHeight();
+                        break;
+                    case ColType.MONSTER:
+                        Enemy temp_em = (Enemy)obj.GetParent();
+                        loc_x = temp_em.getX();
+                        loc_y = temp_em.getY();
+                        width = temp_em.getWidth();
+                        height = temp_em.getHeight();
+                        break;
+                    case ColType.BULLET:
+                        Bullet temp_bu = (Bullet)obj.GetParent();
+                        loc_x = temp_bu.x;
+                        loc_y = temp_bu.y;
+                        width = temp_bu.width;
+                        height = temp_bu.height;
+                        break;
+                }
+
                 if (check_map_col(obj.loc_x, obj.loc_y, obj.width, obj.height))
                 {
-                    obj.Collision(new Collision(ColType.MAP, 0)); // REVERTS ITSELF SOME TIMES SO IT SAYS IT'S MARKED
+                   // obj.Collision(new Collision(ColType.MAP, 0)); // REVERTS ITSELF SOME TIMES SO IT SAYS IT'S MARKED
+                    obj.Collision(new ColToken(ColType.MAP, this, unique_id++, null));
                 }
 
 
@@ -153,7 +225,33 @@ namespace ArcadeRPG
                     if (obj.getID() == other_obj.getID())
                     {
                         continue;
-                    } 
+                    }
+                    int other_loc_x = 0, other_loc_y = 0, other_width = 0, other_height = 0;
+                    switch (other_obj.GetLocalType())
+                    {
+                        case ColType.PLAYER:
+                            Player temp_pl = (Player)other_obj.GetParent();
+                            other_loc_x = temp_pl.getX();
+                            other_loc_y = temp_pl.getY();
+                            other_width = temp_pl.getWidth();
+                            other_height = temp_pl.getHeight();
+                            break;
+                        case ColType.MONSTER:
+                            Enemy temp_em = (Enemy)other_obj.GetParent();
+                            other_loc_x = temp_em.getX();
+                            other_loc_y = temp_em.getY();
+                            other_width = temp_em.getWidth();
+                            other_height = temp_em.getHeight();
+                            break;
+                        case ColType.BULLET:
+                            Bullet temp_bu = (Bullet)other_obj.GetParent();
+                            other_loc_x = temp_bu.x;
+                            other_loc_y = temp_bu.y;
+                            other_width = temp_bu.width;
+                            other_height = temp_bu.height;
+                            break;
+                    }
+
                     //Check col
                     /*
                     if (obj.GetLocalType() == ColType.BULLET && other_obj.GetLocalType() == ColType.MONSTER)
@@ -162,9 +260,10 @@ namespace ArcadeRPG
                         continue;
                     }
                      * */
-                    if(check_col(obj.loc_x, obj.loc_y, other_obj.loc_x, other_obj.loc_y, obj.width, obj.height, other_obj.width, other_obj.height)) {
-                        obj.Collision(new Collision(other_obj.GetLocalType(), other_obj.getID()));
+                    if(check_col(loc_x, loc_y, other_loc_x, other_loc_y, width, height, other_width, other_height)) {
+                       // obj.Collision(new Collision(other_obj.GetLocalType(), other_obj.getID()));
                        // other_obj.Collision(new Collision(obj.GetLocalType(), obj.getID()));
+                        obj.Collision(other_obj);
                     }
 
 
