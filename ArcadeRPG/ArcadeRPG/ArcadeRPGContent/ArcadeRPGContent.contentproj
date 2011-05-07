@@ -166,10 +166,6 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <None Include="levels\Crash_%28Level 1%29_tutorial.lvl">
-      <Name>Crash_%28Level 1%29_tutorial</Name>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="levels\levels.txt">
       <Name>levels</Name>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -247,6 +243,10 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
     </Compile>
+    <None Include="levels\tutorial.lvl">
+      <Name>tutorial</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="arrowdown.png">

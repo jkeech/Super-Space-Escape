@@ -1,4 +1,4 @@
-Crash_(Level 1)_tutorial
+tutorial
 Level_1
 Level_2
 Level_3
