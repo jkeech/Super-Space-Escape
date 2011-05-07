@@ -31,6 +31,8 @@ namespace ArcadeRPG
         Bullet sword_bullet; //Little trick to create a "bullet" object to do damage
         bool sword_swing = false;
         int sword_delay = 0;
+        bool boost_active = false;
+        int boost_delay = 0;
         //*******************************************************//
 
 
@@ -410,8 +412,8 @@ namespace ArcadeRPG
                                 {
                                     case itemType.LASER: game_state.local_player.setWeapon(weaponType.LASER); break;
                                     case itemType.SWORD: game_state.local_player.setWeapon(weaponType.SWORD); break;
-                                    case itemType.ATT_BOOST: toRemove = i; game_state.local_player.setAttack(5); break;
-                                    case itemType.DEF_BOOST: toRemove = i; break;
+                                    case itemType.ATT_BOOST: toRemove = i; boost_delay = 10000; boost_active = true; game_state.local_player.setAttackBonus(5); break;
+                                    case itemType.DEF_BOOST: toRemove = i; boost_delay = 10000; boost_active = true; game_state.local_player.setAttackBonus(5); break;
                                     case itemType.KEY:
                                     default: break;
                                 }
@@ -444,6 +446,18 @@ namespace ArcadeRPG
                     game_state.bullet_engine.RemoveBullet(sword_bullet);
                 }
             }
+
+            if (boost_active)
+            {
+                boost_delay -= gameTime.ElapsedGameTime.Milliseconds;
+                if (boost_delay <= 0)
+                {
+                    boost_active = false;
+                    game_state.local_player.setAttackBonus(0);
+                    game_state.local_player.setDefenseBonus(0);
+                }
+            }
+
             List<ColToken> cols = game_state.local_player.col_tok.GetCollisions();
             for (int j = 0; j < cols.Count(); ++j)
             {
@@ -452,8 +466,33 @@ namespace ArcadeRPG
                 {
                     if (!game_state.local_player.hurt)
                     {
+                        int damage = 0;
+                        if (coll.GetLocalType() == ColType.BULLET)
+                        {
+                            //BulletEngine will deal the damage for this
+                            /*
+                            Bullet bull = (Bullet)coll.GetParent();
+                            if (bull.owner == bulletOwner.ENEMY)
+                            {
+                                switch (bull.type)
+                                {
+                                    case bulletType.SMALL:
+                                        damage = 5;
+                                        break;
+                                    case bulletType.SWORD:
+                                        damage = 10;
+                                        break;
+
+                                }
+                            }*/
+                        }
+                        else if (coll.GetLocalType() == ColType.MONSTER)
+                        {
+                            Enemy enem = (Enemy)coll.GetParent();
+                            damage = enem.getAttack();
+                        }
                         //Player gets hurt!
-                        game_state.local_player.setHealth(game_state.local_player.getHealth() - 3);
+                        game_state.local_player.setHealth(game_state.local_player.getHealth() + game_state.local_player.getDefenseBonus() - damage);
                         game_state.local_player.hurt = true;
                         double new_width = ((double)health_bar_width) * (double)((double)game_state.local_player.getHealth() / (double)game_state.local_player.getMaxHealth());
                         health_bar_rec.Width = (int)new_width;

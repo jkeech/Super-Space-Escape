@@ -30,7 +30,7 @@ namespace ArcadeRPG
         public ColToken col_tok;
         public bool moving;
         public bool hurt;
-        int attack;
+        int attack, defense; //Bonuses from items
         int speed;
         int health;
         int max_health;
@@ -51,7 +51,7 @@ namespace ArcadeRPG
 
             max_health = health = 100;
             speed = 3;
-            attack = 0;
+            attack = defense = 0;
             activeWeapon = weaponType.NONE;
             //secondaryWeapon = null;
             dir = PlayerDir.UP;
@@ -114,15 +114,24 @@ namespace ArcadeRPG
             return activeWeapon;
         }
 
-        public int getAttack()
+        public int getAttackBonus()
         {
             return attack;
         }
 
+        public int getDefenseBonus()
+        {
+            return defense;
+        }
 
-        public void setAttack(int _attack)
+        public void setAttackBonus(int _attack)
         {
             attack = _attack;
+        }
+
+        public void setDefenseBonus(int _defense)
+        {
+            defense = _defense;
         }
         /// <summary>
         /// Sets the current x coordinate of the player
@@ -224,7 +233,7 @@ namespace ArcadeRPG
             if (t == enemyType.GRUNT)
             {
                 eType = t;
-                attack = 1;
+                attack = 2;
                 speed = 2;
                 max_health = health = 20;
             }
@@ -232,7 +241,7 @@ namespace ArcadeRPG
             else if (t == enemyType.BEETLE)
             {
                 eType = t;
-                attack = 2;
+                attack = 5;
                 speed = 2;
                 max_health = health = 10;
             }
@@ -240,7 +249,7 @@ namespace ArcadeRPG
             else if (t == enemyType.BERSERKER)
             {
                 eType = t;
-                attack = 3;
+                attack = 5;
                 speed = 3;
                 max_health = health = 15;
             }
@@ -304,6 +313,11 @@ namespace ArcadeRPG
         public Sprite getSprite()
         {
             return sprite;
+        }
+
+        public int getAttack()
+        {
+            return attack;
         }
 
         public void setSprite(Sprite _sprite)
