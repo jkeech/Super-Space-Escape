@@ -91,11 +91,6 @@ namespace ArcadeRPG
             {
                 collisions.Add(col);
             }
-            else
-            {
-                Console.Write("Derp derp\n");
-            }
-
         }
 
         public void Collision(ColToken tok)
@@ -212,7 +207,7 @@ namespace ArcadeRPG
                         break;
                 }
 
-                if (check_map_col(obj.loc_x, obj.loc_y, obj.width, obj.height))
+                if (check_map_col(loc_x, loc_y, width, height))
                 {
                    // obj.Collision(new Collision(ColType.MAP, 0)); // REVERTS ITSELF SOME TIMES SO IT SAYS IT'S MARKED
                     obj.Collision(new ColToken(ColType.MAP, this, unique_id++, null));
