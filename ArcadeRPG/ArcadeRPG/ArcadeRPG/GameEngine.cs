@@ -134,11 +134,7 @@ namespace ArcadeRPG
             game_state.fx_engine = new EffectsEngine(game_state);
             game_state.obj_mang = new ObjectManager(game_state);
 
-            game_state.local_player.col_tok = game_state.coll_engine.register_object(game_state.local_player.getX(),
-                game_state.local_player.getY(),
-                game_state.local_player.getWidth(),
-                game_state.local_player.getHeight(),
-                ColType.PLAYER);
+            game_state.local_player.col_tok = game_state.coll_engine.register_object(game_state.local_player, ColType.PLAYER);
 
 
 
@@ -228,6 +224,8 @@ namespace ArcadeRPG
             game_state.fx_engine.LoadSound(Content, "sword_swing", soundType.SWORD);
             game_state.fx_engine.LoadExplosion(Content, "expl", explosionType.SMALL);
             //SoundEffect game_music = Content.Load<SoundEffect>("01AttackPanda1");
+            Song game_music = Content.Load<Song>("01AttackPanda1");
+            MediaPlayer.Play(game_music);
             //game_music.Play();
 
             //********************************LOADING GRAPHIC SPRITES********************************//
@@ -412,7 +410,7 @@ namespace ArcadeRPG
                                 {
                                     case itemType.LASER: game_state.local_player.setWeapon(weaponType.LASER); break;
                                     case itemType.SWORD: game_state.local_player.setWeapon(weaponType.SWORD); break;
-                                    case itemType.ATT_BOOST:
+                                    case itemType.ATT_BOOST: toRemove = i; game_state.local_player.setAttack(5); break;
                                     case itemType.DEF_BOOST: toRemove = i; break;
                                     case itemType.KEY:
                                     default: break;
@@ -446,11 +444,11 @@ namespace ArcadeRPG
                     game_state.bullet_engine.RemoveBullet(sword_bullet);
                 }
             }
-            List<Collision> cols = game_state.local_player.col_tok.GetCollisions();
+            List<ColToken> cols = game_state.local_player.col_tok.GetCollisions();
             for (int j = 0; j < cols.Count(); ++j)
             {
-                Collision coll = cols.ElementAt(j);
-                if (coll.type != ColType.MAP)
+                ColToken coll = cols.ElementAt(j);
+                if (coll.GetLocalType() != ColType.MAP)
                 {
                     if (!game_state.local_player.hurt)
                     {

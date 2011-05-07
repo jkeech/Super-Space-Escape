@@ -11,6 +11,7 @@ namespace ArcadeRPG
     class Bullet
     {
         public int x, y;
+        public int width, height;
         public int vel_x, vel_y;
         public bulletOwner owner;
         public bulletType type;
@@ -72,8 +73,9 @@ namespace ArcadeRPG
 
             bullet.owner = owner;
             bullet.type = type;
-
-            bullet.col_tok = game_state.coll_engine.register_object(bullet.x, bullet.y, width, height, ColType.BULLET);
+            bullet.width = width;
+            bullet.height = height;
+            bullet.col_tok = game_state.coll_engine.register_object(bullet, ColType.BULLET);
 
             bullets.Add(bullet);
 
@@ -89,10 +91,10 @@ namespace ArcadeRPG
                 bool throw_out = false;
                 if (bullet.col_tok.HasCollisions())
                 {
-                    List<Collision> cols = bullet.col_tok.GetCollisions();
+                    List<ColToken> cols = bullet.col_tok.GetCollisions();
                     for (int j = 0; j < cols.Count(); ++j)
                     {
-                        if ((bullet.owner == bulletOwner.PLAYER && cols.ElementAt(j).type == ColType.PLAYER) || (bullet.owner == bulletOwner.ENEMY && cols.ElementAt(j).type == ColType.MONSTER))
+                        if ((bullet.owner == bulletOwner.PLAYER && cols.ElementAt(j).GetLocalType() == ColType.PLAYER) || (bullet.owner == bulletOwner.ENEMY && cols.ElementAt(j).GetLocalType() == ColType.MONSTER))
                         {
                             continue;
                         } else {
