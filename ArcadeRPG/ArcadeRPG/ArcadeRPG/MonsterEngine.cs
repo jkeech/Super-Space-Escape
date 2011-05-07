@@ -416,10 +416,12 @@ namespace ArcadeRPG
 
         public void Update(int elapsed_time)
         {
+            
             for (int i = 0; i < monsters.Count(); ++i)
             {
                 Enemy monster = monsters.ElementAt(i);
                 bool mons_removed = false;
+                /*
                 if (monster.col_tok.HasCollisions())//&& monster.col_tok.GetHitType() == ColType.BULLET)
                 {
 
@@ -441,7 +443,7 @@ namespace ArcadeRPG
                                     break;
 
                             }
-                            monster.setHealth(monster.getHealth() - (game_state.local_player.getAttack()+damage));
+                            monster.setHealth(monster.getHealth() - (game_state.local_player.getAttackBonus()+damage));
                             //dmg_sound.Play();
                             if (monster.getHealth() <= 0)
                             {
@@ -459,6 +461,13 @@ namespace ArcadeRPG
                     }
 
                     monster.col_tok.ResetCollisions();
+                }
+             * */
+                if (monster.getHealth() <= 0)
+                {
+                    game_state.monster_engine.Remove(monster);
+                    mons_removed = true;
+                    game_state.fx_engine.RequestExplosion(explosionType.SMALL, monster.getX() + (monster.getWidth() / 2), monster.getY() + (monster.getHeight() / 2));
                 }
                 if (mons_removed == false)
                 {
