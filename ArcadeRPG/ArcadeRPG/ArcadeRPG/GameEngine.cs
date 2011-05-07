@@ -485,6 +485,13 @@ namespace ArcadeRPG
 
                                 }
                             }*/
+                            Bullet bul = (Bullet)coll.GetParent();
+                            if (bul.owner == bulletOwner.PLAYER)
+                            {
+                                continue;
+                            }
+
+          
                         }
                         else if (coll.GetLocalType() == ColType.MONSTER)
                         {
