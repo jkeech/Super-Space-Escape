@@ -357,7 +357,12 @@ namespace ArcadeRPG
             game_state.coll_engine.remove_object(monster.col_tok);
             monsters.Remove(monster);
         }
-
+        public void Clear()//removes monster instances for map clearing
+        {
+            for (int x = 0; x < monsters.Count(); x++)
+                game_state.coll_engine.remove_object(monsters[x].col_tok);
+            monsters.Clear();
+        }
         public List<Enemy> GetMonsters()
         {
             return monsters;

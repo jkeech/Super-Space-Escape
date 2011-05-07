@@ -155,12 +155,20 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+    <None Include="levels\levels.txt">
+      <Name>levels</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Content Include="levels\maze.lvl">
       <Name>maze</Name>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="levels\Level_2.lvl">
       <Name>Level_2</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="levels\Level_3.lvl">
+      <Name>Level_3</Name>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="levels\maze%282%29.lvl">

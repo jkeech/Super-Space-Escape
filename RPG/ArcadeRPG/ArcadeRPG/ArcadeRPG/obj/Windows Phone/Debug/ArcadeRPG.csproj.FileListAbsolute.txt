@@ -36,7 +36,6 @@ H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG
 H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\AppManifest.xaml
 H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\obj\Windows Phone\Debug\WMAppManifest.xml.g
 H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\obj\Windows Phone\Debug\WMAppManifest.xml
-bin\Windows Phone\Debug\GameThumbnail.png
 H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\ArcadeRPG.xap
 H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\obj\Windows Phone\Debug\XapCacheFile.xml
 \\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\sprite.xnb
@@ -83,3 +82,48 @@ H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG
 \\filer\bmp4846\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\berserker.xnb
 H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\beetles.xnb
 H:\ms_windows\cpsc_redirected\My Documents\Visual Studio 2010\Projects\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\berserker.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\sprite.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\clouds.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\tiles.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\objects_cropped.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_gun.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_no.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_sword.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\player_sword_attack.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\objects1.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\grunt.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\bullet.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\fire.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\background_cropped.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\foreground_cropped.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\expl.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\beetles.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\berserker.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowdown.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowleft.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowright.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\arrowup.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\shoot.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\sword_swing.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\hurt.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\01AttackPanda1.xnb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\levels\maze.lvl
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\levels\level0.txt
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\levels\levels.txt
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\levels\maze(2).lvl
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\levels\poffworld.lvl
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\levels\poffworld2.lvl
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\ArcadeRPG.dll
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\ArcadeRPG.pdb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\obj\Windows Phone\Debug\ArcadeRPG.dll
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\obj\Windows Phone\Debug\ArcadeRPG.pdb
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\AppManifest.xaml
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\obj\Windows Phone\Debug\WMAppManifest.xml.g
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\obj\Windows Phone\Debug\WMAppManifest.xml
+bin\Windows Phone\Debug\GameThumbnail.png
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\ArcadeRPG.xap
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\obj\Windows Phone\Debug\XapCacheFile.xml
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\levels\Level_2.lvl
+C:\Users\sitremba1\315\Super-Space-Escape\RPG\ArcadeRPG\ArcadeRPG\ArcadeRPG\bin\Windows Phone\Debug\Content\levels\Level_3.lvl

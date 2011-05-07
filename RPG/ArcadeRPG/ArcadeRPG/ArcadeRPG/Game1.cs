@@ -20,16 +20,11 @@ namespace ArcadeRPG
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-
-<<<<<<< HEAD
         TileEngine tileEngine;
         List<Texture2D> tiles;
         BackRender back;
         int xtestx = 0;
-=======
         GameEngine game_engine;
-
->>>>>>> upstream/master
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -42,7 +37,6 @@ namespace ArcadeRPG
             // Frame rate is 30 fps by default for Windows Phone.
             TargetElapsedTime = TimeSpan.FromTicks(333333);
         }
-
 
 
         /// <summary>

@@ -117,6 +117,10 @@ namespace ArcadeRPG
                 }
             }
         }
+        public void Clear() //needs to be implemented to prevent leak only clears monsters atm, not collision
+        {
+            game_state.monster_engine.Clear();
+        }
 
         //Item lookup - coords
         public Item getItemAt(int x, int y, int width, int height)

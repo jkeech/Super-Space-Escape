@@ -19,9 +19,9 @@ namespace ArcadeRPG
         int currentLevel;
        // TileLoader tileLoader;
         List<Texture2D> tiles;
-
+        List<String> level_names;
         List<Map> levels;
-
+        
         /// <summary>
         /// Constructor for a TileEngine object
         /// </summary>
@@ -30,18 +30,53 @@ namespace ArcadeRPG
         {
             TILE_SIZE = tileSize;
             levels = new List<Map>();
+            level_names = new List<string>();
             tiles = tilest;
             currentLevel = -1;
+            readLevels();
         }
-
+        public void readLevels()
+        {
+            Stream stream = TitleContainer.OpenStream("Content/levels/levels.txt");
+            StreamReader sr = new StreamReader(stream);
+            
+            String temp = "";
+            while (!sr.EndOfStream)
+            {
+                temp="corrupted load";//will be replaced if loaded properly
+                temp = sr.ReadLine();
+                level_names.Add(temp);
+            }
+            sr.Close();
+        }
+        public String getCurrentLevelName()
+        {
+            return level_names[currentLevel];
+        }
+        public String getNextLevelName()
+        {
+            if (currentLevel + 1 < level_names.Count()-1)
+                return level_names[currentLevel + 1];
+            else
+                return null;
+        }
+        public String getPrevLevelName()
+        {
+            if (currentLevel + 1 >0)
+                return level_names[currentLevel - 1];
+            else
+                return null;
+        }
         /// <summary>
         /// Loads a level from a file and adds it to the list of levels
         /// </summary>
         /// <param name="file">Input the file name where the level is located. Only input the name, not the extension. Level files by default are stored in the Content/levels/ folder. Ex: To load "Content/levels/level1.txt", simply call loadLevel("level1");</param>
-        public void loadLevel(String file)
+        public void loadLevel(int num)
         {
+            String file = level_names[num];
             Stream stream = TitleContainer.OpenStream("Content/levels/" + file + ".lvl");
             StreamReader sr = new StreamReader(stream);
+            currentLevel = num;
 
             //begin reading data
 
@@ -141,9 +176,9 @@ namespace ArcadeRPG
                     currentID++;
                 }
             }
-
+            sr.Close();
             levels.Add(newLevel);
-            currentLevel++;
+            
         }
 
         /// <summary>
