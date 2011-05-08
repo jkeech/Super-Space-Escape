@@ -197,6 +197,15 @@ namespace ArcadeRPG
         {
             inventory.Remove(item);
         }
+        public bool hasKey()
+        {
+            foreach (Item i in inventory)
+            {
+                if (i.getType() == itemType.KEY)
+                    return true;
+            }
+            return false;
+        }
     }
 
     class Enemy
