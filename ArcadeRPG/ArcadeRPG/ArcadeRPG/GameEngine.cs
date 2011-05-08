@@ -727,7 +727,7 @@ namespace ArcadeRPG
                 spriteBatch.DrawString(displayFont, currScore.ToString(), currScorePos, Color.Black); // draw actual score
 
                 spriteBatch.DrawString(displayFont, levelstring, levelstringpos, Color.Black); // draw "level: "
-                spriteBatch.DrawString(displayFont, levelnum.ToString(), levelnumpos, Color.Black); // draw level number
+                spriteBatch.DrawString(displayFont, game_state.tile_engine.getCurrentLevelName(), levelnumpos, Color.Black); // draw level number
                 //****************************************************************************//
 
 
