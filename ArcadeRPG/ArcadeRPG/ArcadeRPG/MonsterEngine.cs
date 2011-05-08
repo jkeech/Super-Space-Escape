@@ -220,9 +220,9 @@ namespace ArcadeRPG
             PathFind pf = new PathFind(game_state);
             int mons_tile_x = (monster.getX() + (monster.getWidth() / 2)) / game_state.tile_engine.getTileSize();
             int mons_tile_y = (monster.getY() + (monster.getHeight() / 2)) / game_state.tile_engine.getTileSize();
-            int pl_tile_x = game_state.local_player.getX()/game_state.tile_engine.getTileSize();
-            int pl_tile_y = game_state.local_player.getY()/game_state.tile_engine.getTileSize();
-            pl_tile_y += 1;//get the enemies to head toward the bottom of the player so that they follow you on the bridge
+            int pl_tile_x = (game_state.local_player.getX()+(game_state.local_player.getWidth()/2))/game_state.tile_engine.getTileSize();
+            int pl_tile_y = (game_state.local_player.getY()+(game_state.local_player.getHeight()/2))/game_state.tile_engine.getTileSize();
+           // pl_tile_y += 1;//get the enemies to head toward the bottom of the player so that they follow you on the bridge
             monster.setPath(pf.FindPath(mons_tile_x, mons_tile_y, pl_tile_x, pl_tile_y));
         }
 

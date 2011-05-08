@@ -76,8 +76,8 @@ namespace ArcadeRPG
                     {
                         if (t.getTexture() == PLAYER_SPAWN)
                         {
-                            game_state.local_player.setX(w * TileEngine.TILE_SIZE);
-                            game_state.local_player.setY(h * TileEngine.TILE_SIZE);
+                            game_state.local_player.setX((w * TileEngine.TILE_SIZE)+(TileEngine.TILE_SIZE/2) - game_state.local_player.getWidth()/2);///2+game_state.local_player.getWidth());
+                            game_state.local_player.setY((h * TileEngine.TILE_SIZE) + (TileEngine.TILE_SIZE / 2) - game_state.local_player.getHeight());///2+game_state.local_player.getHeight());
                         }
                         else
                         {
