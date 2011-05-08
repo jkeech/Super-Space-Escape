@@ -25,11 +25,10 @@ namespace ArcadeRPG
         CollisionEngine ce;
         
         int engine_id;
-        public int loc_x, loc_y;
-        public int width, height;
+        
         ColType local_type;
 
-        List<Collision> collisions;
+
         List<ColToken> cols;
         object parent;
         public bool updated_this_frame;
@@ -85,13 +84,7 @@ namespace ArcadeRPG
             return engine_id;
         }
 
-        public void Collision(Collision col)
-        {
-            if (!collisions.Contains(col))
-            {
-                collisions.Add(col);
-            }
-        }
+
 
         public void Collision(ColToken tok)
         {
