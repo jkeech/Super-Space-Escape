@@ -202,7 +202,7 @@ namespace ArcadeRPG
                     return false;
                 }
             }
-            if ((type == /*gateID*/) || (type == /*gateID*/))
+            if ((type == 88) || (type == 89))
             {
                 return true;
             }

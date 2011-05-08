@@ -347,34 +347,42 @@ namespace ArcadeRPG
                     //Collision and updating
                     if (game_state.coll_engine.check_map_col(pot_x, pot_y, game_state.local_player.getWidth(), game_state.local_player.getHeight()) == false)
                     {
-                        game_state.local_player.setX(pot_x);
-                        game_state.local_player.setY(pot_y);
-
-
-                        //System.Diagnostics.Debug.WriteLine("Stuff: {0},{1}", pot_x, pot_y);
-
-                        Item item = game_state.obj_mang.getItemAt(pot_x, pot_y, game_state.local_player.getWidth(), game_state.local_player.getHeight());
-                        if (item != null)
+                        if (game_state.obj_mang.checkForGateAt(pot_x, pot_y, game_state.local_player.getWidth(), game_state.local_player.getHeight()) && !game_state.local_player.hasKey())
                         {
-                            game_state.local_player.addItem(item);
-                            if (game_state.local_player.getWeapon() == weaponType.NONE)
+                            //there is a gate and the player does not have a key
+                            
+                        }
+                        else
+                        {//no gate or the player has the key
+                            game_state.local_player.setX(pot_x);
+                            game_state.local_player.setY(pot_y);
+
+
+                            //System.Diagnostics.Debug.WriteLine("Stuff: {0},{1}", pot_x, pot_y);
+
+                            Item item = game_state.obj_mang.getItemAt(pot_x, pot_y, game_state.local_player.getWidth(), game_state.local_player.getHeight());
+                            if (item != null)
                             {
-                                if (item.getType() == itemType.SWORD)
+                                game_state.local_player.addItem(item);
+                                if (game_state.local_player.getWeapon() == weaponType.NONE)
                                 {
-                                    game_state.local_player.setWeapon(weaponType.SWORD);
-                                }
-                                if (item.getType() == itemType.LASER)
-                                {
-                                    game_state.local_player.setWeapon(weaponType.LASER);
+                                    if (item.getType() == itemType.SWORD)
+                                    {
+                                        game_state.local_player.setWeapon(weaponType.SWORD);
+                                    }
+                                    if (item.getType() == itemType.LASER)
+                                    {
+                                        game_state.local_player.setWeapon(weaponType.LASER);
+                                    }
                                 }
                             }
-                        }
 
-                        if (!game_state.local_player.moving)
-                        {
-                            game_state.local_player.setDirection(pot_dir);
-                            game_state.local_player.moving = true;
-                            character_sprite[(int)game_state.local_player.getWeapon()].StartAnimating((int)pot_dir * 3, ((int)pot_dir * 3) + 2);
+                            if (!game_state.local_player.moving)
+                            {
+                                game_state.local_player.setDirection(pot_dir);
+                                game_state.local_player.moving = true;
+                                character_sprite[(int)game_state.local_player.getWeapon()].StartAnimating((int)pot_dir * 3, ((int)pot_dir * 3) + 2);
+                            }
                         }
 
                     }
