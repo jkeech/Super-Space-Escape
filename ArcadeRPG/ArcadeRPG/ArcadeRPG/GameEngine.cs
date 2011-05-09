@@ -53,19 +53,19 @@ namespace ArcadeRPG
 
         //******************GRAPHIC SPRITES*****************//
         Texture2D backpack; // backpack graphic user can tap on for item inventory
-        Texture2D healthbar; // displays user character's health
+        Texture2D healthbar_empty; // displays user character's health
+        Texture2D healthbar_full;
         Texture2D uparrow;
         Texture2D downarrow;
         Texture2D leftarrow;
         Texture2D rightarrow; // graphics for "keypad"
         Texture2D fire_button;
         Texture2D item_background;
-        Texture2D stat_background;
         //*************************************************//
 
 
         //*********************POSITIONS***********************//
-        Vector2 backpackpos = new Vector2(700, 335); // position for backpack sprite
+        Vector2 backpackpos = new Vector2(700, 330); // position for backpack sprite
         //Vector2 gunbuttonpos = new Vector2(630, 425); // position for attack button
         Vector2 healthpos = new Vector2(280, 445); // position for health bar
 
@@ -87,7 +87,7 @@ namespace ArcadeRPG
         Vector2 rightarrowpos = new Vector2(85, 385); //positions for each arrow
         Vector2 fire_button_pos = new Vector2(700, 385);
 
-        Rectangle health_bar_rec;
+        Rectangle health_bar_rec, health_bar_empty_rec;
         static int health_bar_width = 200;
         //****************************************************//
 
@@ -232,7 +232,6 @@ namespace ArcadeRPG
             rightarrow = Content.Load<Texture2D>("arrowright"); // components for "keypad" HUD
             fire_button = Content.Load<Texture2D>("fire");
             item_background = Content.Load<Texture2D>("item_background");
-            stat_background = Content.Load<Texture2D>("stat_back");
 
             game_state.fx_engine.LoadSound(Content, "shoot", soundType.SHOOT);
             game_state.fx_engine.LoadSound(Content, "hurt", soundType.HURT);
@@ -245,8 +244,10 @@ namespace ArcadeRPG
 
             //********************************LOADING GRAPHIC SPRITES********************************//
             backpack = Content.Load<Texture2D>("backpack"); // loading backpack
-            healthbar = Content.Load<Texture2D>("healthbar"); // load health bar
+            healthbar_empty = Content.Load<Texture2D>("healthbar"); // load health bar
+            healthbar_full = Content.Load<Texture2D>("healthbar_full"); // load health bar
             health_bar_rec = new Rectangle((int)healthpos.X, (int)healthpos.Y, health_bar_width, 30);
+            health_bar_empty_rec = new Rectangle((int)healthpos.X, (int)healthpos.Y, health_bar_width, 30);
             //**************************************************************************************//
 
 
@@ -770,19 +771,23 @@ namespace ArcadeRPG
                 spriteBatch.Draw(leftarrow, leftarrowpos, null, trans, 0, imageOffset, 3.0f, SpriteEffects.None, 0);
                 spriteBatch.Draw(rightarrow, rightarrowpos, null, trans, 0, imageOffset, 3.0f, SpriteEffects.None, 0);
                 spriteBatch.Draw(fire_button, fire_button_pos, null, trans, 0, imageOffset, 3.0f, SpriteEffects.None, 0);
+                spriteBatch.DrawString(displayFont, "FIRE!", new Vector2(fire_button_pos.X + 38, fire_button_pos.Y + 45), Color.Black);
                 //draw the arrow graphics to the screen with given position, 3x as big as original size, no effects
                 //************************************************************//
 
 
                 //***********************DRAWING GRAPHIC SPRITES***********************//
-                spriteBatch.Draw(backpack, backpackpos, null, trans, 0, imageOffset, 0.4f, SpriteEffects.None, 0); //draw the backpack "button"
-                
-                spriteBatch.Draw(healthbar, health_bar_rec, null, trans);  //draw health bar
+                spriteBatch.Draw(backpack, backpackpos, null, trans, 0, imageOffset, new Vector2(0.4f,1.0f), SpriteEffects.None, 0); //draw the backpack "button"    
+                spriteBatch.DrawString(displayFont, "Inventory", new Vector2(backpackpos.X + 20, backpackpos.Y + 12), Color.Black);
+                spriteBatch.Draw(healthbar_empty, health_bar_empty_rec, null, trans);  //draw health bar
+                spriteBatch.Draw(healthbar_full, health_bar_rec, null, trans);  //draw health bar
+                string curHealth = "" + game_state.local_player.getHealth();
+                string maxHealth = "" + game_state.local_player.getMaxHealth();
+                spriteBatch.DrawString(displayFont, "Health: " + curHealth + "/" + maxHealth, new Vector2(health_bar_rec.X + 42, health_bar_rec.Y + 5), Color.Black);
                 //********************************************************************//
 
 
                 //***************************DRAWING STRINGS***********************************//
-                spriteBatch.Draw(stat_background, timeLeftPos, lucen);
                 //spriteBatch.DrawString(displayFont, scoreString, scoreStringPos, Color.Cyan); // draw "score: "
                 //spriteBatch.DrawString(displayFont, currScore.ToString(), currScorePos, Color.Cyan); // draw actual score
 

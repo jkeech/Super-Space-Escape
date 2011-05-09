@@ -19,6 +19,7 @@ namespace ArcadeRPG
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
+        private const bool DEV_MODE = true;
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Vector2 imageOffset = new Vector2(0, 0); //don't offset anything
@@ -108,6 +109,13 @@ namespace ArcadeRPG
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
+
+            if (DEV_MODE)
+            {
+                if (intro.isShowing()) intro.Hide();
+                if (instruct.isShowing()) instruct.Hide();
+                if (instruct2.isShowing()) instruct2.Hide();
+            }
 
             if (intro.isShowing()) // if the introduction screen is showing, continue showing until introTime runs out (5 seconds)
             {

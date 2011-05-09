@@ -271,8 +271,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="stat_back.png">
-      <Name>stat_back</Name>
+    <Compile Include="trooper.png">
+      <Name>trooper</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="healthbar_full.png">
+      <Name>healthbar_full</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
