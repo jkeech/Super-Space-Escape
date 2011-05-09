@@ -201,6 +201,7 @@ namespace ArcadeRPG
 
             monster_texture[(int)enemyType.BEETLE] = Content.Load<Texture2D>("beetles");
             monster_texture[(int)enemyType.BERSERKER] = Content.Load<Texture2D>("berserker");
+            monster_texture[(int)enemyType.TROOPER] = Content.Load<Texture2D>("trooper");
             //monster_sprites[(int)enemyType.GRUNT].Load(monster_texture[(int)enemyType.GRUNT], 32, 48);
             //monster_sprites[(int)enemyType.GRUNT].StartAnimating((int)PlayerDir.UP * 3, ((int)PlayerDir.UP * 3) + 2);
             LoadLevel(0);

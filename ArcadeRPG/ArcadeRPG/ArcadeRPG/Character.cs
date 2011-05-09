@@ -10,7 +10,7 @@ using Microsoft.Xna.Framework.Content;
 namespace ArcadeRPG
 {
     enum PlayerDir { UP, RIGHT, DOWN, LEFT };
-    enum enemyType { GRUNT, BERSERKER, BEETLE, NUM_ENEM };
+    enum enemyType { GRUNT, BERSERKER, BEETLE, TROOPER, NUM_ENEM };
     enum weaponType { NONE, SWORD, LASER, GRENADE };
     enum itemType { NONE, SWORD, LASER, ATT_BOOST, DEF_BOOST, KEY, NUM_ITEMS };
     //just the basics on types
@@ -244,7 +244,7 @@ namespace ArcadeRPG
                 eType = t;
                 attack = 2;
                 speed = 2;
-                max_health = health = 20;
+                max_health = health = 10;
             }
             //creates the second level of enemy
             else if (t == enemyType.BEETLE)
@@ -261,6 +261,14 @@ namespace ArcadeRPG
                 attack = 5;
                 speed = 3;
                 max_health = health = 15;
+            }
+            else if (t == enemyType.TROOPER)
+            {
+                eType = t;
+                attack = 5;
+                speed = 2;
+                max_health = health = 20;
+
             }
 
 

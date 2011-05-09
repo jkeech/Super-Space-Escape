@@ -44,6 +44,8 @@ namespace ArcadeRPG
             //Load Beetle
             //decision_matrix[(int)enemyType.BEETLE, (int)actionDecision.ADVANCE, (int)actionFactor.DP] = .4f; //Wants to advance towards player
             decision_matrix[(int)enemyType.BEETLE, (int)actionDecision.FLEE, (int)actionFactor.HL] = .7f; //Wants to run towards player
+        
+            //Insert Trooper stuff
         }
 
 
