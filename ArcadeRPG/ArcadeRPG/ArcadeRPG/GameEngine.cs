@@ -60,6 +60,7 @@ namespace ArcadeRPG
         Texture2D rightarrow; // graphics for "keypad"
         Texture2D fire_button;
         Texture2D item_background;
+        Texture2D stat_background;
         //*************************************************//
 
 
@@ -72,12 +73,14 @@ namespace ArcadeRPG
         Vector2 currScorePos = new Vector2(75, 20); // position of actual score
         Vector2 timeLeftPos = new Vector2(0, 0); // "Time Remaining" position
         Vector2 timePos = new Vector2(75, 0); // displaying actual time left
+
         Vector2 livesStringPos = new Vector2(0, 40);
         Vector2 levelstringpos = new Vector2(700, 0); // "Level: " position
         Vector2 levelnumpos = new Vector2(755, 0); // level number position
        
 
         Color trans = new Color(255, 255, 255, 50);
+        Color lucen = new Color(255, 255, 255, 120);
         Vector2 uparrowpos = new Vector2(50, 345);
         Vector2 downarrowpos = new Vector2(50, 425);
         Vector2 leftarrowpos = new Vector2(15, 385);
@@ -89,11 +92,13 @@ namespace ArcadeRPG
         //****************************************************//
 
         //**************DISPLAY STRINGS******************//
-        public const string scoreString = "SCORE: "; // display string
+        public const string scoreString = "Score: "; // display string
         public int currScore = 0; // actual score, again can be modified like the levelnum var. not "const"
-        public const string timeLeft = "TIME: ";
-        public const string levelstring = "LEVEL: ";
-        public const string livesString = "LIVES REMAINING: ";
+        public const string timeLeft = "Time: ";
+
+        public const string levelstring = "Level: ";
+        public const string livesString = "Lives Remaining: ";
+
         public int levelnum = 0; // can be modified for when a user advances through levels, not a "const"
         //************************************************//
 
@@ -226,6 +231,7 @@ namespace ArcadeRPG
             rightarrow = Content.Load<Texture2D>("arrowright"); // components for "keypad" HUD
             fire_button = Content.Load<Texture2D>("fire");
             item_background = Content.Load<Texture2D>("item_background");
+            stat_background = Content.Load<Texture2D>("stat_back");
 
             game_state.fx_engine.LoadSound(Content, "shoot", soundType.SHOOT);
             game_state.fx_engine.LoadSound(Content, "hurt", soundType.HURT);
@@ -245,6 +251,7 @@ namespace ArcadeRPG
 
             //********************MISCELLANEOUS*****************************************************//
             displayFont = Content.Load<SpriteFont>("StatsFont"); //load a font from a formatted file
+            //displayFont = Content.Load<SpriteFont>("Courier New");
             itemfont = Content.Load<SpriteFont>("ItemFont"); // ^^
             expiredfont = Content.Load<SpriteFont>("TimeExpired"); // ^^
             //***************************************************************************************//
@@ -440,20 +447,20 @@ namespace ArcadeRPG
                                 switch (game_state.local_player.getDirection())
                                 {
                                     case PlayerDir.DOWN:
-                                        bullet_x = game_state.local_player.getX() + game_state.local_player.getWidth() / 2;
+                                        bullet_x = game_state.local_player.getX() - 2;
                                         bullet_y = game_state.local_player.getY() + game_state.local_player.getHeight();
                                         break;
                                     case PlayerDir.UP:
-                                        bullet_x = game_state.local_player.getX() + game_state.local_player.getWidth() / 2;
+                                        bullet_x = game_state.local_player.getX() - 2;
                                         bullet_y = game_state.local_player.getY() - game_state.local_player.getHeight();
                                         break;
                                     case PlayerDir.LEFT:
-                                        bullet_x = game_state.local_player.getX() - game_state.local_player.getWidth();
-                                        bullet_y = game_state.local_player.getY() + game_state.local_player.getHeight() / 2;
+                                        bullet_x = game_state.local_player.getX() - (game_state.local_player.getWidth());
+                                        bullet_y = game_state.local_player.getY(); //+ game_state.local_player.getHeight();
                                         break;
                                     case PlayerDir.RIGHT:
                                         bullet_x = game_state.local_player.getX() + game_state.local_player.getWidth();
-                                        bullet_y = game_state.local_player.getY() + game_state.local_player.getHeight() / 2;
+                                        bullet_y = game_state.local_player.getY(); //+ game_state.local_player.getHeight();
                                         break;
                                 }
 
@@ -774,14 +781,16 @@ namespace ArcadeRPG
 
 
                 //***************************DRAWING STRINGS***********************************//
-                spriteBatch.DrawString(displayFont, scoreString, scoreStringPos, Color.Black); // draw "score: "
-                spriteBatch.DrawString(displayFont, currScore.ToString(), currScorePos, Color.Black); // draw actual score
-
-                spriteBatch.DrawString(displayFont, levelstring, levelstringpos, Color.Black); // draw "level: "
-                spriteBatch.DrawString(displayFont, game_state.tile_engine.getCurrentLevelName(), levelnumpos, Color.Black); // draw level number
+                spriteBatch.Draw(stat_background, timeLeftPos, lucen);
+                //spriteBatch.DrawString(displayFont, scoreString, scoreStringPos, Color.Cyan); // draw "score: "
+                //spriteBatch.DrawString(displayFont, currScore.ToString(), currScorePos, Color.Cyan); // draw actual score
 
 
-                spriteBatch.DrawString(displayFont, livesString+livesRemaining.ToString(), livesStringPos, Color.Black); // draw lives remaining
+                spriteBatch.DrawString(displayFont, levelstring, scoreStringPos, Color.Cyan); // draw "level: "
+                spriteBatch.DrawString(displayFont, game_state.tile_engine.getCurrentLevelName(), currScorePos, Color.Cyan); // draw level number
+
+                spriteBatch.DrawString(displayFont, livesString+livesRemaining.ToString(), livesStringPos, Color.Cyan); // draw lives remaining
+
                 //****************************************************************************//
 
 
@@ -795,8 +804,9 @@ namespace ArcadeRPG
                 }
                 else
                 {
-                    spriteBatch.DrawString(displayFont, timeLeft, timeLeftPos, Color.Black);
-                    spriteBatch.DrawString(displayFont, ((int)(currTime.TotalSeconds)).ToString(), timePos, Color.Black);
+                    spriteBatch.DrawString(displayFont, timeLeft, timeLeftPos, Color.Cyan);
+                    spriteBatch.DrawString(displayFont, ((int)(currTime.TotalSeconds)).ToString(), timePos, Color.Cyan);
+
                 }
 
             } // end backpack button NOT pressed if
