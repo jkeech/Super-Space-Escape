@@ -120,6 +120,9 @@ namespace ArcadeRPG
         public void Clear() //needs to be implemented to prevent leak only clears monsters atm, not collision
         {
             game_state.monster_engine.Clear();
+            game_state.local_player.setWeapon(weaponType.NONE);
+            game_state.local_player.getInventory().Clear();
+            game_state.local_player.setHealth(game_state.local_player.getMaxHealth());
         }
 
         //Item lookup - coords

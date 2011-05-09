@@ -12,7 +12,7 @@ using Microsoft.Xna.Framework.Input.Touch;
 
 namespace ArcadeRPG
 {
-    class TimeExpired
+    public class TimeExpired
     {
         public enum State { SHOW, HIDE };
         private State state; // ^^ being displayed or not
@@ -21,10 +21,9 @@ namespace ArcadeRPG
         private Vector2 timeoutpos;
         private Vector2 offset;
         public Boolean play_again;
-        private double g_o_time=0;
-
         private TimeSpan timeLeft = TimeSpan.FromSeconds(10.0); // grant the player a certain time to decide if they want to play again
         private Vector2 d_time_pos;
+        private SpriteFont font;
 
 
         public TimeExpired()
@@ -32,14 +31,26 @@ namespace ArcadeRPG
             state = State.HIDE; // hidden by default until shown explicitly
             color = Color.Crimson; // the color of defeat....
             offset = new Vector2(0, 0);
-            d_time_pos = new Vector2(325, 250); // formatting
-            play_again = true;
+            d_time_pos = new Vector2(373, 250); // formatting
+            play_again = false;
         }
 
-        public void Show(SpriteBatch spritebatch, SpriteFont sf)
+        public void Show(SpriteBatch spritebatch)
         {
             state = State.SHOW;
             spritebatch.Draw(timeoutpic, timeoutpos, null, Color.White, 0 , offset, 1.0f, SpriteEffects.None, 0); // draw the time expired screen
+            spritebatch.DrawString(font, String.Format("{0:0.0}", timeLeft.TotalSeconds), d_time_pos, Color.White);
+        }
+
+        public Boolean isRunning()
+        {
+            return timeLeft.TotalSeconds > 0;
+        }
+
+        public void reset()
+        {
+            play_again = false;
+            timeLeft = TimeSpan.FromSeconds(10.0);
         }
 
         public void Hide()
@@ -56,6 +67,7 @@ namespace ArcadeRPG
         {
             timeoutpic = contman.Load<Texture2D>("OutOfTime");
             timeoutpos = new Vector2(0, 0);
+            font = contman.Load<SpriteFont>("TimeExpired");
         }
 
 
@@ -65,13 +77,13 @@ namespace ArcadeRPG
         }
 
 
-        public void update(SpriteBatch sb, SpriteFont sf, GameTime gt)
+        public void update(GameTime gt)
         {
             // have a "timer" count down from arbitrary time (10 seconds for this menu)
             //if user doesnt click to play again in that amount of time, auto exit
 
-            g_o_time += gt.ElapsedGameTime.TotalSeconds;
-            if (g_o_time >= 10)
+            timeLeft -= gt.ElapsedGameTime;
+            if (timeLeft.TotalSeconds <= 0)
             {
                 shutDown();
                 return;
@@ -81,17 +93,13 @@ namespace ArcadeRPG
                 TouchCollection tc = TouchPanel.GetState();
                 foreach (TouchLocation tl in tc)
                 {
-                    if ((tl.Position.X >= 0) && (tl.Position.X <= 100) && (tl.Position.Y >= 0) && (tl.Position.Y <= 100)) // test coords
+                    if (tl.State == TouchLocationState.Pressed)
                     {
                         play_again = true;
-                        return; // return before timer runs out
+                        return;
                     }
                 }
-
-                sb.DrawString(sf, (10-Convert.ToInt32(g_o_time)).ToString(), d_time_pos, Color.White);
             }
-
-
         } // end update
 
 
@@ -100,6 +108,5 @@ namespace ArcadeRPG
             play_again = false;
             return;
         }
-
     }
 }

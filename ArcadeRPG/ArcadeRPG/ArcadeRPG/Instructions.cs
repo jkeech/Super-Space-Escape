@@ -48,9 +48,9 @@ namespace ArcadeRPG
             instructpos = new Vector2(0, 0);
         }
 
-        public void update(GameTime gameTime, TouchCollection tc)
+        public void update(GameTime gameTime)
         {
-            tc = TouchPanel.GetState();
+            TouchCollection tc = TouchPanel.GetState();
             foreach (TouchLocation tl in tc)
             {
                 if (tl.State == TouchLocationState.Pressed)
