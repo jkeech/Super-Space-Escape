@@ -5,11 +5,12 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
-
+using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Input.Touch;
 
 namespace ArcadeRPG
 {
-    class GameOver
+    public class GameOver
     {
         public enum State { SHOW, HIDE };
         private State state; // ^^ showing or not
@@ -45,9 +46,20 @@ namespace ArcadeRPG
         {
             gameovertime -= gameTime.ElapsedGameTime; // start timer on actual game
 
-            if ((gameovertime.Seconds <= 0) && (gameovertime.Milliseconds <= 0))
+            if (gameovertime.TotalSeconds <= 0)
             {
                 exit = true;
+                return;
+            }
+
+            TouchCollection tc = TouchPanel.GetState();
+            foreach (TouchLocation tl in tc)
+            {
+                if (tl.State == TouchLocationState.Pressed)
+                {
+                    exit = true;
+                    return;
+                }
             }
 
         }

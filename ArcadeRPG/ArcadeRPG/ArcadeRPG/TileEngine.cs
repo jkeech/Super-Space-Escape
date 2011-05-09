@@ -177,8 +177,11 @@ namespace ArcadeRPG
                 }
             }
             sr.Close();
-            levels.Add(newLevel);
-            
+
+            if (currentLevel > (levels.Count - 1))
+                levels.Add(newLevel);
+            else
+                levels[currentLevel] = newLevel;            
         }
 
         /// <summary>

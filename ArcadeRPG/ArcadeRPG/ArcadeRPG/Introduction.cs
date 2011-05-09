@@ -54,7 +54,7 @@ namespace ArcadeRPG
         {
             introTime -= gameTime.ElapsedGameTime;
 
-            if ((introTime.Seconds <= 0) && (introTime.Milliseconds <= 0))
+            if (introTime.TotalSeconds <= 0)
             {
                 Hide();
             }
