@@ -66,6 +66,7 @@ namespace ArcadeRPG
 
         //*********************POSITIONS***********************//
         Vector2 backpackpos = new Vector2(700, 330); // position for backpack sprite
+        Rectangle backpackExit = new Rectangle(529, 334, 84, 44);
         //Vector2 gunbuttonpos = new Vector2(630, 425); // position for attack button
         Vector2 healthpos = new Vector2(280, 445); // position for health bar
 
@@ -472,7 +473,7 @@ namespace ArcadeRPG
                     }
                     else
                     {
-                        Vector2 formatpos = new Vector2(275, 125);
+                        Vector2 formatpos = new Vector2(315, 170);
                         int tileSize = game_state.tile_engine.getTileSize();
 
                         Item toRemove = null;
@@ -498,7 +499,7 @@ namespace ArcadeRPG
                         if (toRemove != null)
                             game_state.local_player.removeItem(toRemove);
 
-                        if ((tl.Position.X >= 642) && (tl.Position.X <= 758) && (tl.Position.Y >= 360) && (tl.Position.Y <= 435)) // coordinates of the "exit" button in inventory
+                        if (backpackExit.Contains((int)tl.Position.X, (int)tl.Position.Y)) // coordinates of the "exit" button in inventory
                         {
                             backpackmenu.backpack_touched = false; //user has exited, return to main game screen
                         }
@@ -762,61 +763,57 @@ namespace ArcadeRPG
 
             //begin operations on display textures
             //gets spritebatch in a state to be 'ready' to draw
-            if (!backpackmenu.backpack_touched)
+
+            //******************DRAWING ARROWS**************************//
+            spriteBatch.Draw(uparrow, uparrowpos, null, trans, 0, imageOffset, 3.0f, SpriteEffects.None, 0);
+            spriteBatch.Draw(downarrow, downarrowpos, null, trans, 0, imageOffset, 3.0f, SpriteEffects.None, 0);
+            spriteBatch.Draw(leftarrow, leftarrowpos, null, trans, 0, imageOffset, 3.0f, SpriteEffects.None, 0);
+            spriteBatch.Draw(rightarrow, rightarrowpos, null, trans, 0, imageOffset, 3.0f, SpriteEffects.None, 0);
+            spriteBatch.Draw(fire_button, fire_button_pos, null, trans, 0, imageOffset, 3.0f, SpriteEffects.None, 0);
+            spriteBatch.DrawString(displayFont, "FIRE!", new Vector2(fire_button_pos.X + 38, fire_button_pos.Y + 45), Color.Black);
+            //draw the arrow graphics to the screen with given position, 3x as big as original size, no effects
+            //************************************************************//
+
+
+            //***********************DRAWING GRAPHIC SPRITES***********************//
+            spriteBatch.Draw(backpack, backpackpos, null, trans, 0, imageOffset, new Vector2(0.4f,1.0f), SpriteEffects.None, 0); //draw the backpack "button"    
+            spriteBatch.DrawString(displayFont, "Inventory", new Vector2(backpackpos.X + 20, backpackpos.Y + 12), Color.Black);
+            spriteBatch.Draw(healthbar_empty, health_bar_empty_rec, null, trans);  //draw health bar
+            spriteBatch.Draw(healthbar_full, health_bar_rec, null, trans);  //draw health bar
+            string curHealth = "" + game_state.local_player.getHealth();
+            string maxHealth = "" + game_state.local_player.getMaxHealth();
+            spriteBatch.DrawString(displayFont, "Health: " + curHealth + "/" + maxHealth, new Vector2(health_bar_rec.X + 42, health_bar_rec.Y + 5), Color.Black);
+            //********************************************************************//
+
+
+            //***************************DRAWING STRINGS***********************************//
+            //spriteBatch.DrawString(displayFont, scoreString, scoreStringPos, Color.Cyan); // draw "score: "
+            //spriteBatch.DrawString(displayFont, currScore.ToString(), currScorePos, Color.Cyan); // draw actual score
+
+
+            spriteBatch.DrawString(displayFont, levelstring, scoreStringPos, Color.Cyan); // draw "level: "
+            spriteBatch.DrawString(displayFont, game_state.tile_engine.getCurrentLevelName(), currScorePos, Color.Cyan); // draw level number
+
+            spriteBatch.DrawString(displayFont, livesString+livesRemaining.ToString(), livesStringPos, Color.Cyan); // draw lives remaining
+
+            //****************************************************************************//
+
+
+            //check to see if the score needs to continue to be drawn (if time hasn't run out)
+            //if it has, undraw it and display time expired string and menu
+            if (!hasTimeLeft())
             {
+                die();
+                if(hasMoreLives())
+                    timex.Show(spriteBatch); // brings up time expired screen
+            }
+            else
+            {
+                spriteBatch.DrawString(displayFont, timeLeft, timeLeftPos, Color.Cyan);
+                spriteBatch.DrawString(displayFont, ((int)(currTime.TotalSeconds)).ToString(), timePos, Color.Cyan);
 
-                //******************DRAWING ARROWS**************************//
-                spriteBatch.Draw(uparrow, uparrowpos, null, trans, 0, imageOffset, 3.0f, SpriteEffects.None, 0);
-                spriteBatch.Draw(downarrow, downarrowpos, null, trans, 0, imageOffset, 3.0f, SpriteEffects.None, 0);
-                spriteBatch.Draw(leftarrow, leftarrowpos, null, trans, 0, imageOffset, 3.0f, SpriteEffects.None, 0);
-                spriteBatch.Draw(rightarrow, rightarrowpos, null, trans, 0, imageOffset, 3.0f, SpriteEffects.None, 0);
-                spriteBatch.Draw(fire_button, fire_button_pos, null, trans, 0, imageOffset, 3.0f, SpriteEffects.None, 0);
-                spriteBatch.DrawString(displayFont, "FIRE!", new Vector2(fire_button_pos.X + 38, fire_button_pos.Y + 45), Color.Black);
-                //draw the arrow graphics to the screen with given position, 3x as big as original size, no effects
-                //************************************************************//
-
-
-                //***********************DRAWING GRAPHIC SPRITES***********************//
-                spriteBatch.Draw(backpack, backpackpos, null, trans, 0, imageOffset, new Vector2(0.4f,1.0f), SpriteEffects.None, 0); //draw the backpack "button"    
-                spriteBatch.DrawString(displayFont, "Inventory", new Vector2(backpackpos.X + 20, backpackpos.Y + 12), Color.Black);
-                spriteBatch.Draw(healthbar_empty, health_bar_empty_rec, null, trans);  //draw health bar
-                spriteBatch.Draw(healthbar_full, health_bar_rec, null, trans);  //draw health bar
-                string curHealth = "" + game_state.local_player.getHealth();
-                string maxHealth = "" + game_state.local_player.getMaxHealth();
-                spriteBatch.DrawString(displayFont, "Health: " + curHealth + "/" + maxHealth, new Vector2(health_bar_rec.X + 42, health_bar_rec.Y + 5), Color.Black);
-                //********************************************************************//
-
-
-                //***************************DRAWING STRINGS***********************************//
-                //spriteBatch.DrawString(displayFont, scoreString, scoreStringPos, Color.Cyan); // draw "score: "
-                //spriteBatch.DrawString(displayFont, currScore.ToString(), currScorePos, Color.Cyan); // draw actual score
-
-
-                spriteBatch.DrawString(displayFont, levelstring, scoreStringPos, Color.Cyan); // draw "level: "
-                spriteBatch.DrawString(displayFont, game_state.tile_engine.getCurrentLevelName(), currScorePos, Color.Cyan); // draw level number
-
-                spriteBatch.DrawString(displayFont, livesString+livesRemaining.ToString(), livesStringPos, Color.Cyan); // draw lives remaining
-
-                //****************************************************************************//
-
-
-                //check to see if the score needs to continue to be drawn (if time hasn't run out)
-                //if it has, undraw it and display time expired string and menu
-                if (!hasTimeLeft())
-                {
-                    die();
-                    if(hasMoreLives())
-                        timex.Show(spriteBatch); // brings up time expired screen
-                }
-                else
-                {
-                    spriteBatch.DrawString(displayFont, timeLeft, timeLeftPos, Color.Cyan);
-                    spriteBatch.DrawString(displayFont, ((int)(currTime.TotalSeconds)).ToString(), timePos, Color.Cyan);
-
-                }
-
-            } // end backpack button NOT pressed if
-            else // backpack button has been pressed
+            }
+            if(backpackmenu.backpack_touched) // backpack button has been pressed
             {
                 if (hasTimeLeft()) // if time hasnt run out during the period where the inventory is brought up by the user, show the inventory
                 {
@@ -840,12 +837,12 @@ namespace ArcadeRPG
 
 
             //format display on screen for string to be drawn
-            Vector2 formatpos = new Vector2(275, 125);
+            Vector2 formatpos = new Vector2(315, 170);
             float origx = formatpos.X;
 
             if (game_state.local_player.getInventory().Count == 0) // no items collected, display a message
             {
-                sb.DrawString(sf, backpackmenu.getEmptyString(), formatpos, Color.White);
+                sb.DrawString(sf, backpackmenu.getEmptyString(), new Vector2(formatpos.X + 45,formatpos.Y), Color.Black);
             }
             else // inventory has a capacity
             {
@@ -865,7 +862,7 @@ namespace ArcadeRPG
                     // Draw item name to screen
                     formatpos.X += 50;
                     i.setPos(formatpos);
-                    sb.DrawString(sf, i.getName(), i.getPos(), Color.White, 0, imageOffset, 1.0f, SpriteEffects.None, 0);
+                    sb.DrawString(sf, i.getName(), i.getPos(), Color.Black, 0, imageOffset, 1.0f, SpriteEffects.None, 0);
 
                     // Reset position for next item
                     formatpos.Y += 50;

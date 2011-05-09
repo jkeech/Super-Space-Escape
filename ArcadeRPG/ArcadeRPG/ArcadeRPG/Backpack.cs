@@ -18,7 +18,7 @@ namespace ArcadeRPG
         private Vector2 exitpicpos;
         private Vector2 offset;
         public Boolean backpack_touched;
-        private const string empty = "NO ITEMS IN INVENTORY";
+        private const string empty = "None :(";
 
         //no time, this menu will be up as long as the user wants (does not hit "exit" button)
 
