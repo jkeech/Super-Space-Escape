@@ -46,8 +46,8 @@ namespace ArcadeRPG
                     break;
                 case bulletType.SWORD:
                     vel = 0;
-                    width = 20;
-                    height = 20;
+                    width = 36;
+                    height = 36;
                     break;
             }
 
