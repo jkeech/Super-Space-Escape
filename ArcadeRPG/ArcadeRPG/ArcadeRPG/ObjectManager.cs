@@ -103,6 +103,11 @@ namespace ArcadeRPG
                                     height = 36;
                                     type = enemyType.BERSERKER;
                                     break;
+                                case 77: //Trooper
+                                    width = 32;
+                                    height = 36;
+                                    type = enemyType.TROOPER;
+                                    break;
                                 default:
                                     continue;
 
