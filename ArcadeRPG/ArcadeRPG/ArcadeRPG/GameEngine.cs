@@ -241,7 +241,7 @@ namespace ArcadeRPG
             //SoundEffect game_music = Content.Load<SoundEffect>("01AttackPanda1");
             Song game_music = Content.Load<Song>("01AttackPanda1");
             MediaPlayer.Play(game_music);
-            //game_music.Play();
+            MediaPlayer.IsRepeating = true;
 
             //********************************LOADING GRAPHIC SPRITES********************************//
             backpack = Content.Load<Texture2D>("backpack"); // loading backpack
