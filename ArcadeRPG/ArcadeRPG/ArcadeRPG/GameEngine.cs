@@ -235,8 +235,11 @@ namespace ArcadeRPG
             item_background = Content.Load<Texture2D>("item_background");
 
             game_state.fx_engine.LoadSound(Content, "shoot", soundType.SHOOT);
-            game_state.fx_engine.LoadSound(Content, "hurt", soundType.HURT);
-            game_state.fx_engine.LoadSound(Content, "sword_swing", soundType.SWORD);
+            game_state.fx_engine.LoadSound(Content, "enemy_hit", soundType.ENEMY_HURT);
+            game_state.fx_engine.LoadSound(Content, "enemy_die", soundType.ENEMY_DIE);
+            game_state.fx_engine.LoadSound(Content, "player_hurt", soundType.PLAYER_HURT);
+            game_state.fx_engine.LoadSound(Content, "player_sword_s", soundType.SWORD);
+            game_state.fx_engine.LoadSound(Content, "item_pickup", soundType.ITEM_PICKUP);
             game_state.fx_engine.LoadExplosion(Content, "expl", explosionType.SMALL);
             //SoundEffect game_music = Content.Load<SoundEffect>("01AttackPanda1");
             Song game_music = Content.Load<Song>("01AttackPanda1");
@@ -391,6 +394,7 @@ namespace ArcadeRPG
                             Item item = game_state.obj_mang.getItemAt(pot_x, pot_y, game_state.local_player.getWidth(), game_state.local_player.getHeight());
                             if (item != null)
                             {
+                                game_state.fx_engine.RequestSound(soundType.ITEM_PICKUP);
                                 game_state.local_player.addItem(item);
                                 if (game_state.local_player.getWeapon() == weaponType.NONE)
                                 {
@@ -426,6 +430,7 @@ namespace ArcadeRPG
                     {
                         if ((tl.Position.X >= 700) && (tl.Position.Y >= 385)) // Fire button
                         {
+                            game_state.fx_engine.RequestRumble(200);
                             if (game_state.local_player.getWeapon() == weaponType.LASER)
                             {
                                 game_state.bullet_engine.fire(game_state.local_player.getX() + (int)character_sprite[(int)game_state.local_player.getWeapon()].size.X / 2,
@@ -578,7 +583,7 @@ namespace ArcadeRPG
 
                         game_state.local_player.setHealth(game_state.local_player.getHealth() + game_state.local_player.getDefenseBonus() - damage);
                         game_state.local_player.hurt = true;
-                   
+                        game_state.fx_engine.RequestSound(soundType.PLAYER_HURT);
                         //Get hurt by a little
                         hurt_time = 500;
                     }
@@ -606,7 +611,7 @@ namespace ArcadeRPG
 
             game_state.coll_engine.Update();
 
-            game_state.fx_engine.Update();
+            game_state.fx_engine.Update(gameTime.ElapsedGameTime.Milliseconds);
             if (testAtExit( game_state.local_player.getX(),(game_state.local_player.getY()+game_state.local_player.getHeight()-1))||testAtExit( game_state.local_player.getX()+game_state.local_player.getWidth(),(game_state.local_player.getY()+game_state.local_player.getHeight())))
             {
                 int tempn = game_state.tile_engine.getCurrentLevel() + 1;

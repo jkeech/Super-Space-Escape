@@ -90,7 +90,7 @@ namespace ArcadeRPG
                             {
                                 case 78: //Beetle
                                     width = 30;
-                                    height = 30;
+                                    height = 23;
                                     type = enemyType.BEETLE;
                                     break;
                                 case 72: //grunt
