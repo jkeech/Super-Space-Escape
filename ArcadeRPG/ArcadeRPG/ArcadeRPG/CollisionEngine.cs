@@ -256,6 +256,17 @@ namespace ArcadeRPG
             int tile_x =  (pot_x+5) / game_state.tile_engine.getTileSize();
             int tile_y = (pot_y + height) / game_state.tile_engine.getTileSize();
 
+            if (tile_x < 0 || tile_x >= back_layer.getWidth())
+            {
+                return true;
+            }
+
+            if (tile_y < 0 || tile_y >= back_layer.getHeight())
+            {
+                return true;
+            }
+
+            
             Tile t = back_layer.getTile(tile_x, tile_y);
             if (t.hasCollision() == true)
             {
