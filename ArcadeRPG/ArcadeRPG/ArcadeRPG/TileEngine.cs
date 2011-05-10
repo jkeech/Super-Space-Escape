@@ -86,7 +86,7 @@ namespace ArcadeRPG
 
             // Rest of the data
             //XXX - Problem here?
-            string[] id = sr.ReadToEnd().Replace("\r", " ").Replace("\n", " ").Split(' ');
+            string[] id = sr.ReadToEnd().Replace("\n", " ").Split(' ');
 
             int width, height;
             int.TryParse(id[0],out width);
