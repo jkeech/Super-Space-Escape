@@ -114,7 +114,7 @@ namespace ArcadeRPG
 
                                 }
                                 monster.setHealth(monster.getHealth() - (game_state.local_player.getAttackBonus() + damage));
-                                game_state.fx_engine.RequestSound(soundType.HURT);
+                                game_state.fx_engine.RequestSound(soundType.ENEMY_HURT);
                             }
                             else if (hit.GetLocalType() == ColType.PLAYER)
                             {
