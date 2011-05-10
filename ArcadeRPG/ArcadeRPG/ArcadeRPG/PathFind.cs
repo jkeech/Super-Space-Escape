@@ -17,7 +17,7 @@ namespace ArcadeRPG
         public int G;
         public int H;
 
-        public Node(int x, int y, int _parent_x, int _parent_y)
+        public Node(int x, int y, int _parent_x, int _parent_y) //establish a node
         {
             loc_x = x;
             loc_y = y;
@@ -28,7 +28,7 @@ namespace ArcadeRPG
             H = 0;
         }
 
-        public Node(int x, int y, int _parent_x, int _parent_y, int _G, int _H)
+        public Node(int x, int y, int _parent_x, int _parent_y, int _G, int _H) // different parameters
         {
             loc_x = x;
             loc_y = y;
@@ -39,7 +39,7 @@ namespace ArcadeRPG
             H = _H;
         }
 
-        public int CompareTo(object a)
+        public int CompareTo(object a) // are nodes the same?
         {
             Node other = (Node)a;
             int loc_rating = G + H;
@@ -48,19 +48,17 @@ namespace ArcadeRPG
         }
     };
 
-    class PathFind
+    class PathFind // class to be able to tell enemy AI where to go
     {
         WhichList[,] which_list;
 
         List<Node> open_list = new List<Node>();
         Node[,] closed_list;
-        //List<Node> closed_list = new List<Node>();
 
         GameState game_state;
         TileLayer back_layer;
+
         public PathFind(GameState _game_state) {
-          
-           // Node t = open_list.Max(nodey => nodey);
             game_state = _game_state;
 
             back_layer = game_state.tile_engine.getCurrentMap().getLayer(LayerType.BACKGROUND);
@@ -83,8 +81,9 @@ namespace ArcadeRPG
         }
 
 
-        public List<Node> FindPath(int cur_x, int cur_y, int target_x, int target_y)
+        public List<Node> FindPath(int cur_x, int cur_y, int target_x, int target_y) // this is where we literally tell the enemies where to go
         {
+            //A* Pathfinding algorithm
             Node start = new Node(cur_x, cur_y, -1, -1);
             open_list.Add(start);
 
@@ -156,7 +155,7 @@ namespace ArcadeRPG
             return ret_val;
         }
 
-        List<Node> GetNeighbors(Node node)
+        List<Node> GetNeighbors(Node node) // what is around the enemy?
         {
             Node top = new Node(node.loc_x, node.loc_y - 1, node.loc_x, node.loc_y);
             Node bottom = new Node(node.loc_x, node.loc_y + 1, node.loc_x, node.loc_y);

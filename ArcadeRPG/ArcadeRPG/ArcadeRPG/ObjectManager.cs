@@ -45,15 +45,11 @@ namespace ArcadeRPG
             }
 
 
-
+            //item ID's on sheet
             item_hash[65] = itemType.SWORD;
-
             item_hash[63] = itemType.LASER;
-
             item_hash[66] = itemType.ATT_BOOST;
-
             item_hash[67] = itemType.DEF_BOOST;
-
             item_hash[83] = itemType.KEY;
 
 
@@ -122,7 +118,7 @@ namespace ArcadeRPG
                 }
             }
         }
-        public void Clear() //needs to be implemented to prevent leak only clears monsters atm, not collision
+        public void Clear()
         {
             game_state.monster_engine.Clear();
             game_state.local_player.setWeapon(weaponType.NONE);
@@ -215,6 +211,6 @@ namespace ArcadeRPG
                 return true;
             }
             return false;
-        }//checkForGateAt
+        } //checkForGateAt
     }
 }

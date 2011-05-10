@@ -9,56 +9,52 @@ using Microsoft.Xna.Framework.Content;
 
 namespace ArcadeRPG
 {
-    enum PlayerDir { UP, RIGHT, DOWN, LEFT };
-    enum enemyType { GRUNT, BERSERKER, BEETLE, TROOPER, NUM_ENEM };
-    enum weaponType { NONE, SWORD, LASER, GRENADE };
-    enum itemType { NONE, SWORD, LASER, ATT_BOOST, DEF_BOOST, KEY, NUM_ITEMS };
+    enum PlayerDir { UP, RIGHT, DOWN, LEFT }; // facing which direction
+    enum enemyType { GRUNT, BERSERKER, BEETLE, TROOPER, NUM_ENEM }; // types of monsters
+    enum weaponType { NONE, SWORD, LASER, GRENADE }; // types of weapons
+    enum itemType { NONE, SWORD, LASER, ATT_BOOST, DEF_BOOST, KEY, NUM_ITEMS }; // types of items/boosts that can be gathered throughout the levels
     //just the basics on types
     /// <summary>
     /// Holds the data for the player
     /// </summary>
     class Player
     {
-        int last_x, last_y;
-        int x;
-        int y;
-        int width, height;
-        List<Item> inventory;
-        weaponType activeWeapon;
-        //Weapon secondaryWeapon;
-        PlayerDir dir;
+        int last_x, last_y; // "last" positions, used in updating positions
+        int x; // x position
+        int y; // y position
+        int width, height; // dimensions
+        List<Item> inventory; // all items collected
+        weaponType activeWeapon; // weapon currently using
+        PlayerDir dir; // direction user currently facing
         public ColToken col_tok;
-        public bool moving;
-        public bool hurt;
-        int attack, defense; //Bonuses from items
-        int speed;
-        int health;
-        int max_health;
+        public bool moving; // is the character moving?
+        public bool hurt; // is the character getting hurt?
+        int attack, defense, speed, health, max_health; //Bonuses from items
+        // player has an attack, speed, and health or hp stat
+        // a small weapon inventory, size is to be decided
+        // or a system of active/secondary weapons can be used
+
         /// <summary>
         /// Constructor for a Player object
         /// </summary>
         /// <param name="xLoc">Input the initial x coordinate of the player</param>
         /// <param name="yLoc">Input the initial y coordinate of the player</param>
-        // player has an attack, speed, and health or hp stat
-        // a small weapon inventory, size is to be decided
-        // or a system of active/secondary weapons can be used
         public Player(int xLoc, int yLoc, int pWidth, int pHeight)
         {
             last_x = x = xLoc;
             last_y = y = yLoc;
             width = pWidth;
-            height = pHeight;
+            height = pHeight; // set player position
 
-            max_health = health = 100;
-            speed = 3;
-            attack = defense = 0;
-            activeWeapon = weaponType.NONE;
-            //secondaryWeapon = null;
-            dir = PlayerDir.UP;
-            moving = false;
+            max_health = health = 100; // give the user 100 "units" of health
+            speed = 3; // move at 3 pixels/frame
+            attack = defense = 0; // no additional boosts by default
+            activeWeapon = weaponType.NONE; // user starts with no weapons by default
+            dir = PlayerDir.UP; // facing up by default
+            moving = false; // users not moving by default
             col_tok = null;
-            inventory = new List<Item>();
-            hurt = false;
+            inventory = new List<Item>(); // has no inventory by default
+            hurt = false; // user has not been hurt yet
         }
 
         /// <summary>
@@ -67,7 +63,7 @@ namespace ArcadeRPG
         /// 
         public List<Item> getInventory()
         {
-            return inventory;
+            return inventory; // get all the items the user has collected
         }
 
         public int getX()
@@ -78,6 +74,8 @@ namespace ArcadeRPG
         /// <summary>
         /// Returns the current y coordinate of the player
         /// </summary>
+        
+        //utility functions for the character--> most return self explanatory members
         public int getY()
         {
             return y;
@@ -161,43 +159,39 @@ namespace ArcadeRPG
                 col_tok.update(x, y);
             }
         }
+
         //when player grabs a weapon this changes attack stats
         public void setWeapon(weaponType _weapon)
         {
-            //Weapon active = this.activeWeapon;
-            //attack = active.getAttackBonus(ab);
-
             activeWeapon = _weapon;
-            //not perfectly implemented yet
-            //will also change other aspects of weapon including type and animation
-
         }
 
         public void setHealth(int _health)
         {
-            health = _health;
+            health = _health; // if boost collected, change health max
         }
 
         public void setDirection(PlayerDir _dir)
         {
-            dir = _dir;
+            dir = _dir; //update direction the character is facing
         }
 
         public PlayerDir getDirection()
         {
-            return dir;
+            return dir; //update direction the character is facing
         }
 
         public void addItem(Item item)
         {
-            inventory.Add(item);
+            inventory.Add(item); // user has collected an item, add it to the inventory list
         }
 
         public void removeItem(Item item)
         {
-            inventory.Remove(item);
+            inventory.Remove(item); // user has used up an item in the inventory, remove it from the inventory
         }
-        public bool hasKey()
+
+        public bool hasKey() // has the user collected a key to open a gate in the level?
         {
             foreach (Item i in inventory)
             {
@@ -210,6 +204,10 @@ namespace ArcadeRPG
 
     class Enemy
     {
+        
+        //*********************************************************************************//
+        //Refer to player class- most of the members are the same and have the same meaning
+        //*********************************************************************************//
         int last_x, last_y;
         int x;
         int y;
@@ -220,13 +218,12 @@ namespace ArcadeRPG
 
         public ColToken col_tok;
         PlayerDir dir, last_dir;
-        //same attributes as player without weapons
         enemyType eType;
         Sprite sprite;
 
-        public int next_think_time;
-        Node cur_target;
-        List<Node> path;
+        public int next_think_time; // for the AI to "think"
+        Node cur_target; // is the AI seeking a target?
+        List<Node> path; // path for AI to travel
 
         public Enemy(int xLoc, int yLoc, int eWidth, int eHeight, enemyType t)
         {
@@ -285,6 +282,8 @@ namespace ArcadeRPG
         /// <summary>
         /// Returns the current y coordinate of the enemy
         /// </summary>
+        
+        //more utilities like with the player, most return self-explanatory members
         public int getY()
         {
             return y;
@@ -349,7 +348,7 @@ namespace ArcadeRPG
 
         }
 
-        public void setPath(List<Node> _path)
+        public void setPath(List<Node> _path) // tell the monsters what path to travel
         {
             path = _path;
             if (path.Count() == 0)
@@ -441,16 +440,16 @@ namespace ArcadeRPG
         //each weapon has a type and attack bonus, and an animation later on
 
         private string name; // name of item
-        public Boolean collected;
-        private int boost; // what the item can do for the user (i.e., boost attack by 5, then boost will = 5). to be implemented in derived classes
-        private Vector2 offset; // default offset for drawing a sprite (keep it zero for consistency)
+        public Boolean collected; // has the user collected the item?
+        private int boost; // what the item can do for the user (i.e., boost attack by 5, then boost will = 5)
+        private Vector2 offset;
         private Color color; // for drawing function, keep it white for draw to draw no layer in front of item to be drawn
 
         //no time limit, items will last duration of level. upon level "advance", items that are ATTACK/DEFENSE/SPEED will be cleared out of item vector in main class
         private Texture2D itempic;
         private Vector2 itempos;
 
-        //constructor
+        
         public Item(itemType _type, int _ab, int _sb, int _db, int _time, int texID)
         {
             color = Color.White;
