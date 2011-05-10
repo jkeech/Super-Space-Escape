@@ -750,9 +750,12 @@ namespace ArcadeRPG
             for (int i = 0; i < bullets.Count(); ++i)
             {
                 Bullet bullet = bullets.ElementAt(i);
-                bullet_sprite.loc.X = bullet.x - offset_x;
-                bullet_sprite.loc.Y = bullet.y - offset_y;
-                bullet_sprite.Draw(spriteBatch);
+                if (bullet.type != bulletType.SWORD)
+                {
+                    bullet_sprite.loc.X = bullet.x - offset_x;
+                    bullet_sprite.loc.Y = bullet.y - offset_y;
+                    bullet_sprite.Draw(spriteBatch);
+                }
             }
 
             game_state.tile_engine.getCurrentMap().drawForeground(spriteBatch,game_state.local_player.getX(), game_state.local_player.getY());
