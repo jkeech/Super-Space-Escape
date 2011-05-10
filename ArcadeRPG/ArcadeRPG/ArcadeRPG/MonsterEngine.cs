@@ -386,6 +386,7 @@ namespace ArcadeRPG
                     game_state.monster_engine.Remove(monster);
                     mons_removed = true;
                     game_state.fx_engine.RequestExplosion(explosionType.SMALL, monster.getX() + (monster.getWidth() / 2), monster.getY() + (monster.getHeight() / 2));
+                    game_state.fx_engine.RequestSound(soundType.ENEMY_DIE);
                 }
                 if (mons_removed == false)
                 {

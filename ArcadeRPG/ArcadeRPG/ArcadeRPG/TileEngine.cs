@@ -51,7 +51,7 @@ namespace ArcadeRPG
         }
         public String getCurrentLevelName()
         {
-            return level_names[currentLevel];
+            return getCurrentMap().getTitle();
         }
         public String getNextLevelName()
         {
@@ -85,7 +85,9 @@ namespace ArcadeRPG
             title = sr.ReadLine();
 
             // Rest of the data
-            string[] id = sr.ReadToEnd().Replace(Environment.NewLine," ").Split(' ');
+
+            //XXX - Problem here?
+            string[] id = sr.ReadToEnd().Replace("\n", " ").Split(' ');
 
             int width, height;
             int.TryParse(id[0],out width);

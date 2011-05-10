@@ -20,6 +20,7 @@ namespace ArcadeRPG
     public class Game1 : Microsoft.Xna.Framework.Game
     {
         private const bool DEV_MODE = false; // DEV_MODE indicates whether or not to skip the menus (testing purposes)
+
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 

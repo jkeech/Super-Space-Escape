@@ -6,18 +6,20 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 
 namespace ArcadeRPG
 {
-    enum soundType { HURT, SHOOT, SWORD, NUM_S_TYPES }; // types of sounds
+    enum soundType { ENEMY_HURT, PLAYER_HURT, ENEMY_DIE, ITEM_PICKUP, SHOOT, SWORD, NUM_S_TYPES };
     enum explosionType { SMALL, BIG, NUM_E_TYPES };
-    enum effectType { SOUND, EXPLOSION };
+    enum effectType { SOUND, EXPLOSION, RUMBLE };
     
     class Effect
     {
         public effectType type;
         public soundType s_type;
         public explosionType e_type;
+        public int rumble_dur;
         public int x, y;
 
         public Effect(effectType _type, soundType _s_type, explosionType _e_type, int _x, int _y)
@@ -27,7 +29,15 @@ namespace ArcadeRPG
             e_type = _e_type;
             x = _x;
             y = _y;
+
         }
+        
+        public Effect(effectType _type, int _rumble_dur)
+        {
+            type = _type;
+            rumble_dur = _rumble_dur;
+        }
+         
     }
 
     class EffectsEngine
@@ -59,9 +69,17 @@ namespace ArcadeRPG
 
         }
 
+        public void RequestRumble(int dur)
+        {
+           // GamePad.SetVibration(null, 
+            all_effects.Add(new Effect(effectType.RUMBLE, dur));
+            GamePad.SetVibration(PlayerIndex.One, 0.5f, 0.5f);
+        }
+
         public void RequestSound(soundType s_type)
         {
-            all_effects.Add(new Effect(effectType.SOUND, s_type, explosionType.BIG, 0, 0));
+           // all_effects.Add(new Effect(effectType.SOUND, s_type, explosionType.BIG, 0, 0));
+            sounds[(int)s_type].Play();
         }
 
         public void RequestExplosion(explosionType e_type, int _x, int _y)
@@ -69,22 +87,37 @@ namespace ArcadeRPG
             all_effects.Add(new Effect(effectType.EXPLOSION, soundType.SHOOT, explosionType.SMALL, _x, _y));
         }
 
-        public void Update()
+        public void Update(int elapsed_time)
         {
-            for (int i = 0; i < all_effects.Count(); ++i) // does a sound need to be played?
+            List<Effect> to_delete = new List<Effect>();
+
+            for (int i = 0; i < all_effects.Count(); ++i)  // does a sound need to be played?
+
             {
                 Effect fct = all_effects.ElementAt(i);
-                if (fct.type == effectType.SOUND)
-                {
-                    sounds[(int)fct.s_type].Play();
-                }
-                else if (fct.type == effectType.EXPLOSION)
+                if (fct.type == effectType.EXPLOSION)
                 {
                     expls[(int)fct.e_type].AnimateOnce();
                     to_draw.Add(fct);
+                    to_delete.Add(fct);
+                }
+                else if (fct.type == effectType.RUMBLE)
+                {
+                    fct.rumble_dur -= elapsed_time;
+                    if (fct.rumble_dur <= 0)
+                    {
+                        GamePad.SetVibration(PlayerIndex.One, 0.0f, 0.0f);
+                        to_delete.Add(fct);
+                    }
                 }
             }
-            all_effects.Clear(); // all effects have been played
+
+            for (int i = 0; i < to_delete.Count(); ++i)
+            {
+                Effect fct = to_delete.ElementAt(i);
+                all_effects.Remove(fct);
+            }
+
         }
 
         public void Draw(SpriteBatch batch, int offset_x, int offset_y) // draw explosions

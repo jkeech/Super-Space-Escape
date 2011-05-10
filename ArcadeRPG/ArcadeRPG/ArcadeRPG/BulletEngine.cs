@@ -115,7 +115,8 @@ namespace ArcadeRPG
 
                                 }
                                 monster.setHealth(monster.getHealth() - (game_state.local_player.getAttackBonus() + damage)); // substract damage from monster's health
-                                game_state.fx_engine.RequestSound(soundType.HURT); // play a sound when hitting enemies
+                                game_state.fx_engine.RequestSound(soundType.ENEMY_HURT); // play a sound when hitting enemies
+
                             }
                             else if (hit.GetLocalType() == ColType.PLAYER) // if enemy bullet hits our character
                             {

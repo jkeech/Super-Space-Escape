@@ -77,6 +77,11 @@ namespace ArcadeRPG
             return height;
         }
 
+        public string getTitle()
+        {
+            return title;
+        }
+
         public int getWidth()
         {
             return width;
