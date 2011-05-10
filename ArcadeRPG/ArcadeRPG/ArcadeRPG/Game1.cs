@@ -19,7 +19,7 @@ namespace ArcadeRPG
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
-        private const bool DEV_MODE = true;
+        private const bool DEV_MODE = false;
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Vector2 imageOffset = new Vector2(0, 0); //don't offset anything
