@@ -51,7 +51,7 @@ namespace ArcadeRPG
         }
         public String getCurrentLevelName()
         {
-            return level_names[currentLevel];
+            return getCurrentMap().getTitle();
         }
         public String getNextLevelName()
         {
