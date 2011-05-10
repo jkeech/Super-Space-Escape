@@ -40,7 +40,7 @@ namespace ArcadeRPG
             switch (type)
             {
                 case bulletType.SMALL:
-                    vel = 5;
+                    vel = 8;
                     width = 9;
                     height = 9;
                     break;

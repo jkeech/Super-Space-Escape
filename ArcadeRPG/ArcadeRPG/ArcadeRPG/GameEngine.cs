@@ -244,7 +244,7 @@ namespace ArcadeRPG
             //SoundEffect game_music = Content.Load<SoundEffect>("01AttackPanda1");
             Song game_music = Content.Load<Song>("01AttackPanda1");
             MediaPlayer.Play(game_music);
-            //game_music.Play();
+            MediaPlayer.IsRepeating = true;
 
             //********************************LOADING GRAPHIC SPRITES********************************//
             backpack = Content.Load<Texture2D>("backpack"); // loading backpack
@@ -293,12 +293,6 @@ namespace ArcadeRPG
                 new_enemy.setSprite(enemy_sprite);
                 //game_state.monster_engine.AddMonster(new_enemy);
             }
-            /*
-            game_state.monster_engine = new MonsterEngine(game_state);
-            game_state.coll_engine = new CollisionEngine(game_state);
-            game_state.fx_engine = new EffectsEngine(game_state);
-            game_state.obj_mang = new ObjectManager(game_state);
-            */
         }
 
         public void resetTimer()
