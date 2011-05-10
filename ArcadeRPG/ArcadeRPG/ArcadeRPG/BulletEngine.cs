@@ -99,6 +99,10 @@ namespace ArcadeRPG
                         {
                             continue;
                         } else {
+                            if (bullet.owner == bulletOwner.ENEMY)
+                            {
+                                continue;
+                            }
                             ColToken hit = cols.ElementAt(j);
                             if (hit.GetLocalType() == ColType.MONSTER) // if bullet runs into a monster
                             {
