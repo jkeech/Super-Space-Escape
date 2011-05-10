@@ -80,10 +80,10 @@ namespace ArcadeRPG
 
         Color trans = new Color(255, 255, 255, 50);
         Color lucen = new Color(255, 255, 255, 120);
-        Vector2 uparrowpos = new Vector2(60, 310);
-        Vector2 downarrowpos = new Vector2(60, 420);
-        Vector2 leftarrowpos = new Vector2(15, 375);
-        Vector2 rightarrowpos = new Vector2(120, 375); //positions for each arrow
+        Vector2 uparrowpos = new Vector2(75, 310);
+        Vector2 downarrowpos = new Vector2(75, 420);
+        Vector2 leftarrowpos = new Vector2(15, 365);
+        Vector2 rightarrowpos = new Vector2(130, 365); //positions for each arrow
         Vector2 fire_button_pos = new Vector2(700, 385);
 
         Rectangle health_bar_rec, health_bar_empty_rec;
@@ -323,26 +323,26 @@ namespace ArcadeRPG
                 //if the screen is pressed on an arrow, move sprite accordingly
                 if (tl.State == TouchLocationState.Pressed || tl.State == TouchLocationState.Moved)
                 {
-                    if ((tl.Position.X >= 60) && (tl.Position.X <= 110) && (tl.Position.Y >= 310) && (tl.Position.Y <= 380)) // up arrow
+                    if ((tl.Position.X >= 75) && (tl.Position.X <= 120) && (tl.Position.Y >= 310) && (tl.Position.Y <= 380)) // up arrow
                     {
                         pot_y -= game_state.local_player.getSpeed();
                         pot_dir = PlayerDir.UP;
                         // -1 = up direction (axis goes down incresingly)
                     }
 
-                    if ((tl.Position.X >= 60) && (tl.Position.X <= 110) && (tl.Position.Y >= 420) && (tl.Position.Y <= 480)) // down arrow
+                    if ((tl.Position.X >= 75) && (tl.Position.X <= 120) && (tl.Position.Y >= 420) && (tl.Position.Y <= 480)) // down arrow
                     {
                         pot_y += game_state.local_player.getSpeed();
                         pot_dir = PlayerDir.DOWN;             
                     }
 
-                    if ((tl.Position.X >= 15) && (tl.Position.X <= 70) && (tl.Position.Y >= 375) && (tl.Position.Y <= 430)) // left arrow
+                    if ((tl.Position.X >= 15) && (tl.Position.X <= 70) && (tl.Position.Y >= 365) && (tl.Position.Y <= 430)) // left arrow
                     {
                         pot_x -= game_state.local_player.getSpeed();
                         pot_dir = PlayerDir.LEFT;
                     }
 
-                    if ((tl.Position.X >= 115) && (tl.Position.X <= 170) && (tl.Position.Y >= 375) && (tl.Position.Y <= 430)) // right arrow
+                    if ((tl.Position.X >= 115) && (tl.Position.X <= 170) && (tl.Position.Y >= 365) && (tl.Position.Y <= 430)) // right arrow
                     {
                         pot_x += game_state.local_player.getSpeed();
                         pot_dir = PlayerDir.RIGHT;
