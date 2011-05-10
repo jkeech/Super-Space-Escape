@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Devices;
 
 namespace ArcadeRPG
 {
@@ -71,14 +72,12 @@ namespace ArcadeRPG
 
         public void RequestRumble(int dur)
         {
-           // GamePad.SetVibration(null, 
-            all_effects.Add(new Effect(effectType.RUMBLE, dur));
-            GamePad.SetVibration(PlayerIndex.One, 0.5f, 0.5f);
+            VibrateController vibrate = VibrateController.Default;
+            vibrate.Start(TimeSpan.FromMilliseconds(dur)); 
         }
 
         public void RequestSound(soundType s_type)
         {
-           // all_effects.Add(new Effect(effectType.SOUND, s_type, explosionType.BIG, 0, 0));
             sounds[(int)s_type].Play();
         }
 
