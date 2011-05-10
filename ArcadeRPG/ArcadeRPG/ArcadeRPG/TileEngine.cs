@@ -85,7 +85,6 @@ namespace ArcadeRPG
             title = sr.ReadLine();
 
             // Rest of the data
-            //XXX - Problem here?
             string[] id = sr.ReadToEnd().Replace(Environment.NewLine," ").Split(' ');
 
             int width, height;
@@ -94,7 +93,6 @@ namespace ArcadeRPG
 
             // Create the map
             Map newLevel = new Map(title, width, height, TILE_SIZE, tiles);
-           // tileLoader.resetLayers(width, height);
 
             //Populate the map data
             int currentID = 3;
@@ -108,9 +106,7 @@ namespace ArcadeRPG
 
                     // Create a new tile at location (x,y) with texture id given and collision flag = 0
                     newLevel.getLayer(LayerType.BACKGROUND).setTile(new Tile(textureID, false), x, y);
-                   // tileLoader.addToLayer(LayerType.BACKGROUND, x, y, textureID);
 
-                    // increment the currentID
                     currentID++;
                 }
             }
@@ -130,7 +126,6 @@ namespace ArcadeRPG
 
                     // Create a new tile at location (x,y) with texture id given and collision flag = 0
                     newLevel.getLayer(LayerType.BACKGROUND).getTile(x,y).setCollision(hasCollision);
-                    //tileLoader.addToLayer(LayerType.COLLISION, x, y, textureID);
 
                     // increment the currentID
                     currentID++;
@@ -153,9 +148,7 @@ namespace ArcadeRPG
 
                     // Create a new tile at location (x,y) with texture id given and collision flag = 0
                     newLevel.getLayer(LayerType.FOREGROUND).setTile(new Tile(textureID, false), x, y);
-                    //tileLoader.addToLayer(LayerType.FOREGROUND, x, y, textureID);
 
-                    // increment the currentID
                     currentID++;
                 }
             }
@@ -170,9 +163,7 @@ namespace ArcadeRPG
 
                     // Create a new tile at location (x,y) with texture id given and collision flag = 0
                     newLevel.getLayer(LayerType.OBJECTS).setTile(new Tile(textureID, false), x, y);
-                    //tileLoader.addToLayer(LayerType.OBJECTS, x, y, textureID);
 
-                    // increment the currentID
                     currentID++;
                 }
             }

@@ -46,7 +46,7 @@ namespace ArcadeRPG
         {
             gameovertime -= gameTime.ElapsedGameTime; // start timer on actual game
 
-            if (gameovertime.TotalSeconds <= 0)
+            if (gameovertime.TotalSeconds <= 0) // timer has expired, game exits to phone platform
             {
                 exit = true;
                 return;
@@ -55,7 +55,7 @@ namespace ArcadeRPG
             TouchCollection tc = TouchPanel.GetState();
             foreach (TouchLocation tl in tc)
             {
-                if (tl.State == TouchLocationState.Pressed)
+                if (tl.State == TouchLocationState.Pressed) // has user elected to play again?
                 {
                     exit = true;
                     return;

@@ -82,7 +82,7 @@ namespace ArcadeRPG
             return width;
         }
 
-        public int[] get_cur_tile_pos()
+        public int[] get_cur_tile_pos() // tile position
         {
             int xtile = sprite_x / tile_size;
             int xpos = sprite_x % tile_size;
@@ -116,7 +116,9 @@ namespace ArcadeRPG
             int brcornery;//bottom right corner, ending off screen
             double swidth = 800 / tile_size;//screen width, based on tiles
             double sheight = 480 / tile_size;//screen width, based on tiles
-            if (sprite_x < 400-(tile_size/2))
+
+
+            if (sprite_x < 400-(tile_size/2)) // is the character at the edge of the screen?
             {
                 tlcornerx = 0;
                 brcornerx = (int)swidth + 1;
@@ -207,12 +209,14 @@ namespace ArcadeRPG
             int[] bounds = new int[4];
             bool at_edgex = false;
             bool at_edgey = false;
-            int tlcornerx;//top left corner, ending off screen
+            int tlcornerx; //top left corner, ending off screen
             int tlcornery;
             int brcornerx;
-            int brcornery;//bottom right corner, ending off screen
-            double swidth = 800 / tile_size;//screen width, based on tiles
-            double sheight = 480 / tile_size;//screen width, based on tiles
+            int brcornery; //bottom right corner, ending off screen
+            double swidth = 800 / tile_size; //screen width, based on tiles
+            double sheight = 480 / tile_size; //screen width, based on tiles
+
+
             if (sprite_x < 400 - (tile_size / 2))
             {
                 tlcornerx = 0;
@@ -356,6 +360,7 @@ namespace ArcadeRPG
             Rectangle sourceR;
             int countx = 0;
             int county = 0;
+
             for (int a = tlcornerx; a <= brcornerx; a++)
             {
                 county = 0;
@@ -364,17 +369,17 @@ namespace ArcadeRPG
 
                     int xdisp = 0;
                     int ydisp = 0;
-                    if (!at_edgex)
+                    if (!at_edgex) // if not at the edge with respect to the x direction...
                     {
                         xdisp = sprite_position[1] + tile_size;
                     }
-                    if (!at_edgey)
+                    if (!at_edgey) // if not at the edge with respect to the y direction...
                     {
                         ydisp = sprite_position[3] + tile_size;
                     }
                     if (!(a * tile_size >= width * tile_size || a * tile_size < 0 || b * tile_size >= height * tile_size || b * tile_size < 0))
                     {
-                        temp_texture = map[1].getTile(a, b).getTexture();//get texture of this tile
+                        temp_texture = map[1].getTile(a, b).getTexture(); //get texture of this tile
 
                         sourceR = new Rectangle((temp_texture % (texture_layers[1].Width / 32)) * tile_size , (temp_texture / (texture_layers[1].Width / 32)) * tile_size, tile_size , tile_size );
                         drawR = new Rectangle((countx * 2 * tile_size) - (xdisp*2), (county *2* tile_size) - (ydisp*2), tile_size, tile_size);

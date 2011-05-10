@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace ArcadeRPG
 {
-    enum soundType { HURT, SHOOT, SWORD, NUM_S_TYPES };
+    enum soundType { HURT, SHOOT, SWORD, NUM_S_TYPES }; // types of sounds
     enum explosionType { SMALL, BIG, NUM_E_TYPES };
     enum effectType { SOUND, EXPLOSION };
     
@@ -33,8 +33,8 @@ namespace ArcadeRPG
     class EffectsEngine
     {
         GameState game_state;
-        List<Effect> all_effects;
-        List<Effect> to_draw;
+        List<Effect> all_effects; // all possible effects
+        List<Effect> to_draw; // which effect
         SoundEffect[] sounds;
         Sprite[] expls;
 
@@ -49,13 +49,13 @@ namespace ArcadeRPG
 
         public void LoadSound(ContentManager cont_man, string _path, soundType s_type) 
         {
-            sounds[(int)s_type] = cont_man.Load<SoundEffect>(_path);
+            sounds[(int)s_type] = cont_man.Load<SoundEffect>(_path); // play a sound
         }
 
         public void LoadExplosion(ContentManager cont_man, string _path, explosionType e_type)
         {
             expls[(int)e_type] = new Sprite();
-            expls[(int)e_type].Load(cont_man, _path, 16, 16, 200);
+            expls[(int)e_type].Load(cont_man, _path, 16, 16, 200); // draw an explosion
 
         }
 
@@ -71,7 +71,7 @@ namespace ArcadeRPG
 
         public void Update()
         {
-            for (int i = 0; i < all_effects.Count(); ++i)
+            for (int i = 0; i < all_effects.Count(); ++i) // does a sound need to be played?
             {
                 Effect fct = all_effects.ElementAt(i);
                 if (fct.type == effectType.SOUND)
@@ -84,10 +84,10 @@ namespace ArcadeRPG
                     to_draw.Add(fct);
                 }
             }
-            all_effects.Clear();
+            all_effects.Clear(); // all effects have been played
         }
 
-        public void Draw(SpriteBatch batch, int offset_x, int offset_y)
+        public void Draw(SpriteBatch batch, int offset_x, int offset_y) // draw explosions
         {
 
             for (int i = 0; i < to_draw.Count(); ++i)
@@ -102,7 +102,7 @@ namespace ArcadeRPG
                     }
                 }
             }
-            //to_draw.Clear();
+
         }
     }
 }

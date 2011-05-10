@@ -9,9 +9,6 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
-//using System;
-//using System.Collections.Generic;
-//using System.Linq;
 using System.Text;
 
 namespace ArcadeRPG
@@ -19,16 +16,16 @@ namespace ArcadeRPG
 
     class BackRender
     {
-        Texture2D tile;
+        Texture2D tile; // rerpesents each tile of the map
         int tile_size = 32;//possibly needs to be set, should be make the option for HD maps, bad idea though for collision purposes
         int tile_row_num;
-        int locx =30;
-        int locy = 133;
+        int locx =30; // location in the x direction
+        int locy = 133; // location in the y direction
         int big_small = 1; //small or large res. small =0, large=1. win phones have 2 resolutions, need to plan for both eventually 
-        private List<Texture2D> tiles;
+        private List<Texture2D> tiles; // all the tiles of a map in a collective structure
         List<List<int>> tile_map;
-        int map_size_x;
-        int map_size_y;
+        int map_size_x; // map size along the x axis
+        int map_size_y; // map size along the y axis
         
         public List<int> get_cur_tile_pos() //returns the current position, according to the tiles (tile, pos on tile)
         {
@@ -46,9 +43,8 @@ namespace ArcadeRPG
             return ret;
         }
 
-        public BackRender(List<List<int>> tile_mapt, Texture2D tiles, int tile_dim, int tile_num)//tile dim is the width of the tiles, tile_num is the number of tiles per row of a tilesheet. Keep to square sheets for ease of use
+        public BackRender(List<List<int>> tile_mapt, Texture2D tiles, int tile_dim, int tile_num) //tile dim is the width of the tiles, tile_num is the number of tiles per row of a tilesheet. Keep to square sheets for ease of use
         {
-            // TODO: Complete member initialization
             tile_row_num = tile_num;
             tile_map = tile_mapt;
             tile_size = tile_dim;
@@ -60,12 +56,14 @@ namespace ArcadeRPG
         {
             locx = xpos;
             locy = ypos;
-            bool at_edge = false;
+            bool at_edge = false; // is the tile located at the border of the screen? no by default
 
-            List<int> tile_pos = get_cur_tile_pos();//(tile x,pos x,tile y,pos y)
-            List<int> tile_bound = new System.Collections.Generic.List<int>();//(xmin,xmax,ymin,ymax)
-            // || (locy > (map_size_y - 240)) || (locy < 240))
-            if ((locx < 400) || (locx > (map_size_x - 400)) )
+            List<int> tile_pos = get_cur_tile_pos(); //(tile x,pos x,tile y,pos y)
+            List<int> tile_bound = new System.Collections.Generic.List<int>(); //(xmin,xmax,ymin,ymax)
+
+            //from this point until the draw function call, determine where to place the tiles
+
+            if ( (locx < 400) || (locx > (map_size_x - 400)) ) // is the tile located on the border of the screen?
             {
                 at_edge = true;
                 if ((locx < 400))
@@ -127,16 +125,8 @@ namespace ArcadeRPG
                     cur_col = tile_map[x][y] % tile_row_num;
                     source.Add(new Rectangle(cur_row * tile_size, cur_col * tile_size, tile_size, tile_size));
                 }
-            /*wtf was I thinking?
-            for (int x = 0; x < tile_map.Count;x++ )
-                for (int y = 0; y < tile_map[x].Count; y++)
-                {
-                    cur_row = tile_map[x][y] / tile_row_num;
-                    cur_col = tile_map[x][y] % tile_row_num;
-                    source.Add(new Rectangle(cur_row * tile_size, cur_col * tile_size,tile_size,tile_size));
-                }
-             */
-            if (big_small == 1)//set displacement of tiles
+
+            if (big_small == 1) //set displacement of tiles
             {
                 for (int x = -1; x < 27; x++)
                     for (int y = -1; y < 17; y++)
@@ -145,77 +135,12 @@ namespace ArcadeRPG
                     }
             }
             
-            for (int x=0;x<tile_spot.Count;x++) 
+            for (int x=0;x<tile_spot.Count;x++)  // draw all of the tiles
             {    
-                tile_batch.Draw(tile, tile_spot[x], source[x], Color.White);//white necessary for no tinting      
+                tile_batch.Draw(tile, tile_spot[x], source[x], Color.White);      
             }
             
             
         }
     }
 }
-
-
-
-
-
-
-
-
-/* add back in if needed for speed, prolly not
-            int quadrant;
-            if (tile_pos[1] <= tile_size/2)//quadrants based on cartesian coordinate plane
-            {
-                if(tile_pos[3]<= tile_size/2)//is in quad2
-                {
-                    quadrant = 2;
-                    if(big_small==1)//if full res
-                    {
-                        tile_bound.Add(tile_pos[0]-13);
-                        tile_bound.Add(tile_pos[0]+12);
-                        tile_bound.Add(tile_pos[0]-8);
-                        tile_bound.Add(tile_pos[0]+7);
-                    }
-                    //else will be programmed later, requires more math
-                }
-                if(tile_pos[3] > tile_size/2)//is in quad3
-                {
-                    quadrant = 3;
-                    if(big_small==1)//if full res
-                    {
-                        tile_bound.Add(tile_pos[0]-13);
-                        tile_bound.Add(tile_pos[0]+12);
-                        tile_bound.Add(tile_pos[0]-7);
-                        tile_bound.Add(tile_pos[0]+8);
-                    }
-                    //else will be programmed later, requires more math
-                }
-            }
-            if (tile_pos[1] > tile_size/2)//quadrants based on cartesian coordinate plane
-            {
-                if(tile_pos[3]<= tile_size/2)//is in quad1
-                {
-                    quadrant = 1;
-                    if(big_small==1)//if full res
-                    {
-                        tile_bound.Add(tile_pos[0]-12);
-                        tile_bound.Add(tile_pos[0]+13);
-                        tile_bound.Add(tile_pos[0]-8);
-                        tile_bound.Add(tile_pos[0]+7);
-                    }
-                    //else will be programmed later, requires more math
-                }
-                if(tile_pos[3] > tile_size/2)//is in quad4
-                {
-                    quadrant = 4;
-                    if(big_small==1)//if full res
-                    {
-                        tile_bound.Add(tile_pos[0]-12);
-                        tile_bound.Add(tile_pos[0]+13);
-                        tile_bound.Add(tile_pos[0]-7);
-                        tile_bound.Add(tile_pos[0]+8);
-
-                    }
-                    //else will be programmed later, requires more math
-                }
-            }*/

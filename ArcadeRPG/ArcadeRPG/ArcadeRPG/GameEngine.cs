@@ -25,7 +25,6 @@ namespace ArcadeRPG
         Sprite[] character_sprite;
 
         Texture2D[] monster_texture;
-        //List<Sprite> monster_sprites;
         Sprite bullet_sprite;
         Sprite sword_sprite;
         Bullet sword_bullet; //Little trick to create a "bullet" object to do damage
@@ -67,7 +66,6 @@ namespace ArcadeRPG
         //*********************POSITIONS***********************//
         Vector2 backpackpos = new Vector2(700, 330); // position for backpack sprite
         Rectangle backpackExit = new Rectangle(529, 334, 84, 44);
-        //Vector2 gunbuttonpos = new Vector2(630, 425); // position for attack button
         Vector2 healthpos = new Vector2(280, 445); // position for health bar
 
         Vector2 scoreStringPos = new Vector2(0, 20); // position of score string
@@ -82,21 +80,19 @@ namespace ArcadeRPG
 
         Color trans = new Color(255, 255, 255, 50);
         Color lucen = new Color(255, 255, 255, 120);
-        Vector2 uparrowpos = new Vector2(50, 345);
-        Vector2 downarrowpos = new Vector2(50, 425);
-        Vector2 leftarrowpos = new Vector2(15, 385);
-        Vector2 rightarrowpos = new Vector2(85, 385); //positions for each arrow
+        Vector2 uparrowpos = new Vector2(60, 330);
+        Vector2 downarrowpos = new Vector2(60, 420);
+        Vector2 leftarrowpos = new Vector2(15, 375);
+        Vector2 rightarrowpos = new Vector2(100, 375); //positions for each arrow
         Vector2 fire_button_pos = new Vector2(700, 385);
 
         Rectangle health_bar_rec, health_bar_empty_rec;
         static int health_bar_width = 200;
         //****************************************************//
 
-        //**************DISPLAY STRINGS******************//
-        public const string scoreString = "Score: "; // display string
-        public int currScore = 0; // actual score, again can be modified like the levelnum var. not "const"
-        public const string timeLeft = "Time: ";
 
+        //**************DISPLAY STRINGS******************//
+        public const string timeLeft = "Time: ";
         public const string levelstring = "Level: ";
         public const string livesString = "Lives Remaining: ";
 
@@ -143,20 +139,14 @@ namespace ArcadeRPG
 
             game_state = new GameState();
             game_state.local_player = new Player(33, 0, 32, 36);
-            //game_state.local_player.setWeapon(weaponType.SWORD);
             game_state.monster_engine = new MonsterEngine(game_state);
             game_state.coll_engine = new CollisionEngine(game_state);
             game_state.fx_engine = new EffectsEngine(game_state);
             game_state.obj_mang = new ObjectManager(game_state);
+            //instantiate each type of object, respectively
 
             game_state.local_player.col_tok = game_state.coll_engine.register_object(game_state.local_player, ColType.PLAYER);
 
-
-
-            //Content.RootDirectory = "Content";
-
-            // Frame rate is 30 fps by default for Windows Phone.
-            //TargetElapsedTime = TimeSpan.FromTicks(333333);
         }
 
 
@@ -169,8 +159,7 @@ namespace ArcadeRPG
         /// </summary>
         public void Initialize()
         {
-
-
+            //nothing
         }
 
         /// <summary>
@@ -181,38 +170,32 @@ namespace ArcadeRPG
         {
             // Create a new SpriteBatch, which can be used to draw textures.
 
-            Texture2D textureb = Content.Load<Texture2D>("background_cropped");
-            Texture2D texturef = Content.Load<Texture2D>("foreground_cropped");
-            Texture2D textureo = Content.Load<Texture2D>("objects1");
-            tiles = new List<Texture2D>();
+            Texture2D textureb = Content.Load<Texture2D>("background_cropped"); // background
+            Texture2D texturef = Content.Load<Texture2D>("foreground_cropped"); // foreground
+            Texture2D textureo = Content.Load<Texture2D>("objects1"); // objects
+            tiles = new List<Texture2D>(); // tiles
             tiles.Add(textureb);
             tiles.Add(texturef);
-            tiles.Add(textureo);
+            tiles.Add(textureo); // add bg, fg, obj's to draw
             game_state.tile_engine = new TileEngine(32, tiles);
             
-            //back_layer = tileEngine.getLayer(LayerType.BACKGROUND);
             //Character Sprite
             character_sprite[(int)weaponType.NONE].Load(Content, "player_no", 32, 36, 200);
             character_sprite[(int)weaponType.SWORD].Load(Content, "player_sword", 32, 36, 200);
             character_sprite[(int)weaponType.LASER].Load(Content, "player_gun", 32, 36, 200);
-            //character_sprite.loc.X = 400;
-            //character_sprite.loc.Y = 240;
 
             monster_texture[(int)enemyType.GRUNT] = Content.Load<Texture2D>("grunt");
 
             monster_texture[(int)enemyType.BEETLE] = Content.Load<Texture2D>("beetles");
             monster_texture[(int)enemyType.BERSERKER] = Content.Load<Texture2D>("berserker");
             monster_texture[(int)enemyType.TROOPER] = Content.Load<Texture2D>("trooper");
-            //monster_sprites[(int)enemyType.GRUNT].Load(monster_texture[(int)enemyType.GRUNT], 32, 48);
-            //monster_sprites[(int)enemyType.GRUNT].StartAnimating((int)PlayerDir.UP * 3, ((int)PlayerDir.UP * 3) + 2);
+
             LoadLevel(0);
             bullet_sprite.Load(Content, "bullet", 9, 9, 0);
             sword_sprite.Load(Content, "player_sword_attack", 32, 36, 0);
 
 
-            //game_state.monster_engine.AddMonster(new Enemy(500, 240, 48, 54, enemyType.GRUNT));
-            //game_state.monster_engine.AddMonster(new Enemy(300, 400, 48, 54, enemyType.GRUNT));
-            for (int i = 0; i < game_state.monster_engine.GetMonsters().Count(); ++i)
+            for (int i = 0; i < game_state.monster_engine.GetMonsters().Count(); ++i) // draw new monsters randomly
             {
                 Enemy new_enemy = game_state.monster_engine.GetMonsters().ElementAt(i);
                 Sprite enemy_sprite = new Sprite();
@@ -220,27 +203,26 @@ namespace ArcadeRPG
 
                 enemy_sprite.Load(monster_texture[new_enemy_type], new_enemy.getWidth(), new_enemy.getHeight(), 200);
                 new_enemy.setSprite(enemy_sprite);
-                //game_state.monster_engine.AddMonster(new_enemy);
             }
 
             game_state.bullet_engine = new BulletEngine(game_state);
-            //character_sprite.StartAnimating(6, 8);
-            // TODO: use this.Content to load your game content here
+
 
             uparrow = Content.Load<Texture2D>("arrowup");
             downarrow = Content.Load<Texture2D>("arrowdown");
             leftarrow = Content.Load<Texture2D>("arrowleft");
             rightarrow = Content.Load<Texture2D>("arrowright"); // components for "keypad" HUD
-            fire_button = Content.Load<Texture2D>("fire");
-            item_background = Content.Load<Texture2D>("item_background");
+            fire_button = Content.Load<Texture2D>("fire"); // "fire" button (attacks enemies when pushed)
+            item_background = Content.Load<Texture2D>("item_background"); // user taps this to bring up inventory
 
             game_state.fx_engine.LoadSound(Content, "shoot", soundType.SHOOT);
-            game_state.fx_engine.LoadSound(Content, "hurt", soundType.HURT);
+            game_state.fx_engine.LoadSound(Content, "hurt", soundType.HURT); // sounds
+            
             game_state.fx_engine.LoadSound(Content, "sword_swing", soundType.SWORD);
-            game_state.fx_engine.LoadExplosion(Content, "expl", explosionType.SMALL);
-            //SoundEffect game_music = Content.Load<SoundEffect>("01AttackPanda1");
-            Song game_music = Content.Load<Song>("01AttackPanda1");
-            MediaPlayer.Play(game_music);
+            game_state.fx_engine.LoadExplosion(Content, "expl", explosionType.SMALL); // explosion sprites
+            SoundEffect game_music = Content.Load<SoundEffect>("01AttackPanda1"); // song
+            //Song game_music = Content.Load<Song>("01AttackPanda1");
+            //MediaPlayer.Play(game_music);
             //game_music.Play();
 
             //********************************LOADING GRAPHIC SPRITES********************************//
@@ -262,6 +244,7 @@ namespace ArcadeRPG
             backpackmenu.loadContent(Content);
             gameOver.loadContent(Content);
             timex.loadContent(Content);
+            //load content for each respective menu
         }
 
         /// <summary>
@@ -272,15 +255,14 @@ namespace ArcadeRPG
         {
         }
 
-        public void LoadLevel(int level_num)
+        public void LoadLevel(int level_num) // which level should we load?
         {
             game_state.obj_mang.Clear();
-            resetTimer();
-            game_state.tile_engine.loadLevel(level_num);//needs to be changed to level_0
+            resetTimer(); // restart the level timer for each new level
+            game_state.tile_engine.loadLevel(level_num);
             game_state.obj_mang.load(game_state.tile_engine.getCurrentMap().getLayer(LayerType.OBJECTS));
-            //game_state.monster_engine.AddMonster(new Enemy(500, 240, 48, 54, enemyType.GRUNT));
-            //game_state.monster_engine.AddMonster(new Enemy(300, 400, 48, 54, enemyType.GRUNT));
-            for (int i = 0; i < game_state.monster_engine.GetMonsters().Count(); ++i)
+
+            for (int i = 0; i < game_state.monster_engine.GetMonsters().Count(); ++i) // put the enemies on the map
             {
                 Enemy new_enemy = game_state.monster_engine.GetMonsters().ElementAt(i);
                 Sprite enemy_sprite = new Sprite();
@@ -288,14 +270,8 @@ namespace ArcadeRPG
           
                 enemy_sprite.Load(monster_texture[new_enemy_type], new_enemy.getWidth(), new_enemy.getHeight(), 200);
                 new_enemy.setSprite(enemy_sprite);
-                //game_state.monster_engine.AddMonster(new_enemy);
             }
-            /*
-            game_state.monster_engine = new MonsterEngine(game_state);
-            game_state.coll_engine = new CollisionEngine(game_state);
-            game_state.fx_engine = new EffectsEngine(game_state);
-            game_state.obj_mang = new ObjectManager(game_state);
-            */
+
         }
 
         public void resetTimer()
@@ -303,7 +279,7 @@ namespace ArcadeRPG
             currTime = TimeSpan.FromSeconds(LEVEL_TIME);
         }
 
-        public bool hasTimeLeft()
+        public bool hasTimeLeft() // has the user run out of time?
         {
             return currTime.TotalSeconds > 0;
         }
@@ -321,7 +297,7 @@ namespace ArcadeRPG
         /// checking for collisions, gathering input, and playing audio.
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
-        public void Update(GameTime gameTime)
+        public void Update(GameTime gameTime) // is the user dead? if so handle it
         {
             if (game_state.local_player.getHealth() <= 0)
             {
@@ -336,7 +312,6 @@ namespace ArcadeRPG
             double new_width = ((double)health_bar_width) * (double)((double)game_state.local_player.getHealth() / (double)game_state.local_player.getMaxHealth());
             health_bar_rec.Width = (int)new_width;
 
-            //Put a nicer function here
             TouchCollection touchCollection = TouchPanel.GetState();
             foreach (TouchLocation tl in touchCollection)
             // for each place the screen has been touched at the point of "getState"
@@ -345,36 +320,30 @@ namespace ArcadeRPG
                 //if the screen is pressed on an arrow, move sprite accordingly
                 if (tl.State == TouchLocationState.Pressed || tl.State == TouchLocationState.Moved)
                 {
-                    if ((tl.Position.X >= 50) && (tl.Position.X <= 100) && (tl.Position.Y >= 345) && (tl.Position.Y <= 385)) // up arrow
+                    if ((tl.Position.X >= 60) && (tl.Position.X <= 110) && (tl.Position.Y >= 330) && (tl.Position.Y <= 380)) // up arrow
                     {
-
-                        //local_player.setY(local_player.getY() - 3);
                         pot_y -= game_state.local_player.getSpeed();
                         pot_dir = PlayerDir.UP;
                         // -1 = up direction (axis goes down incresingly)
 
                     }
 
-                    if ((tl.Position.X >= 50) && (tl.Position.X <= 100) && (tl.Position.Y >= 425) && (tl.Position.Y <= 465)) // down arrow
+                    if ((tl.Position.X >= 60) && (tl.Position.X <= 110) && (tl.Position.Y >= 420) && (tl.Position.Y <= 470)) // down arrow
                     {
                         pot_y += game_state.local_player.getSpeed();
-                        pot_dir = PlayerDir.DOWN;
-                        // local_player.setY(local_player.getY() + 3);              
+                        pot_dir = PlayerDir.DOWN;             
                     }
 
-                    if ((tl.Position.X >= 15) && (tl.Position.X <= 55) && (tl.Position.Y >= 385) && (tl.Position.Y <= 425)) // left arrow
+                    if ((tl.Position.X >= 15) && (tl.Position.X <= 65) && (tl.Position.Y >= 375) && (tl.Position.Y <= 425)) // left arrow
                     {
                         pot_x -= game_state.local_player.getSpeed();
                         pot_dir = PlayerDir.LEFT;
-                        //local_player.setX(local_player.getX() - 3); // -1 = left because left to right
-
                     }
 
-                    if ((tl.Position.X >= 90) && (tl.Position.X <= 130) && (tl.Position.Y >= 385) && (tl.Position.Y <= 425)) // right arrow
+                    if ((tl.Position.X >= 100) && (tl.Position.X <= 150) && (tl.Position.Y >= 375) && (tl.Position.Y <= 425)) // right arrow
                     {
                         pot_x += game_state.local_player.getSpeed();
                         pot_dir = PlayerDir.RIGHT;
-                        //local_player.setX(local_player.getX() + 3);
                     }
 
 
@@ -384,20 +353,17 @@ namespace ArcadeRPG
                         if (game_state.obj_mang.checkForGateAt(pot_x, pot_y, game_state.local_player.getWidth(), game_state.local_player.getHeight()) && !game_state.local_player.hasKey())
                         {
                             //there is a gate and the player does not have a key
-                            
                         }
-                        else
-                        {//no gate or the player has the key
+                        else //no gate or the player has the key
+                        {
                             game_state.local_player.setX(pot_x);
                             game_state.local_player.setY(pot_y);
 
 
-                            //System.Diagnostics.Debug.WriteLine("Stuff: {0},{1}", pot_x, pot_y);
-
                             Item item = game_state.obj_mang.getItemAt(pot_x, pot_y, game_state.local_player.getWidth(), game_state.local_player.getHeight());
                             if (item != null)
                             {
-                                game_state.local_player.addItem(item);
+                                game_state.local_player.addItem(item); // item collected, set weapon type to respective type of item collected
                                 if (game_state.local_player.getWeapon() == weaponType.NONE)
                                 {
                                     if (item.getType() == itemType.SWORD)
@@ -411,7 +377,7 @@ namespace ArcadeRPG
                                 }
                             }
 
-                            if (!game_state.local_player.moving)
+                            if (!game_state.local_player.moving) // player is still
                             {
                                 game_state.local_player.setDirection(pot_dir);
                                 game_state.local_player.moving = true;
@@ -426,22 +392,25 @@ namespace ArcadeRPG
                 {
                     if (tl.Position.X >= backpackpos.X && tl.Position.X <= backpackpos.X + backpack.Width && tl.Position.Y >= backpackpos.Y && tl.Position.Y <= backpackpos.Y + backpack.Height)
                     {
+                        // has user elected to bring up inventory?
                         backpackmenu.backpack_touched = true;
+                        //^^ yes
                     }
-                    if (backpackmenu.backpack_touched == false)
+                    if (backpackmenu.backpack_touched == false) // if they havent
                     {
-                        if ((tl.Position.X >= 700) && (tl.Position.Y >= 385)) // Fire button
+                        if ((tl.Position.X >= 700) && (tl.Position.Y >= 385)) // and the Fire button is tapped
                         {
-                            if (game_state.local_player.getWeapon() == weaponType.LASER)
+                            if (game_state.local_player.getWeapon() == weaponType.LASER) //if the proper weapon is selected and able to shoot bullets while the fire button is tapped
                             {
                                 game_state.bullet_engine.fire(game_state.local_player.getX() + (int)character_sprite[(int)game_state.local_player.getWeapon()].size.X / 2,
                                     game_state.local_player.getY() + (int)character_sprite[(int)game_state.local_player.getWeapon()].size.Y / 2,
                                     game_state.local_player.getDirection(),
                                     bulletOwner.PLAYER,
                                     bulletType.SMALL);
-                                game_state.fx_engine.RequestSound(soundType.SHOOT);
+                                game_state.fx_engine.RequestSound(soundType.SHOOT); // shoot a bullet
                             }
                             else if (game_state.local_player.getWeapon() == weaponType.SWORD)
+                                // else swing the sword, dont shoot bullets
                             {
                                 sword_swing = true;
                                 game_state.fx_engine.RequestSound(soundType.SWORD);
@@ -459,11 +428,11 @@ namespace ArcadeRPG
                                         break;
                                     case PlayerDir.LEFT:
                                         bullet_x = game_state.local_player.getX() - (game_state.local_player.getWidth());
-                                        bullet_y = game_state.local_player.getY(); //+ game_state.local_player.getHeight();
+                                        bullet_y = game_state.local_player.getY();
                                         break;
                                     case PlayerDir.RIGHT:
                                         bullet_x = game_state.local_player.getX() + game_state.local_player.getWidth();
-                                        bullet_y = game_state.local_player.getY(); //+ game_state.local_player.getHeight();
+                                        bullet_y = game_state.local_player.getY();
                                         break;
                                 }
 
@@ -471,7 +440,7 @@ namespace ArcadeRPG
                             }
                         }
                     }
-                    else
+                    else // bring up the inventory and display the items properly and in an orderly fashion
                     {
                         Vector2 formatpos = new Vector2(315, 170);
                         int tileSize = game_state.tile_engine.getTileSize();
@@ -482,7 +451,7 @@ namespace ArcadeRPG
                             Rectangle dest = new Rectangle((int)formatpos.X, (int)formatpos.Y, 300, 40);
                             if(dest.Contains((int)tl.Position.X,(int)tl.Position.Y))
                             {
-                                //menu item Clicked
+                                //menu item Clicked and ready to be used in game
                                 switch (i.getType())
                                 {
                                     case itemType.LASER: game_state.local_player.setWeapon(weaponType.LASER); break;
@@ -511,7 +480,7 @@ namespace ArcadeRPG
 
             }
 
-            if (sword_swing)
+            if (sword_swing) // swing sword
             {
                 sword_delay += gameTime.ElapsedGameTime.Milliseconds;
                 if (sword_delay > 200)
@@ -522,7 +491,7 @@ namespace ArcadeRPG
                 }
             }
 
-            if (game_state.local_player.getAttackBonus() > 0)
+            if (game_state.local_player.getAttackBonus() > 0) //add attack bonuses
             {
                 att_boost_delay -= gameTime.ElapsedGameTime.Milliseconds;
                 if (att_boost_delay <= 0)
@@ -531,7 +500,7 @@ namespace ArcadeRPG
                 }
             }
 
-            if (game_state.local_player.getDefenseBonus() > 0)
+            if (game_state.local_player.getDefenseBonus() > 0) // add defensive bonuses
             {
                 def_boost_delay -= gameTime.ElapsedGameTime.Milliseconds;
                 if (def_boost_delay <= 0)
@@ -551,22 +520,7 @@ namespace ArcadeRPG
                         int damage = 0;
                         if (coll.GetLocalType() == ColType.BULLET)
                         {
-                            //BulletEngine will deal the damage for this
-                            /*
-                            Bullet bull = (Bullet)coll.GetParent();
-                            if (bull.owner == bulletOwner.ENEMY)
-                            {
-                                switch (bull.type)
-                                {
-                                    case bulletType.SMALL:
-                                        damage = 5;
-                                        break;
-                                    case bulletType.SWORD:
-                                        damage = 10;
-                                        break;
 
-                                }
-                            }*/
                             Bullet bul = (Bullet)coll.GetParent();
                             if (bul.owner == bulletOwner.PLAYER)
                             {
@@ -594,19 +548,20 @@ namespace ArcadeRPG
             game_state.local_player.col_tok.update(game_state.local_player.getX(), game_state.local_player.getY());
 
             if(game_state.local_player.hurt) {
-                hurt_time -= gameTime.ElapsedGameTime.Milliseconds;
+                hurt_time -= gameTime.ElapsedGameTime.Milliseconds; // dont repeatedly get hurt, only get hurt once per attack by an enemy
                 if (hurt_time <= 0)
                 {
-                    game_state.local_player.hurt = false;
+                    game_state.local_player.hurt = false; // time to get hurt has run out
                 }
             }
             currTime -= gameTime.ElapsedGameTime; // start timer on actual game
 
 
-            if (currTime.TotalSeconds <= 0)
+            if (currTime.TotalSeconds <= 0) // time per level has run out
             {
                 return;
             }
+
             game_state.monster_engine.Update(gameTime.ElapsedGameTime.Milliseconds);
             game_state.bullet_engine.Update();
 
@@ -621,10 +576,10 @@ namespace ArcadeRPG
 
         }
 
-        public void die()
+        public void die() // user has died in a level. level will start over and a life will be decucted
         {
             livesRemaining--;
-            if (!hasMoreLives())
+            if (!hasMoreLives()) // if the user has 0 more lives, game over
             {
                 if (backpackmenu.isShowing())
                     backpackmenu.Hide();
@@ -634,7 +589,7 @@ namespace ArcadeRPG
                 return;
             }
 
-            LoadLevel(game_state.tile_engine.getCurrentLevel());
+            LoadLevel(game_state.tile_engine.getCurrentLevel()); // restart if the user has more lives
         }
 
         public Boolean hasMoreLives()
@@ -646,13 +601,11 @@ namespace ArcadeRPG
         /// This is called when the game should draw itself.
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
-        public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        public void Draw(GameTime gameTime, SpriteBatch spriteBatch) // draw everything on the screen
         {
-            //spriteBatch.Begin();
             game_state.tile_engine.getCurrentMap().drawBackground(spriteBatch, game_state.local_player.getX(), game_state.local_player.getY());
             game_state.tile_engine.getCurrentMap().drawObjects(spriteBatch, game_state.local_player.getX(), game_state.local_player.getY());
 
-            //tileEngine.draw(local_player.getX(), local_player.getY(), 0);
             if (game_state.local_player.getX() <= 400 - 16)
             {
                 character_sprite[(int)game_state.local_player.getWeapon()].loc.X = game_state.local_player.getX();
@@ -685,6 +638,7 @@ namespace ArcadeRPG
             bool shouldFadeAttack = game_state.local_player.getAttackBonus() > 0;
             bool shouldFadeDefense = game_state.local_player.getDefenseBonus() > 0;
             Color toFade;
+            //choose arbitrary colors for boosts
             if (shouldFadeHurt)
             {
                 toFade = Color.Red;
@@ -706,10 +660,8 @@ namespace ArcadeRPG
                 toFade = Color.White;
             }
 
-            //character_sprite.cur_frame 
-            if (sword_swing)
+            if (sword_swing) // if the sword has been swung
             {
-
                 sword_sprite.loc = character_sprite[(int)game_state.local_player.getWeapon()].loc;
                 sword_sprite.Draw(spriteBatch, (int)game_state.local_player.getDirection(), (shouldFadeHurt || shouldFadeAttack || shouldFadeDefense), toFade);
             }
@@ -728,12 +680,7 @@ namespace ArcadeRPG
                 Enemy monster = monsters.ElementAt(i);
                 if (game_state.monster_engine.IsVisible(monster))
                 {
-                    /*
-                    int loc = (int)monster.getType();
-                    monster_sprites[(int)monster.getType()].loc.X = monster.getX() - offset_x;
-                    monster_sprites[(int)monster.getType()].loc.Y = monster.getY() - offset_y;
-                    monster_sprites[loc].Draw(spriteBatch);
-                     * */
+
                     Sprite mons_sprite = monster.getSprite();
                     mons_sprite.loc.X = monster.getX() - offset_x;
                     mons_sprite.loc.Y = monster.getY() - offset_y;
@@ -741,13 +688,14 @@ namespace ArcadeRPG
                     {
                         if (mons_sprite.loc.Y > 0 && mons_sprite.loc.Y < 400)
                         {
-                            mons_sprite.Draw(spriteBatch); //Draw if the loc is pos not neg
+                            mons_sprite.Draw(spriteBatch); //Draw if the location is not negative
                         }
                     }
                 }
             }
 
             List<Bullet> bullets = game_state.bullet_engine.GetBullets();
+            //draw the bullets appropriately
             for (int i = 0; i < bullets.Count(); ++i)
             {
                 Bullet bullet = bullets.ElementAt(i);
@@ -765,10 +713,10 @@ namespace ArcadeRPG
             //gets spritebatch in a state to be 'ready' to draw
 
             //******************DRAWING ARROWS**************************//
-            spriteBatch.Draw(uparrow, uparrowpos, null, trans, 0, imageOffset, 3.0f, SpriteEffects.None, 0);
-            spriteBatch.Draw(downarrow, downarrowpos, null, trans, 0, imageOffset, 3.0f, SpriteEffects.None, 0);
-            spriteBatch.Draw(leftarrow, leftarrowpos, null, trans, 0, imageOffset, 3.0f, SpriteEffects.None, 0);
-            spriteBatch.Draw(rightarrow, rightarrowpos, null, trans, 0, imageOffset, 3.0f, SpriteEffects.None, 0);
+            spriteBatch.Draw(uparrow, uparrowpos, null, trans, 0, imageOffset, 4.0f, SpriteEffects.None, 0);
+            spriteBatch.Draw(downarrow, downarrowpos, null, trans, 0, imageOffset, 4.0f, SpriteEffects.None, 0);
+            spriteBatch.Draw(leftarrow, leftarrowpos, null, trans, 0, imageOffset, 4.0f, SpriteEffects.None, 0);
+            spriteBatch.Draw(rightarrow, rightarrowpos, null, trans, 0, imageOffset, 4.0f, SpriteEffects.None, 0);
             spriteBatch.Draw(fire_button, fire_button_pos, null, trans, 0, imageOffset, 3.0f, SpriteEffects.None, 0);
             spriteBatch.DrawString(displayFont, "FIRE!", new Vector2(fire_button_pos.X + 38, fire_button_pos.Y + 45), Color.Black);
             //draw the arrow graphics to the screen with given position, 3x as big as original size, no effects
@@ -787,15 +735,9 @@ namespace ArcadeRPG
 
 
             //***************************DRAWING STRINGS***********************************//
-            //spriteBatch.DrawString(displayFont, scoreString, scoreStringPos, Color.Cyan); // draw "score: "
-            //spriteBatch.DrawString(displayFont, currScore.ToString(), currScorePos, Color.Cyan); // draw actual score
-
-
             spriteBatch.DrawString(displayFont, levelstring, scoreStringPos, Color.Cyan); // draw "level: "
             spriteBatch.DrawString(displayFont, game_state.tile_engine.getCurrentLevelName(), currScorePos, Color.Cyan); // draw level number
-
             spriteBatch.DrawString(displayFont, livesString+livesRemaining.ToString(), livesStringPos, Color.Cyan); // draw lives remaining
-
             //****************************************************************************//
 
 
