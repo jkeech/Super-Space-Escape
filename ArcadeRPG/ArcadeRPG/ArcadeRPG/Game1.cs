@@ -19,9 +19,11 @@ namespace ArcadeRPG
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
-        private const bool DEV_MODE = false;
+        private const bool DEV_MODE = false; // DEV_MODE indicates whether or not to skip the menus (testing purposes)
+
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+
         Vector2 imageOffset = new Vector2(0, 0); //don't offset anything
         Color backColor = Color.White; // arbitrary color for background
 
@@ -33,7 +35,7 @@ namespace ArcadeRPG
         Instructions instruct; // instantiate objects
         //*************************************************************//
 
-        GameEngine game_engine;
+        GameEngine game_engine; // isntance of a class to handle most of the gameplay
 
         public Game1()
         {
@@ -86,7 +88,7 @@ namespace ArcadeRPG
             gameover.loadContent(Content);
             //***************************************************************************************//
 
-            game_engine.LoadContent(Content);
+            game_engine.LoadContent(Content); // load all game content separately in the game engine
 
         }
 
@@ -96,7 +98,7 @@ namespace ArcadeRPG
         /// </summary>
         protected override void UnloadContent()
         {
-
+            //nothing to unload
         }
 
         /// <summary>
@@ -110,7 +112,7 @@ namespace ArcadeRPG
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            if (DEV_MODE)
+            if (DEV_MODE) // if want to skip the menus (for testing purposes)
             {
                 if (intro.isShowing()) intro.Hide();
                 if (instruct.isShowing()) instruct.Hide();
@@ -121,11 +123,11 @@ namespace ArcadeRPG
             {
                 intro.update(gameTime);
             }
-            else if (instruct.isShowing()) // if instructions are showing, continue showing for 5 seconds and let it advance
+            else if (instruct.isShowing()) // if instructions are showing, continue showing until user taps it to advance
             {
                 instruct.update(gameTime);
             }
-            else if (instruct2.isShowing()) // if second instructions are showing, continue showing
+            else if (instruct2.isShowing()) // if second instructions are showing, continue showing until user taps it to advance
             {
                 instruct2.update(gameTime);
             }
@@ -135,7 +137,7 @@ namespace ArcadeRPG
                 if (timex.play_again) // user wants to play again
                 {
                     timex.Hide(); // so hide game screen and
-                    timex.reset();
+                    timex.reset(); // reset the timer and
                     game_engine.Update(gameTime); // go to game environment
                 }
                 else if (!timex.isRunning()) // user did not select play again before time ran out
@@ -154,13 +156,13 @@ namespace ArcadeRPG
                     this.Exit(); // end game
                 }
             }
-            else
+            else // game is playing
             {
-                game_engine.Update(gameTime);
+                game_engine.Update(gameTime); //update the game based on UI, AI, time
                 if (game_engine.gameEnded)
                 {
                     spriteBatch.Begin();
-                    gameover.Show(spriteBatch);
+                    gameover.Show(spriteBatch); // if all 5 lives run out, show the game over screen
                     spriteBatch.End();
                 }
             }
@@ -188,22 +190,22 @@ namespace ArcadeRPG
             else if (instruct.isShowing())
             {
                 spriteBatch.Begin();
-                instruct.Show(spriteBatch); // show instructions screen until timer runs out
+                instruct.Show(spriteBatch); // show instructions screen until user taps
                 spriteBatch.End();
             }
             else if (instruct2.isShowing())
             {
                 spriteBatch.Begin();
-                instruct2.Show(spriteBatch); // show instructions screen until timer runs out
+                instruct2.Show(spriteBatch); // show instructions screen until user taps
                 spriteBatch.End();
             }
             else if (timex.isShowing())
             {
                 spriteBatch.Begin();
-                timex.Show(spriteBatch); // show time expired screen until user makes a selection
+                timex.Show(spriteBatch); // show time expired screen until user makes a selection / time runs out
                 spriteBatch.End();
             }
-            else if (gameover.isShowing())
+            else if (gameover.isShowing()) // show game over screen for 5 seconds. game will exit back to the windows phone platform after this
             {
                 spriteBatch.Begin();
                 gameover.Show(spriteBatch);
@@ -212,8 +214,8 @@ namespace ArcadeRPG
             else // no menus displayed
             {
                 spriteBatch.Begin();
-                game_engine.Draw(gameTime, spriteBatch);
-                spriteBatch.End(); // go to game environment
+                game_engine.Draw(gameTime, spriteBatch); // draw game contents according to UI, AI, time
+                spriteBatch.End();
             }
             base.Draw(gameTime);
         } // end draw function

@@ -14,13 +14,10 @@ namespace ArcadeRPG
         private State state; // ^^ showing or not
         private Color color;
         private Texture2D backpackpic; // graphic for inventory menu (NOT BACKPACK PIC on game screen)
-        private Vector2 backpackpos;
-        private Vector2 exitpicpos;
+        private Vector2 backpackpos; // position for the backpack sprite to be displayed
         private Vector2 offset;
-        public Boolean backpack_touched;
+        public Boolean backpack_touched; // does the inventory need to be brought up?
         private const string empty = "None :(";
-
-        //no time, this menu will be up as long as the user wants (does not hit "exit" button)
 
 
         public Backpack()
@@ -44,7 +41,7 @@ namespace ArcadeRPG
             if (state == State.HIDE) { return; }
             else
             {
-                backpackpic.ToString().Remove(0); // "undraws" screen
+                backpackpic.ToString().Remove(0); // "converts" the whole screen to a "string" and "removes" it. "hiding" it
                 state = State.HIDE;
             }
         }
@@ -52,9 +49,8 @@ namespace ArcadeRPG
 
         public void loadContent(ContentManager contman)
         {
-            backpackpic = contman.Load<Texture2D>("Inventory");
+            backpackpic = contman.Load<Texture2D>("Inventory"); // load the picture
             backpackpos = new Vector2(0, 0);
-            exitpicpos = new Vector2(675, 400);
         }
 
 
@@ -64,7 +60,7 @@ namespace ArcadeRPG
             return (state == State.SHOW);
         }
 
-        public string getEmptyString()
+        public string getEmptyString() // this will be implemented if the user has tapped the backpack but has no items
         {
             return empty;
         }

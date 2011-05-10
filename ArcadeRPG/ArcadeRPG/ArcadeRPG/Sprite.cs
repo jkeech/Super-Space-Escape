@@ -48,6 +48,7 @@ namespace ArcadeRPG
         /// <summary>
         /// Constructor
         /// </summary>
+        
         public Sprite()
         {
             loc = Vector2.Zero;
@@ -67,6 +68,7 @@ namespace ArcadeRPG
         /// </summary>
         /// <param name="width">width of each sprite</param>
         /// <param name="height">height of each sprite</param>
+        
         public void Load(ContentManager cont_man, string _path, int width, int height, int _anim_time)
         {
             path = _path;
